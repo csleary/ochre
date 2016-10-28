@@ -1,0 +1,14 @@
+{% include header.html %}
+<div id="wrapper">
+  <section>
+    <span class="entry-title">{{ page.title }}</span>
+    <div class="entry-meta">
+      <span class="date">
+        <a href="{{ post.url }}" title="Permalink">{{ site.time | date_to_string }}</a>
+      </span>
+    </div>
+    {{ content }}
+  </section>
+  {% include sidebar.html %}
+</div>
+{% include footer.html %}

@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Serif|Inconsolata");
+@import url("genericons/genericons.css");
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.0; }
+@viewport {
+  zoom: 1.0;
+  width: device-width; }
+* {
+  box-sizing: border-box; }
+
+html {
+  background: #231d24; }
+
+article, section, aside, nav, header, footer, figure, figcaption {
+  display: block; }
+
+a:link,
+a:active,
+a:visited {
+  text-decoration: none; }
+
+body {
+  background: #fff;
+  color: #000;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 1200px;
+  font-family: "PT Serif", serif;
+  font-size: 100%; }
+
+h1,
+h2,
+h3 {
+  color: #000;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 1em; }
+
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 400; }
+
+p {
+  line-height: 1.6em;
+  margin: 1em 0; }
+
+header {
+  background-image: url("/assets/header.png");
+  background-size: 1200px auto;
+  background-position: 0 750px;
+  flex: none;
+  font-family: "PT Sans Narrow", sans-serif;
+  height: 250px;
+  padding: 20px;
+  text-align: center; }
+
+a#site-header {
+  color: #ea5727; }
+
+#site-header {
+  font-size: 8em;
+  margin: 0;
+  padding: 0; }
+
+nav {
+  color: #333;
+  font-family: "PT Sans Narrow", sans-serif;
+  padding: 20px 0 50px 40px;
+  font-size: 2em; }
+
+nav a {
+  color: #333;
+  padding: 5px 10px; }
+
+nav a:hover {
+  border-bottom: 5px solid #ccb89c; }
+
+nav a#current {
+  color: #ea5727;
+  border-bottom: 5px solid #ea5727; }
+
+#wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+#blog,
+section {
+  padding: 0 40px; }
+
+section a:link,
+section a:visited,
+article a:link,
+article a:visited,
+aside a:link,
+aside a:visited {
+  color: #ea5727;
+  text-decoration: none; }
+
+.entry-title {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 3em; }
+
+section a.entry-title,
+article a.entry-title,
+.entry-meta .date a {
+  color: #000; }
+
+.entry-meta {
+  font-family: "PT Sans Narrow", sans-serif;
+  display: block;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 400; }
+
+.entry-meta .date a:before {
+  content: '\f303';
+  font: normal 20px/1 'Genericons';
+  display: inline-block;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.entry-meta {
+  font-family: "PT Sans Narrow", sans-serif;
+  display: block;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 400; }
+
+aside {
+  background: #f2ede6;
+  padding: 0 40px 40px 40px; }
+
+footer {
+  color: #999;
+  flex: none;
+  font-size: 1em;
+  padding: 20px;
+  text-align: center; }
+
+ul {
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0; }
+
+li {
+  padding-bottom: 0.5em; }
+
+li a:link {
+  border-bottom: 0; }
+
+img.aligncenter {
+  display: block;
+  margin: 5px auto; }
+
+code {
+  background: #eee;
+  border-radius: 2px;
+  color: green;
+  font-family: "Inconsolata", monospace;
+  font-size: 1em;
+  padding: 0 4px; }
+
+form {
+  margin-top: 3em; }
+
+form input {
+  background: #fff;
+  border: 5px solid #ccb89c;
+  color: #000;
+  font-family: "PT Serif", serif;
+  font-size: 1em;
+  display: block;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 50%; }
+
+form textarea {
+  background: #fff;
+  border: 5px solid #ccb89c;
+  color: #000;
+  font-family: "PT Serif", serif;
+  font-size: 1em;
+  padding: 10px;
+  width: 100%; }
+
+form input:focus, form textarea:focus {
+  background: #fff; }
+
+form .send {
+  background: #fff;
+  border: 5px solid #000;
+  color: #000;
+  cursor: pointer;
+  float: right;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.5em;
+  margin-top: 20px;
+  width: 150px;
+  transition: color 0.5s, background 0.5s; }
+
+form .send:hover {
+  background: #ea5727;
+  border-color: #ea5727;
+  color: #fff;
+  transition: color 0.2s, background 0.2s; }
+
+form .send:active {
+  background: #000;
+  border-color: #ea5727;
+  color: #ea5727;
+  transition: color 0s, background 0s; }
+
+form .send:focus {
+  background: #000;
+  border-color: #ea5727;
+  transition: color 0s, background 0s; }
+
+aside form input {
+  width: 100%; }
+
+video {
+  width: 100%;
+  height: auto; }
+
+@media (min-width: 768px) {
+  #site-header {
+    font-size: 8em;
+    margin: 0;
+    padding: 0; }
+
+  #wrapper {
+    flex-direction: row;
+    flex: 1; }
+
+  #blog,
+  section {
+    flex: 1; }
+
+  aside {
+    flex: 0 0 400px; } }
