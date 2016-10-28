@@ -238,9 +238,9 @@ aside form input.button {
   border: 5px solid #000;
   color: #000;
   cursor: pointer;
-  float: right;
   font-family: "PT Sans Narrow", sans-serif;
-  width: 100%;
+  font-size: 1.2em;
+  width: 50%;
   transition: color 0.5s, background 0.5s; }
 
 video {

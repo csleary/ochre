@@ -295,11 +295,10 @@ aside form input.button {
   border: 5px solid #000;
   color: #000;
   cursor: pointer;
-  float: right;
+  // float: right;
   font-family: $sans;
-  // font-size: 1.5em;
-  // margin-top: 20px;
-  width: 100%;
+  font-size: 1.2em;
+  width: 50%;
   transition: color 0.5s, background 0.5s;
 }
 
