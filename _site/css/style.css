@@ -117,6 +117,9 @@ article a.entry-title,
 .entry-meta .date a {
   color: #000; }
 
+.entry-meta .date a:hover {
+  color: #ea5727; }
+
 .entry-meta {
   font-family: "PT Sans Narrow", sans-serif;
   display: block;
@@ -124,20 +127,65 @@ article a.entry-title,
   text-transform: uppercase;
   font-weight: 400; }
 
-.entry-meta .date a:before {
-  content: '\f303';
-  font: normal 16px/1 'Genericons';
+.entry-meta .date {
+  text-transform: uppercase;
+  margin-right: 20px; }
+
+.entry-meta .date a:before,
+.entry-meta .categories:before {
   display: inline-block;
-  vertical-align: top;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.entry-meta .date a:before {
+  font: normal 16px/1 'Genericons';
+  content: '\f303'; }
+
+.entry-meta .categories:before {
+  font: normal 16px/1 'Genericons';
+  content: '\f301'; }
+
+.spotify:after {
+  color: #ccb89c;
+  font: normal 32px/1 'Genericons';
+  content: '\f515';
+  vertical-align: -7px;
+  padding-left: 5px; }
+
+.newsletter:after {
+  color: #ccb89c;
+  font: normal 32px/1 'Genericons';
+  content: '\f465';
+  vertical-align: -7px;
+  padding-left: 5px; }
+
+.shows:after {
+  color: #ccb89c;
+  font: normal 32px/1 'Genericons';
+  content: '\f307';
+  vertical-align: -7px;
+  padding-left: 5px; }
+
+.tips:after {
+  color: #ccb89c;
+  font: normal 32px/1 'Genericons';
+  content: '\f221';
+  vertical-align: -7px;
+  padding-left: 5px; }
+
+.links:after {
+  color: #ccb89c;
+  font: normal 32px/1 'Genericons';
+  content: '\f107';
+  vertical-align: -7px;
+  padding-left: 5px; }
+
 .entry-meta {
   font-family: "PT Sans Narrow", sans-serif;
   display: block;
   font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 400; }
+  font-weight: 400;
+  text-transform: none; }
 
 aside {
   background: #f2ede6;
@@ -149,6 +197,19 @@ footer {
   font-size: 1em;
   padding: 20px;
   text-align: center; }
+
+footer a {
+  color: #999; }
+
+.genericon-twitter,
+.genericon-facebook {
+  font-size: 32px; }
+
+.genericon-facebook a:hover {
+  color: #49629d; }
+
+.genericon-twitter a:hover {
+  color: #6aa9e0; }
 
 ul {
   list-style-type: none;
@@ -174,6 +235,7 @@ img.alignright {
   margin: 5px 0 5px 10px; }
 
 pre {
+  font-family: "Inconsolata", monospace;
   margin: 0; }
 
 code {

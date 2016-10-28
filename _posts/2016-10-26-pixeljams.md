@@ -1,5 +1,8 @@
 ---
 title: Pixeljams Volume 2 Out Now
+published: true
+categories: Video, Compilations
+tags:
 ---
 Indie game dev wizards Pixeljam have just released 'Pixeljams Volume 2', featuring an exclusive Ochre track, 'Jump Vector'. The compilation also includes tracks from business funk maestro Datassette and fellow Toytronic alumnus and Pj honcho Miles Tillmann, among others.
 

@@ -4,6 +4,8 @@ $orange: #ea5727;
 $black: #231d24;
 $dark-beige: #ccb89c;
 $light-beige: #f2ede6;
+$twitter-blue: #6aa9e0;
+$facebook-blue: #49629d;
 
 $serif: "PT Serif", serif;
 $sans: "PT Sans Narrow", sans-serif;
@@ -155,29 +157,86 @@ article a.entry-title,
   color: #000;
 }
 
+.entry-meta .date a:hover {
+  color: $orange;
+}
+
 .entry-meta {
   font-family: $sans;
   display: block;
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 400;
+}
+
+.entry-meta .date {
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.entry-meta .date a:before,
+.entry-meta .categories:before {
+display: inline-block;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 
 .entry-meta .date a:before {
+  font: normal 16px/1 'Genericons';
 	content: '\f303';
-	font: normal 16px/1 'Genericons';
-	display: inline-block;
-  vertical-align: top;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+}
+
+.entry-meta .categories:before {
+  font: normal 16px/1 'Genericons';
+	content: '\f301';
+}
+
+.spotify:after {
+  color: $dark-beige;
+  font: normal 32px/1 'Genericons';
+  content: '\f515';
+  vertical-align: -7px;
+  padding-left: 5px;
+}
+
+.newsletter:after {
+  color: $dark-beige;
+  font: normal 32px/1 'Genericons';
+  content: '\f465';
+  vertical-align: -7px;
+  padding-left: 5px;
+}
+
+.shows:after {
+  color: $dark-beige;
+  font: normal 32px/1 'Genericons';
+  content: '\f307';
+  vertical-align: -7px;
+  padding-left: 5px;
+}
+
+.tips:after {
+  color: $dark-beige;
+  font: normal 32px/1 'Genericons';
+  content: '\f221';
+  vertical-align: -7px;
+  padding-left: 5px;
+}
+
+.links:after {
+  color: $dark-beige;
+  font: normal 32px/1 'Genericons';
+  content: '\f107';
+  vertical-align: -7px;
+  padding-left: 5px;
 }
 
 .entry-meta {
   font-family: $sans;
   display: block;
   font-size: 1em;
-  text-transform: uppercase;
   font-weight: 400;
+  text-transform: none;
 }
 
 aside {
@@ -191,6 +250,23 @@ footer {
   font-size: 1em;
   padding: 20px;
   text-align: center;
+}
+
+footer a {
+  color: #999;
+}
+
+.genericon-twitter,
+.genericon-facebook {
+  font-size: 32px;
+}
+
+.genericon-facebook a:hover {
+  color: $facebook-blue;
+}
+
+.genericon-twitter a:hover {
+  color: $twitter-blue;
 }
 
 ul {
@@ -223,6 +299,7 @@ img.alignright {
 }
 
 pre {
+  font-family: $mono;
   margin: 0;
 }
 

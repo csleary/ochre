@@ -8,6 +8,9 @@
         <span class="date">
           <a href="{{ post.url }}" title="Permalink">{{ site.time | date_to_string }}</a>
         </span>
+        <span class="categories">
+          {{ post.categories }}
+        </span>
       </div>
       {{ post.excerpt }}
     </article>
