@@ -16,3 +16,5 @@ defaults:
       type: "posts"
     values:
       layout: "single"
+
+permalink:    /:year/:month/:title/

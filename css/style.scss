@@ -233,7 +233,7 @@ form input {
   display: block;
   padding: 10px;
   margin-bottom: 20px;
-  width: 50%;
+  width: 100%;
 }
 
 form textarea {
@@ -298,7 +298,7 @@ aside form input.button {
   // float: right;
   font-family: $sans;
   font-size: 1.2em;
-  width: 50%;
+  width: 100%;
   transition: color 0.5s, background 0.5s;
 }
 
@@ -318,11 +318,21 @@ video {
     flex-direction: row;
     flex: 1;
   }
+
   #blog,
   section{
     flex: 1;
   }
+
   aside {
     flex: 0 0 400px;
+  }
+
+  form input {
+    width: 50%;
+  }
+
+  aside form input.button {
+    width: 50%;
   }
 }
