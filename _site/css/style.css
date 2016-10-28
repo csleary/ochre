@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Serif|Inconsolata");
 @import url("genericons/genericons.css");
+@import url("syntax.css");
 @-ms-viewport {
   width: extend-to-zoom;
   zoom: 1.0; }
@@ -160,17 +161,32 @@ li {
 li a:link {
   border-bottom: 0; }
 
+img.alignleft {
+  float: left;
+  margin: 5px 10px 5px 0; }
+
 img.aligncenter {
   display: block;
   margin: 5px auto; }
 
+img.alignright {
+  float: right;
+  margin: 5px 0 5px 10px; }
+
+pre {
+  margin: 0; }
+
 code {
-  background: #eee;
-  border-radius: 2px;
-  color: green;
-  font-family: "Inconsolata", monospace;
-  font-size: 1em;
-  padding: 0 4px; }
+  font-family: "Inconsolata", monospace; }
+
+.lineno {
+  color: #999; }
+
+.highlight {
+  background: #f2ede6;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 0.5em; }
 
 form {
   margin-top: 3em; }

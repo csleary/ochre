@@ -11,6 +11,7 @@ $mono: "Inconsolata", monospace;
 
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Serif|Inconsolata');
 @import url('genericons/genericons.css');
+@import url('syntax.css');
 
 @-ms-viewport {
   width: extend-to-zoom;
@@ -206,18 +207,38 @@ li a:link {
   border-bottom: 0;
 }
 
+img.alignleft {
+  float: left;
+  margin: 5px 10px 5px 0;
+}
+
 img.aligncenter {
   display: block;
   margin: 5px auto;
 }
 
+img.alignright {
+  float: right;
+  margin: 5px 0 5px 10px;
+}
+
+pre {
+  margin: 0;
+}
+
 code {
-  background: #eee;
-  border-radius: 2px;
-  color: green;
   font-family: $mono;
-  font-size: 1em;
-  padding: 0 4px;
+}
+
+.lineno {
+  color: #999;
+}
+
+.highlight {
+  background: $light-beige;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 0.5em;
 }
 
 form {
