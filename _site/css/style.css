@@ -76,8 +76,9 @@ a#site-header {
 nav {
   color: #333;
   font-family: "PT Sans Narrow", sans-serif;
-  padding: 20px 0 50px 40px;
-  font-size: 2em; }
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0 50px 40px; }
 
 nav a {
   color: #333;
@@ -155,7 +156,7 @@ article a.entry-title,
 .newsletter:after {
   color: #ccb89c;
   font: normal 32px/1 'Genericons';
-  content: '\f465';
+  content: '\f463';
   vertical-align: -7px;
   padding-left: 5px; }
 
@@ -205,10 +206,10 @@ footer a {
 .genericon-facebook {
   font-size: 32px; }
 
-.genericon-facebook a:hover {
+.genericon-facebook:hover {
   color: #49629d; }
 
-.genericon-twitter a:hover {
+.genericon-twitter:hover {
   color: #6aa9e0; }
 
 ul {

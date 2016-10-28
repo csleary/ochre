@@ -107,8 +107,9 @@ a#site-header {
 nav {
   color: #333;
   font-family: $sans;
-  padding: 20px 0 50px 40px;
   font-size: 2em;
+  text-align: center;
+  padding: 20px 0 50px 40px;
 }
 
 nav a {
@@ -202,7 +203,7 @@ display: inline-block;
 .newsletter:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
-  content: '\f465';
+  content: '\f463';
   vertical-align: -7px;
   padding-left: 5px;
 }
@@ -261,11 +262,11 @@ footer a {
   font-size: 32px;
 }
 
-.genericon-facebook a:hover {
+.genericon-facebook:hover {
   color: $facebook-blue;
 }
 
-.genericon-twitter a:hover {
+.genericon-twitter:hover {
   color: $twitter-blue;
 }
 
