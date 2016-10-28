@@ -210,25 +210,38 @@ form .send {
   width: 150px;
   transition: color 0.5s, background 0.5s; }
 
-form .send:hover {
+form .send:hover,
+aside form input.button:hover {
   background: #ea5727;
   border-color: #ea5727;
   color: #fff;
   transition: color 0.2s, background 0.2s; }
 
-form .send:active {
+form .send:active,
+aside form input.button:active {
   background: #000;
   border-color: #ea5727;
   color: #ea5727;
   transition: color 0s, background 0s; }
 
-form .send:focus {
+form .send:focus,
+aside form input.button:focus {
   background: #000;
   border-color: #ea5727;
   transition: color 0s, background 0s; }
 
 aside form input {
   width: 100%; }
+
+aside form input.button {
+  background: #fff;
+  border: 5px solid #000;
+  color: #000;
+  cursor: pointer;
+  float: right;
+  font-family: "PT Sans Narrow", sans-serif;
+  width: 100%;
+  transition: color 0.5s, background 0.5s; }
 
 video {
   width: 100%;

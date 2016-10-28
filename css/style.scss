@@ -263,21 +263,24 @@ form .send {
   transition: color 0.5s, background 0.5s;
 }
 
-form .send:hover {
+form .send:hover,
+aside form input.button:hover {
   background: $orange;
   border-color: $orange;
   color: #fff;
   transition: color 0.2s, background 0.2s;
 }
 
-form .send:active {
+form .send:active,
+aside form input.button:active {
   background: #000;
   border-color: $orange;
   color: $orange;
   transition: color 0s, background 0s;
 }
 
-form .send:focus {
+form .send:focus,
+aside form input.button:focus {
   background: #000;
   border-color: $orange;
   transition: color 0s, background 0s;
@@ -285,6 +288,19 @@ form .send:focus {
 
 aside form input {
   width: 100%;
+}
+
+aside form input.button {
+  background: #fff;
+  border: 5px solid #000;
+  color: #000;
+  cursor: pointer;
+  float: right;
+  font-family: $sans;
+  // font-size: 1.5em;
+  // margin-top: 20px;
+  width: 100%;
+  transition: color 0.5s, background 0.5s;
 }
 
 video {
