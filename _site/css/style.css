@@ -126,7 +126,7 @@ article a.entry-title,
 
 .entry-meta .date a:before {
   content: '\f303';
-  font: normal 20px/1 'Genericons';
+  font: normal 16px/1 'Genericons';
   display: inline-block;
   vertical-align: top;
   -webkit-font-smoothing: antialiased;
