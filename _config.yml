@@ -17,6 +17,8 @@ defaults:
     values:
       layout: "post"
 
+excerpt_separator: <!--more-->
+
 permalink:    /:year/:month/:title/
 highlighter: rouge
 

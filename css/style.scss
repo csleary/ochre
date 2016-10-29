@@ -37,11 +37,6 @@ article, section, aside, nav, header, footer, figure, figcaption {
   display: block;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 a:link,
 a:active,
 a:visited {
@@ -296,6 +291,13 @@ li a:link {
   border-bottom: 0;
 }
 
+/* Images */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 img.alignleft {
   float: left;
   margin: 5px 10px 5px 0;
@@ -310,6 +312,13 @@ img.alignright {
   float: right;
   margin: 5px 0 5px 10px;
 }
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* Code */
 
 pre {
   font-family: $mono;
@@ -331,6 +340,8 @@ code {
   margin: 10px;
   padding: 0.5em;
 }
+
+/* Forms */
 
 form {
   margin-top: 3em;
@@ -412,11 +423,6 @@ aside form input.button {
   font-size: 1.2em;
   width: 100%;
   transition: color 0.5s, background 0.5s;
-}
-
-video {
-  width: 100%;
-  height: auto;
 }
 
 /* Pagination */
