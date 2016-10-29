@@ -33,41 +33,199 @@
     <a href="/contact/">Contact</a>
   </nav>
 
+
 <div id="wrapper">
   <div id="blog">
     
     <article>
-      <a class="entry-title" href="/2016/10/pixeljams/">Pixeljams Volume 2 Out Now</a>
+      <a class="entry-title" href="/2016/09/pixeljams-volume-2/">Pixeljams Volume 2</a>
       <div class="entry-meta">
         <span class="date">
-          <a href="/2016/10/pixeljams/" title="Permalink">28 Oct 2016</a>
+          <a href="/2016/09/pixeljams-volume-2/" title="Permalink">11 September 2016</a>
         </span>
-        <span class="categories">
-          Video,Compilations
-        </span>
+        <!-- <span class="categories">
+        MusicOchreVideo
+        </span> -->
       </div>
-      <p>Indie game dev wizards Pixeljam have just released ‘Pixeljams Volume 2’, featuring an exclusive Ochre track, ‘Jump Vector’. The compilation also includes tracks from business funk maestro Datassette and fellow Toytronic alumnus and Pj honcho Miles Tillmann, among others.</p>
-
-
+      <p>Indie game dev wizards Pixeljam have just released '<a href="https://pixeljam.bandcamp.com/album/pixeljams-volume-2">Pixeljams Volume 2</a>', featuring an exclusive Ochre track, 'Jump Vector'. The compilation also includes tracks from business funk maestro Datassette and fellow Toytronic alumnus and Pj honcho Miles Tillmann, among others. There's a particularly cool video for Datassette's track 'A Doomed Vessel' also included, created by Rory Scott. Safe to say five bucks gets stretched pretty far here.</p>
+<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=4180483919/size=large/bgcol=ffffff/linkcol=EA5727/tracklist=false/artwork=small/track=1361428529/transparent=true/" seamless><a href="http://pixeljam.bandcamp.com/album/pixeljams-volume-2">Pixeljams Volume 2 by Ochre</a></iframe>
+ <a href="/2016/09/pixeljams-volume-2/" title="Read full post">More...</a>
     </article>
-    
+  
     <article>
-      <a class="entry-title" href="/2016/10/hello/">Hi!</a>
+      <a class="entry-title" href="/2016/08/touched-3-is-out/">Touched 3 is Out</a>
       <div class="entry-meta">
         <span class="date">
-          <a href="/2016/10/hello/" title="Permalink">28 Oct 2016</a>
+          <a href="/2016/08/touched-3-is-out/" title="Permalink">4 August 2016</a>
         </span>
-        <span class="categories">
-          
-        </span>
+        <!-- <span class="categories">
+        MusicOchre
+        </span> -->
       </div>
-      <p>Just another blog post I don’t even know if I’ll end up using this in the end, to be honest.</p>
-
-
+      <p>Just fifteen pounds sterling for 400+ tracks of electronica. God knows how many hours of new music is on this, but it'll keep you going until Christmas. All proceeds go to Macmillan Cancer Support.</p>
+<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1085710896/size=large/bgcol=ffffff/linkcol=EA5727/tracklist=false/artwork=small/track=4138045800/transparent=true/" seamless><a href="http://touched.bandcamp.com/album/touched-3">Touched 3 by Ochre</a></iframe>
+ <a href="/2016/08/touched-3-is-out/" title="Read full post">More...</a>
     </article>
-    
+  
+    <article>
+      <a class="entry-title" href="/2016/07/next-gig-northern-electric-festival-newcastle/">Next gig: Northern Electric Festival, Newcastle</a>
+      <div class="entry-meta">
+        <span class="date">
+          <a href="/2016/07/next-gig-northern-electric-festival-newcastle/" title="Permalink">25 July 2016</a>
+        </span>
+        <!-- <span class="categories">
+        LiveOchre
+        </span> -->
+      </div>
+      <p><a href="http://ochremusic.com/wp-content/uploads/2016/07/Banner3.jpg"><img src="/assets/Banner3.jpg" alt="Northern Electric" width="100%" class="aligncenter size-full wp-image-2373" /></a></p>
+<p><a href="http://www.seetickets.com/event/northern-electric-festival/the-ouseburn-valley/979860">Tickets here!</a> You can also buy tickets from participating venues.</p>
+<p>Line-up/venues:<br />
+<a href="http://ochremusic.com/wp-content/uploads/2016/07/NEposter2...jpg"><img src="/assets/NEposter2...jpg" alt="NE Set Times" width="100%" class="aligncenter size-full wp-image-2374" /></a></p>
+ <a href="/2016/07/next-gig-northern-electric-festival-newcastle/" title="Read full post">More...</a>
+    </article>
+  
+    <article>
+      <a class="entry-title" href="/2016/07/replacing-video-audio-using-ffmpeg/">Replacing video audio using ffmpeg</a>
+      <div class="entry-meta">
+        <span class="date">
+          <a href="/2016/07/replacing-video-audio-using-ffmpeg/" title="Permalink">5 July 2016</a>
+        </span>
+        <!-- <span class="categories">
+        Film ScoringProductionRamblingsVideo
+        </span> -->
+      </div>
+      <p>Up until recently I used Quicktime to switch audio tracks for the odd music and showreel video, but since it will no longer be updated for Windows, and can possibly lead to your PC getting the clap, I figured I'd better find an alternative option. Enter <a href="https://www.ffmpeg.org/">ffmpeg</a>. It's a very powerful, free command line tool that I'd previously only worked with in tandem with some sort of GUI or partner app, and had never really tried to work with it on its own due to its bewildering plethora of options. But after a little trial and error I've settled on the following commands to replace audio streams in video files, (re)encoding where necessary, and avoiding video transcoding if possible in order to retain video image quality.</p>
+<p><!--more--></p>
+<p>I installed ffmpeg using <a href="https://chocolatey.org/">Chocolatey</a>, a very useful package manager for Windows, similar in operation to those you'd find on Linux (well, it's not quite as good as APT or DNF/YUM, say, but it's the best we've got at the moment).</p>
+<p>In Windows 10, you can shift-right click in the Explorer directory that houses your video file to open a command window (just select the very handy 'Open command window here' option).</p>
+<p>Firstly, if you'd like to strip the audio from a video file, you can use this command:</p>
+<p><code>ffmpeg -i INPUT.mp4 -codec copy -an OUTPUT.mp4</code></p>
+<p>Specifying the INPUT and OUTPUT files accordingly, with file extension (needless to say, it doesn't have to be .mp4).<br />
+<code>-i</code> precedes the file you wish to strip the audio from.<br />
+<code>-codec copy</code> is to send the video stream to the output file without transcoding, which will maintain video quality, as well as save you loads of time not having to crunch video.<br />
+<code>-an</code> will remove the audio file. Similarly, you could use <code>-vn</code> to remove a video stream instead.</p>
+<p>Then you can add your audio track by typing:</p>
+<p><code>ffmpeg -i INPUT.mp4 -i AUDIO.wav -shortest -c:v copy -c:a aac -b:a 256k OUTPUT.mp4</code></p>
+<p>As you can see, I have two input streams to be muxed together, the silent video file and the audio wav, to the output file at the end of the command. But there are a couple of other handy commands involved this time.</p>
+<p><code>-c</code> is a shorthand of the <code>-codec</code> command we used in the first example, and is used here to specify the audio and video codecs individually. As before, the video is passed through, but I've chosen to encode the audio as an aac file instead of simply adding the wav audio to the video, and have specified the audio bitrate using <code>-b:a</code>.</p>
+<p>The <code>-shortest</code> option will truncate whichever stream between the audio and video is longest down to the length of the shortest. This is handy for crudely chopping audio down to the video length, say.</p>
+<p>So far so good, but you might be wondering if you can just combine those two commands into a single command for even quicker results. Absolutely:</p>
+<p><code>ffmpeg -i INPUT.mp4 -i AUDIO.wav -map 0:0 -map 1:0 -c:v copy -c:a aac -b:a 256k -shortest OUTPUT.mp4</code></p>
+<p>This time we use the <code>-map</code> commands to specify which streams from the input files respectively should be included the output file. Any stream not explicitly specified will be ignored. I <em>think</em> the left side of the map option denotes the input file index (according to the order in which they were typed in the command), and the right side is the stream ID within the file. You can always check the stream IDs by running ffmpeg specifying only an input file and no output, which will just list all the streams in the media file. Similarly, you could also check the streams in something like VideoLAN, too.</p>
+<p>Anyway, I hope this post is useful. If nothing else, it's a good way for me to consolidate tips for myself (isn't that termed 'Ako', or something?) and help me remember for future use.</p>
+ <a href="/2016/07/replacing-video-audio-using-ffmpeg/" title="Read full post">More...</a>
+    </article>
+  
+    <article>
+      <a class="entry-title" href="/2016/07/touched-3-coming-soon/">Touched 3 Coming Soon</a>
+      <div class="entry-meta">
+        <span class="date">
+          <a href="/2016/07/touched-3-coming-soon/" title="Permalink">2 July 2016</a>
+        </span>
+        <!-- <span class="categories">
+        MusicOchre
+        </span> -->
+      </div>
+      <p>The third instalment of the popular 'Touched' series of mammoth charity compilations will be released later this month, on the 29th July 2016. It'll no doubt be another huge collection of tracks spanning various genres (but, like the previous two, it will probably centre heavily on the more electronic side of things). Once again, I'm pleased to be involved, and have contributed the track 'Anaphora'. Here's a little preview vid:</p>
+<p>https://youtu.be/yQI7s6V1x5c</p>
+ <a href="/2016/07/touched-3-coming-soon/" title="Read full post">More...</a>
+    </article>
+  
+    <article>
+      <a class="entry-title" href="/2016/06/acoustic-cover-of-paper-unicorn-by-digitonal/">Acoustic cover of 'Paper Unicorn' by Digitonal</a>
+      <div class="entry-meta">
+        <span class="date">
+          <a href="/2016/06/acoustic-cover-of-paper-unicorn-by-digitonal/" title="Permalink">8 June 2016</a>
+        </span>
+        <!-- <span class="categories">
+        Ochre
+        </span> -->
+      </div>
+      <p>Check out this beautiful cover of 'Paper Unicorn' by Digitonal, arranged for clarinet and piano. Fantastic work.</p>
+<p>https://soundcloud.com/digitonal/ochre-paper-unicorn-digitonal-transcription-1</p>
+ <a href="/2016/06/acoustic-cover-of-paper-unicorn-by-digitonal/" title="Read full post">More...</a>
+    </article>
+  
+    <article>
+      <a class="entry-title" href="/2016/01/isolette-remix-stems-available/">Isolette Remix Stems Available</a>
+      <div class="entry-meta">
+        <span class="date">
+          <a href="/2016/01/isolette-remix-stems-available/" title="Permalink">25 January 2016</a>
+        </span>
+        <!-- <span class="categories">
+        MusicOchreRemix
+        </span> -->
+      </div>
+      <p>After recently receiving an excellent remix of Paper Unicorn by <a href="https://soundcloud.com/marc-melia-sobrevias">Marc Melia</a>, I thought I'd make stems for the rest of the EP publicly available.</p>
+<p>Some of the parts I use are typically bathed in convolution or delay effects, in which case I've also included some dry versions for added flexibility. Most have an intro bar of silence, except Glassmaker, which starts instead with a single beat of silence (as I'd prepared that a while ago on a separate occasion). Should all be 24-bit wavs. Let me know if I've messed anything up.</p>
+<p><a href="http://ochremusic.com/stems/isolette/01_Paper_Unicorn_(98bpm).zip">01 Paper Unicorn (98bpm)</a><br />
+<a href="http://ochremusic.com/stems/isolette/02_Ark_of_Comfort_(115bpm).zip">02 Ark of Comfort (115bpm)</a><br />
+<a href="http://ochremusic.com/stems/isolette/03_Hivernal_(122.6bpm_6-4).zip">03 Hivernal (122.6bpm)</a><br />
+<a href="http://ochremusic.com/stems/isolette/04_Infinite_Bookends_(81bpm).zip">04 Infinite Bookends (81bpm)</a><br />
+<a href="http://ochremusic.com/stems/isolette/05_Glassmaker_(127bpm).zip">05 Glassmaker (127bpm)</a></p>
+<p>Have at it!</p>
+<p>I'd put stems from earlier tracks online, but thanks to the general impermanence and incompatibilities of music software, plus my relaxed attitude to track freezing, many tracks fail to load or play correctly. Lesson learned: freeze and archive! Should be easier from this point onwards, now I'm over the 64-bit hump.</p>
+ <a href="/2016/01/isolette-remix-stems-available/" title="Read full post">More...</a>
+    </article>
+  
+    <article>
+      <a class="entry-title" href="/2015/10/melograf-site-redesign/">Melograf Site Redesign</a>
+      <div class="entry-meta">
+        <span class="date">
+          <a href="/2015/10/melograf-site-redesign/" title="Permalink">28 October 2015</a>
+        </span>
+        <!-- <span class="categories">
+        Mastering
+        </span> -->
+      </div>
+      <p><a href="http://melograf.com/"><img src="/assets/melograf.png" alt="" width="300" height="300" class="alignright size-full wp-image-2217" /></a>I've just redesigned the site for my mastering service, <a href="http://melograf.com/">Melograf Mastering</a>, to make it much more accessible on mobile devices. It's a lightweight html5 site, replacing the previous WordPress and Flash-based incarnation that had nonetheless served me well for the past six years (crazy to think it's six years old already!). I've retained the dark, cyan-heavy style though---if it works, why change it?</p>
+<p>Hopefully everything renders just fine, with nippy page loads and responsive resizing for different browsing devices, but if you notice anything afoot, embarrassing typos and the like, please give me a shout. It feels odd to do without WordPress, but it admittedly made less sense on a blog-less site, and was used primarily for the feedback comments and the contact form. Now that it's been established for a while and I have more credits under my belt, the loss of a feedback page is hopefully minimal. It's been almost fun refreshing my basic web dev knowledge, reading up on html5, css3, media queries and the like. For a dilettante like me, these more recent developments certainly seem to have made designing a simple site much more straightforward and browser-compatible. Lo, progress!</p>
+ <a href="/2015/10/melograf-site-redesign/" title="Read full post">More...</a>
+    </article>
+  
+    <article>
+      <a class="entry-title" href="/2015/09/anaphora/">Anaphora</a>
+      <div class="entry-meta">
+        <span class="date">
+          <a href="/2015/09/anaphora/" title="Permalink">19 September 2015</a>
+        </span>
+        <!-- <span class="categories">
+        Gear TalkMusicOchre
+        </span> -->
+      </div>
+      <p>Here's a new track I've been working on while trying to get to grips with Ableton Live as a production tool, rather than performance tool. Being so used to Cubase, it's been quite a workflow departure for me (though largely a positive one, I'm happy to say). What Live lacks in comprehensive MIDI and automation editing, it gains in immediacy and ease of audio editing (which has always been a weakness for Cubase, betraying its roots as a MIDI sequencer). Plus some Max for Live tweaks help patch the holes in core functionality, and also help make setting up some MIDI control panels for my hardware synths a breeze (especially handy, as much of my hardware requires loads of menu diving, and is pretty laborious to program).</p>
+<p>https://soundcloud.com/ochre/anaphora</p>
+ <a href="/2015/09/anaphora/" title="Read full post">More...</a>
+    </article>
+  
+    <article>
+      <a class="entry-title" href="/2015/09/2174/"></a>
+      <div class="entry-meta">
+        <span class="date">
+          <a href="/2015/09/2174/" title="Permalink">18 September 2015</a>
+        </span>
+        <!-- <span class="categories">
+        Ochre
+        </span> -->
+      </div>
+      <p>I've just spent the day fiddling with my site's layout, reducing the site width, along with its copious amount of white space, which involved a fair amount of theme tweakery. It's highly likely that I'll have broken something somewhere, so if anything looks odd please let me know!</p>
+ <a href="/2015/09/2174/" title="Read full post">More...</a>
+    </article>
+  
+
+  <!-- Pagination links -->
+    <div class="pagination">
+      
+      <span class="previous"></span>
+      
+      <span class="page_number">Page: 1 of 14</span>
+      
+      <a href="/page2" class="next">Next</a>
+      
+    </div>
   </div>
-  <aside>
+
+<aside>
   <a href="https://play.spotify.com/artist/0OmHDBh5styCXDWKwz58Ts"><h3 class="spotify">Spotify</h3></a>
   <p><iframe src="https://embed.spotify.com/follow/1/?uri=spotify:artist:0OmHDBh5styCXDWKwz58Ts&size=basic&theme=light" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></p>
   <h3 class="newsletter">Newsletter</h3>

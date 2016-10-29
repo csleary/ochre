@@ -37,6 +37,11 @@ article, section, aside, nav, header, footer, figure, figcaption {
   display: block;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a:link,
 a:active,
 a:visited {
@@ -85,11 +90,11 @@ p {
 
 header {
   background-image: url("/assets/header.png");
-  background-size: 1200px auto;
-  background-position: 0 750px;
+  background-size: cover;
+  background-position: 0 300px;
   flex: none;
   font-family: $sans;
-  height: 250px;
+  height: 100px;
   padding: 20px;
   text-align: center;
 }
@@ -107,14 +112,14 @@ a#site-header {
 nav {
   color: #333;
   font-family: $sans;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
-  padding: 20px 0 50px 40px;
+  padding: 20px;
 }
 
 nav a {
   color: #333;
-  padding: 5px 10px;
+  padding: 0 10px;
 }
 
 nav a:hover {
@@ -135,6 +140,10 @@ nav a#current {
 #blog,
 section {
   padding: 0 40px;
+}
+
+article {
+  margin-bottom: 60px;
 }
 
 section a:link,
@@ -178,6 +187,7 @@ article a.entry-title,
 .entry-meta .date a:before,
 .entry-meta .categories:before {
 display: inline-block;
+vertical-align: -0.2em;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
@@ -185,6 +195,7 @@ display: inline-block;
 .entry-meta .date a:before {
   font: normal 16px/1 'Genericons';
 	content: '\f303';
+  margin-right: 0.2em;
 }
 
 .entry-meta .categories:before {
@@ -196,40 +207,40 @@ display: inline-block;
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f515';
-  vertical-align: -7px;
-  padding-left: 5px;
+  vertical-align: -0.2em;
+  padding-left: 0.2em;
 }
 
 .newsletter:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f463';
-  vertical-align: -7px;
-  padding-left: 5px;
+  vertical-align: -0.2em;
+  padding-left: 0.2em;
 }
 
 .shows:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f307';
-  vertical-align: -7px;
-  padding-left: 5px;
+  vertical-align: -0.2em;
+  padding-left: 0.2em;
 }
 
 .tips:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f221';
-  vertical-align: -7px;
-  padding-left: 5px;
+  vertical-align: -0.2em;
+  padding-left: 0.2em;
 }
 
 .links:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f107';
-  vertical-align: -7px;
-  padding-left: 5px;
+  vertical-align: -0.2em;
+  padding-left: 0.2em;
 }
 
 .entry-meta {
@@ -260,6 +271,7 @@ footer a {
 .genericon-twitter,
 .genericon-facebook {
   font-size: 32px;
+  padding: 0 10px;
 }
 
 .genericon-facebook:hover {
@@ -306,6 +318,7 @@ pre {
 
 code {
   font-family: $mono;
+  border-radius: 4px;
 }
 
 .lineno {
@@ -314,7 +327,7 @@ code {
 
 .highlight {
   background: $light-beige;
-  border-radius: 5px;
+  border-radius: 4px;
   margin: 10px;
   padding: 0.5em;
 }
@@ -406,11 +419,60 @@ video {
   height: auto;
 }
 
+/* Pagination */
+
+.pagination {
+  font-family: $sans;
+  font-size: 1.5em;
+}
+
+.pagination a {
+  color: $orange;
+}
+
+.pagination a.next {
+  margin-left: 0.5em;
+}
+
+.pagination a.previous {
+  margin-right: 0.5em;
+}
+
+.pagination a.next:after {
+  font: normal 32px/1 'Genericons';
+  content: '\f429';
+  vertical-align: -0.25em;
+  // padding-left: 0.2em;
+}
+
+.pagination a.previous:before {
+  font: normal 32px/1 'Genericons';
+  content: '\f430';
+  vertical-align: -0.25em;
+  // padding-right: 0.2em;
+}
+
+/* Large Screens */
 @media (min-width: 768px) {
+  header {
+    background-position: 0 750px;
+    height: 250px;
+  }
+
   #site-header {
     font-size: 8em;
     margin: 0;
     padding: 0;
+  }
+
+  nav {
+    font-size: 2em;
+    padding: 20px 0 50px 40px;
+  }
+
+  nav a {
+    color: #333;
+    padding: 5px 10px;
   }
 
   #wrapper {

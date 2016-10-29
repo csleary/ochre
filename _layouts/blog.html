@@ -1,21 +1,38 @@
 {% include header.html %}
+
 <div id="wrapper">
   <div id="blog">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <article>
       <a class="entry-title" href="{{ post.url }}">{{ post.title }}</a>
       <div class="entry-meta">
         <span class="date">
-          <a href="{{ post.url }}" title="Permalink">{{ site.time | date_to_string }}</a>
+          <a href="{{ post.url }}" title="Permalink">{{ post.date | date: "%-d %B %Y"}}</a>
         </span>
-        <span class="categories">
-          {{ post.categories }}
-        </span>
+        <!-- <span class="categories">
+        {{ post.categories }}
+        </span> -->
       </div>
-      {{ post.excerpt }}
+      {{ post.excerpt }} <a href="{{ post.url }}" title="Read full post">More...</a>
     </article>
-    {% endfor %}
+  {% endfor %}
+
+  <!-- Pagination links -->
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      {% else %}
+      <span class="previous"></span>
+      {% endif %}
+      <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      {% else %}
+      <span class="next">Next</span>
+      {% endif %}
+    </div>
   </div>
-  {% include sidebar.html %}
+
+{% include sidebar.html %}
 </div>
 {% include footer.html %}

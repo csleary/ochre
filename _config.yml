@@ -15,7 +15,11 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "single"
+      layout: "post"
 
 permalink:    /:year/:month/:title/
 highlighter: rouge
+
+gems: [jekyll-paginate]
+paginate_path: "page:num"
+paginate: 10

@@ -16,6 +16,10 @@ html {
 article, section, aside, nav, header, footer, figure, figcaption {
   display: block; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 a:link,
 a:active,
 a:visited {
@@ -57,11 +61,11 @@ p {
 
 header {
   background-image: url("/assets/header.png");
-  background-size: 1200px auto;
-  background-position: 0 750px;
+  background-size: cover;
+  background-position: 0 300px;
   flex: none;
   font-family: "PT Sans Narrow", sans-serif;
-  height: 250px;
+  height: 100px;
   padding: 20px;
   text-align: center; }
 
@@ -76,13 +80,13 @@ a#site-header {
 nav {
   color: #333;
   font-family: "PT Sans Narrow", sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
-  padding: 20px 0 50px 40px; }
+  padding: 20px; }
 
 nav a {
   color: #333;
-  padding: 5px 10px; }
+  padding: 0 10px; }
 
 nav a:hover {
   border-bottom: 5px solid #ccb89c; }
@@ -99,6 +103,9 @@ nav a#current {
 #blog,
 section {
   padding: 0 40px; }
+
+article {
+  margin-bottom: 60px; }
 
 section a:link,
 section a:visited,
@@ -135,12 +142,14 @@ article a.entry-title,
 .entry-meta .date a:before,
 .entry-meta .categories:before {
   display: inline-block;
+  vertical-align: -0.2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 .entry-meta .date a:before {
   font: normal 16px/1 'Genericons';
-  content: '\f303'; }
+  content: '\f303';
+  margin-right: 0.2em; }
 
 .entry-meta .categories:before {
   font: normal 16px/1 'Genericons';
@@ -150,36 +159,36 @@ article a.entry-title,
   color: #ccb89c;
   font: normal 32px/1 'Genericons';
   content: '\f515';
-  vertical-align: -7px;
-  padding-left: 5px; }
+  vertical-align: -0.2em;
+  padding-left: 0.2em; }
 
 .newsletter:after {
   color: #ccb89c;
   font: normal 32px/1 'Genericons';
   content: '\f463';
-  vertical-align: -7px;
-  padding-left: 5px; }
+  vertical-align: -0.2em;
+  padding-left: 0.2em; }
 
 .shows:after {
   color: #ccb89c;
   font: normal 32px/1 'Genericons';
   content: '\f307';
-  vertical-align: -7px;
-  padding-left: 5px; }
+  vertical-align: -0.2em;
+  padding-left: 0.2em; }
 
 .tips:after {
   color: #ccb89c;
   font: normal 32px/1 'Genericons';
   content: '\f221';
-  vertical-align: -7px;
-  padding-left: 5px; }
+  vertical-align: -0.2em;
+  padding-left: 0.2em; }
 
 .links:after {
   color: #ccb89c;
   font: normal 32px/1 'Genericons';
   content: '\f107';
-  vertical-align: -7px;
-  padding-left: 5px; }
+  vertical-align: -0.2em;
+  padding-left: 0.2em; }
 
 .entry-meta {
   font-family: "PT Sans Narrow", sans-serif;
@@ -204,7 +213,8 @@ footer a {
 
 .genericon-twitter,
 .genericon-facebook {
-  font-size: 32px; }
+  font-size: 32px;
+  padding: 0 10px; }
 
 .genericon-facebook:hover {
   color: #49629d; }
@@ -240,14 +250,15 @@ pre {
   margin: 0; }
 
 code {
-  font-family: "Inconsolata", monospace; }
+  font-family: "Inconsolata", monospace;
+  border-radius: 4px; }
 
 .lineno {
   color: #999; }
 
 .highlight {
   background: #f2ede6;
-  border-radius: 5px;
+  border-radius: 4px;
   margin: 10px;
   padding: 0.5em; }
 
@@ -326,11 +337,48 @@ video {
   width: 100%;
   height: auto; }
 
+/* Pagination */
+.pagination {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.5em; }
+
+.pagination a {
+  color: #ea5727; }
+
+.pagination a.next {
+  margin-left: 0.5em; }
+
+.pagination a.previous {
+  margin-right: 0.5em; }
+
+.pagination a.next:after {
+  font: normal 32px/1 'Genericons';
+  content: '\f429';
+  vertical-align: -0.25em; }
+
+.pagination a.previous:before {
+  font: normal 32px/1 'Genericons';
+  content: '\f430';
+  vertical-align: -0.25em; }
+
+/* Large Screens */
 @media (min-width: 768px) {
+  header {
+    background-position: 0 750px;
+    height: 250px; }
+
   #site-header {
     font-size: 8em;
     margin: 0;
     padding: 0; }
+
+  nav {
+    font-size: 2em;
+    padding: 20px 0 50px 40px; }
+
+  nav a {
+    color: #333;
+    padding: 5px 10px; }
 
   #wrapper {
     flex-direction: row;
