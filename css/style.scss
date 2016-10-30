@@ -60,7 +60,7 @@ h2,
 h3 {
   color: #000;
   font-family: $sans;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
   padding-top: 1em;
 }
@@ -75,7 +75,6 @@ h2 {
 
 h3 {
   font-size: 1.5em;
-  font-weight: 400;
 }
 
 p {
@@ -86,7 +85,7 @@ p {
 header {
   background-image: url("/assets/header.png");
   background-size: cover;
-  background-position: 0 300px;
+  background-position: 0 525px;
   flex: none;
   font-family: $sans;
   height: 100px;
@@ -153,7 +152,7 @@ aside a:visited {
 
 .entry-title {
   font-family: $sans;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 section a.entry-title,
@@ -180,7 +179,8 @@ article a.entry-title,
 }
 
 .entry-meta .date a:before,
-.entry-meta .categories:before {
+.entry-meta .categories:before,
+.entry-meta .tags:before {
 display: inline-block;
 vertical-align: -0.2em;
 -webkit-font-smoothing: antialiased;
@@ -196,6 +196,15 @@ vertical-align: -0.2em;
 .entry-meta .categories:before {
   font: normal 16px/1 'Genericons';
 	content: '\f301';
+}
+
+.entry-meta .categories {
+  margin-right: 20px;
+}
+
+.entry-meta .tags:before {
+  font: normal 16px/1 'Genericons';
+	content: '\f302';
 }
 
 .spotify:after {
@@ -326,9 +335,20 @@ pre {
 }
 
 code {
+  background: $light-beige;
+  color: #000;
   font-family: $mono;
-  border-radius: 4px;
+  border-radius: 3px;
+  padding: 0.2em;
 }
+
+pre code {
+  background: inherit;
+  color: inherit;
+  border-radius: none;
+  padding: none;
+}
+
 
 .lineno {
   color: #999;
@@ -484,6 +504,10 @@ aside form input.button {
   #wrapper {
     flex-direction: row;
     flex: 1;
+  }
+
+  .entry-title {
+    font-size: 3em;
   }
 
   #blog,

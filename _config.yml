@@ -1,27 +1,33 @@
 title: Ochre
 description: Music by Christopher Leary
-author:
-  name: Chris
+author: Chris
+twitter:
+  username: ochremusic
+facebook:
+  app_id:
+  publisher: 190149549210
+  admins: 100000537844760
+
+google_site_verification:
+
+excerpt_separator: <!--more-->
+highlighter: rouge
+permalink: /:year/:month/:title/
+
+paginate_path: "page:num"
+paginate: 10
 
 defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
-      type: "pages"
+      type: pages
     values:
-      layout: "default"
+      layout: page
   -
     scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
-
-excerpt_separator: <!--more-->
-
-permalink:    /:year/:month/:title/
-highlighter: rouge
-
-gems: [jekyll-paginate]
-paginate_path: "page:num"
-paginate: 10
+      layout: post
+      category: Ochre
