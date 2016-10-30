@@ -31,3 +31,9 @@ defaults:
     values:
       layout: post
       category: Ochre
+
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
