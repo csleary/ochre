@@ -1,0 +1,17 @@
+---
+layout: page
+permalink: /categories/
+title: Categories
+---
+<h2>Archive by Post Category</h2>
+{% for category in site.categories %}
+  {% capture category_name %}{{ category | first }}{% endcapture %}
+  <h3 id="{{ category_name | slugify }}">{{ category_name }}</h3>
+  <p>
+    {% for post in site.categories[category_name] %}
+      {% if post.title != "" %}
+        <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a><br />
+      {% endif %}
+    {% endfor %}
+  </p>
+{% endfor %}

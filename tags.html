@@ -1,0 +1,17 @@
+---
+layout: page
+permalink: /tags/
+title: Tags
+---
+<h2>Archive by Tag</h2>
+{% for tag in site.tags %}
+  {% capture tag_name %}{{ tag | first }}{% endcapture %}
+  <h3 id="{{ tag_name | slugify }}">{{ tag_name }}</h3>
+  <p>
+    {% for post in site.tags[tag_name] %}
+      {% if post.title != "" %}
+        <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a><br />
+      {% endif %}
+    {% endfor %}
+  </p>
+{% endfor %}
