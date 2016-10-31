@@ -499,8 +499,9 @@ aside form input.button {
   min-width: 360px;
 }
 
-.player-wrapper {
+.bc-player {
   display: inline-block;
+  border: 0;
   width: 360px;
   height: 360px;
 }

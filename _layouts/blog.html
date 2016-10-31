@@ -28,7 +28,7 @@
             {% assign categories = page.categories %}
           {% endif %}
           {% for category in categories %}
-            <a href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %},&nbsp{% endunless %}
+            <a href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category | capitalize }}</a>{% unless forloop.last %},&nbsp{% endunless %}
           {% endfor %}
         </span>
         {% endif %}
@@ -41,7 +41,7 @@
             {% assign tags = page.tags %}
           {% endif %}
           {% for tag in tags %}
-            <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %},&nbsp{% endunless %}
+            <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag | downcase }}</a>{% unless forloop.last %},&nbsp{% endunless %}
           {% endfor %}
         </span>
         {% endif %}
