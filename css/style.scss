@@ -500,8 +500,9 @@ aside form input.button {
 }
 
 .player-wrapper {
-  float: right;
+  display: inline-block;
   width: 360px;
+  height: 360px;
 }
 
 /* Large Screens */
