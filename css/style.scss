@@ -55,14 +55,11 @@ body {
   font-size: 100%;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: #000;
   font-family: $sans;
   font-weight: 400;
   margin: 0;
-  padding-top: 1em;
 }
 
 h1 {
@@ -76,6 +73,13 @@ h2 {
 h3 {
   font-size: 1.5em;
 }
+
+section h1,
+section h2,
+section h3 {
+  margin-bottom: 0.5em;
+}
+
 
 p {
   line-height: 1.6em;
@@ -257,7 +261,7 @@ vertical-align: -0.2em;
 
 aside {
   background: $light-beige;
-  padding: 0 40px 40px 40px;
+  padding: 40px;
 }
 
 footer {
@@ -478,6 +482,28 @@ aside form input.button {
   // padding-right: 0.2em;
 }
 
+.album-title {
+  text-align: center;
+  margin: 0;
+}
+
+.album {
+  width: 100%;
+  min-height: 360px;
+  margin: 20px 0 60px 0;
+}
+
+.album img {
+  padding: 0;
+  margin: 0;
+  min-width: 360px;
+}
+
+.player-wrapper {
+  float: right;
+  width: 360px;
+}
+
 /* Large Screens */
 @media (min-width: 768px) {
   header {
@@ -493,7 +519,7 @@ aside form input.button {
 
   nav {
     font-size: 2em;
-    padding: 20px 0 50px 40px;
+    padding: 40px;
   }
 
   nav a {
