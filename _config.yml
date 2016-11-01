@@ -33,7 +33,7 @@ defaults:
       type: posts
     values:
       layout: post
-      category: Ochre
+      category:
 
 gems:
   - jekyll-feed

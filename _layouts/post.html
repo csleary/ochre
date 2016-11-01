@@ -5,7 +5,6 @@
     <div class="entry-meta">
       <span class="date">
         <a href="{{ post.url }}" title="Permalink">
-          <!-- {{ page.date | date: "%-d %B %Y"}} -->
           {% assign d = page.date | date: "%-d"  %}
           {% case d %}
           {% when '1' or '21' or '31' %}{{ d }}st
