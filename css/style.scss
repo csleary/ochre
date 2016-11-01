@@ -177,7 +177,7 @@ article a.entry-title,
 }
 
 .entry-meta .date {
-  margin-right: 20px;
+  margin-right: 1em;
 }
 
 .entry-meta .date a:before,
@@ -192,7 +192,7 @@ vertical-align: -0.2em;
 .entry-meta .date a:before {
   font: normal 16px/1 'Genericons';
 	content: '\f303';
-  margin-right: 0.2em;
+  // margin-right: 0.2em;
 }
 
 .entry-meta .categories:before {
@@ -498,7 +498,6 @@ aside form input.button {
 /* Music Page */
 
 .album-title {
-  text-align: center;
   margin: 0;
 }
 
