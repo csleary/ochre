@@ -230,6 +230,10 @@ blockquote p {
 
 /* Sidebar */
 
+aside .module {
+  margin-top: 40px;
+}
+
 .spotify:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
