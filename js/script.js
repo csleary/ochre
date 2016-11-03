@@ -1,3 +1,11 @@
+// Parallax
+$(function() {
+	$.stellar({
+		horizontalScrolling: false,
+	});
+});
+
+// Contact form AJAX
 var $contactForm = $('#contact-form');
 
 $contactForm.submit(function(e) {

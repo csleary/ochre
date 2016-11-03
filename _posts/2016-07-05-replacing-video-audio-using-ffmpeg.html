@@ -8,21 +8,51 @@ status: publish
 categories: Video
 tags: [apps, tips]
 ---
-<p>Up until recently I used Quicktime to switch audio tracks for the odd music and showreel video, but since it will no longer be updated for Windows, and can possibly lead to your PC getting the clap, I figured I'd better find an alternative option. Enter <a href="https://www.ffmpeg.org/">ffmpeg</a>. It's a very powerful, free command line tool that I'd previously only worked with in tandem with some sort of GUI or partner app, and had never really tried to work with it on its own due to its bewildering plethora of options. But after a little trial and error I've settled on the following commands to replace audio streams in video files, (re)encoding where necessary, and avoiding video transcoding if possible in order to retain video image quality.</p><!--more-->
-<p>I installed ffmpeg using <a href="https://chocolatey.org/">Chocolatey</a>, a very useful package manager for Windows, similar in operation to those you'd find on Linux (well, it's not quite as good as APT or DNF/YUM, say, but it's the best we've got at the moment).</p>
-<p>In Windows 10, you can shift-right click in the Explorer directory that houses your video file to open a command window (just select the very handy 'Open command window here' option).</p>
-<p>Firstly, if you'd like to strip the audio from a video file, you can use this command:</p>
-<p><code>ffmpeg -i INPUT.mp4 -codec copy -an OUTPUT.mp4</code></p>
-<p>Specifying the INPUT and OUTPUT files accordingly, with file extension (needless to say, it doesn't have to be .mp4).<br />
-<code>-i</code> precedes the file you wish to strip the audio from.<br />
-<code>-codec copy</code> is to send the video stream to the output file without transcoding, which will maintain video quality, as well as save you loads of time not having to crunch video.<br />
-<code>-an</code> will remove the audio file. Similarly, you could use <code>-vn</code> to remove a video stream instead.</p>
-<p>Then you can add your audio track by typing:</p>
-<p><code>ffmpeg -i INPUT.mp4 -i AUDIO.wav -shortest -c:v copy -c:a aac -b:a 256k OUTPUT.mp4</code></p>
-<p>As you can see, I have two input streams to be muxed together, the silent video file and the audio wav, to the output file at the end of the command. But there are a couple of other handy commands involved this time.</p>
-<p><code>-c</code> is a shorthand of the <code>-codec</code> command we used in the first example, and is used here to specify the audio and video codecs individually. As before, the video is passed through, but I've chosen to encode the audio as an aac file instead of simply adding the wav audio to the video, and have specified the audio bitrate using <code>-b:a</code>.</p>
-<p>The <code>-shortest</code> option will truncate whichever stream between the audio and video is longest down to the length of the shortest. This is handy for crudely chopping audio down to the video length, say.</p>
-<p>So far so good, but you might be wondering if you can just combine those two commands into a single command for even quicker results. Absolutely:</p>
+<p>
+  Up until recently I used Quicktime to switch audio tracks for the odd music and showreel video, but since it will no longer be updated for Windows, and can possibly lead to your PC getting the clap, I figured I'd better find an alternative option. Enter <a href="https://www.ffmpeg.org/">ffmpeg</a>. It's a very powerful, free command line tool that I'd previously only worked with in tandem with some sort of GUI or partner app, and had never really tried to work with it on its own due to its bewildering plethora of options. But after a little trial and error I've settled on the following commands to replace audio streams in video files, (re)encoding where necessary, and avoiding video transcoding if possible in order to retain video image quality.
+</p><!--more-->
+<p>
+  I installed ffmpeg using <a href="https://chocolatey.org/">Chocolatey</a>, a very useful package manager for Windows, similar in operation to those you'd find on Linux (well, it's not quite as good as APT or DNF/YUM, say, but it's the best we've got at the moment).
+</p>
+<p>
+  In Windows 10, you can shift-right click in the Explorer directory that houses your video file to open a command window (just select the very handy 'Open command window here' option).
+</p>
+<p>
+  Firstly, if you'd like to strip the audio from a video file, you can use this command:
+</p>
+<p>
+  <code>ffmpeg -i INPUT.mp4 -codec copy -an OUTPUT.mp4</code>
+</p>
+<p>
+  Specifying the INPUT and OUTPUT files accordingly, with file extension (needless to say, it doesn't have to be .mp4).
+</p>
+<ul>
+  <li><code>-i</code> precedes the file you wish to strip the audio from.</li>
+  <li><code>-codec copy</code> is to send the video stream to the output file without transcoding, which will maintain video quality, as well as save you loads of time not having to crunch video.</li>
+  <li><code>-an</code> will remove the audio file. Similarly, you could use <code>-vn</code> to remove a video stream instead.</li>
+</ul>
+<p>
+  Then you can add your audio track by typing:
+</p>
+<p>
+  <code>ffmpeg -i INPUT.mp4 -i AUDIO.wav -shortest -c:v copy -c:a aac -b:a 256k OUTPUT.mp4</code>
+</p>
+<p>
+  As you can see, I have two input streams to be muxed together, the silent video file and the audio wav, to the output file at the end of the command. But there are a couple of other handy commands involved this time.
+</p>
+<p>
+  <code>-c</code> is a shorthand of the <code>-codec</code> command we used in the first example, and is used here to specify the audio and video codecs individually. As before, the video is passed through, but I've chosen to encode the audio as an aac file instead of simply adding the wav audio to the video, and have specified the audio bitrate using <code>-b:a</code>.
+</p>
+<p>
+  The <code>-shortest</code> option will truncate whichever stream between the audio and video is longest down to the length of the shortest. This is handy for crudely chopping audio down to the video length, say.
+</p>
+<p>
+  So far so good, but you might be wondering if you can just combine those two commands into a single command for even quicker results. Absolutely:
+</p>
 <code>ffmpeg -i INPUT.mp4 -i AUDIO.wav -map 0:0 -map 1:0 -c:v copy -c:a aac -b:a 256k -shortest OUTPUT.mp4</code>
-<p>This time we use the <code>-map</code> commands to specify which streams from the input files respectively should be included the output file. Any stream not explicitly specified will be ignored. I <em>think</em> the left side of the map option denotes the input file index (according to the order in which they were typed in the command), and the right side is the stream ID within the file. You can always check the stream IDs by running ffmpeg specifying only an input file and no output, which will just list all the streams in the media file. Similarly, you could also check the streams in something like VideoLAN, too.</p>
-<p>Anyway, I hope this post is useful. If nothing else, it's a good way for me to consolidate tips for myself (isn't that termed 'Ako', or something?) and help me remember for future use.</p>
+<p>
+  This time we use the <code>-map</code> commands to specify which streams from the input files respectively should be included the output file. Any stream not explicitly specified will be ignored. I <em>think</em> the left side of the map option denotes the input file index (according to the order in which they were typed in the command), and the right side is the stream ID within the file. You can always check the stream IDs by running ffmpeg specifying only an input file and no output, which will just list all the streams in the media file. Similarly, you could also check the streams in something like VideoLAN, too.
+</p>
+<p>
+  Anyway, I hope this post is useful. If nothing else, it's a good way for me to consolidate tips for myself (isn't that termed 'Ako', or something?) and help me remember for future use.
+</p>

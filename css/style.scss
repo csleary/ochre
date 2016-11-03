@@ -88,13 +88,11 @@ p {
 
 header {
   background-image: url("/assets/header.png");
+  background-position: 0 250px;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
   flex: none;
-  font-family: $sans;
-  height: 250px;
-  padding: 20px;
-  text-align: center;
+  height: 150px;
 }
 
 a#site-header {
@@ -279,6 +277,14 @@ aside {
   padding: 40px;
 }
 
+aside ul {
+  padding: 0;
+}
+
+aside li {
+  list-style-type: none;
+}
+
 /* Footer */
 
 footer {
@@ -310,12 +316,12 @@ footer a {
 }
 
 ul {
-  list-style-type: none;
   margin: 10px 0;
-  padding: 0;
+  padding: 0 2em;
 }
 
 li {
+  line-height: 1.6em;
   padding-bottom: 0.5em;
 }
 
@@ -445,13 +451,6 @@ aside form input.button:active {
   transition: color 0s, background 0s;
 }
 
-form .send:focus,
-aside form input.button:focus {
-  background: #000;
-  border-color: $orange;
-  transition: color 0s, background 0s;
-}
-
 aside form input {
   width: 100%;
 }
@@ -548,15 +547,11 @@ aside form input.button {
 }
 
 /* Large Screens */
+
 @media (min-width: 769px) {
   header {
     background-position: 0 650px;
-  }
-
-  #site-header {
-    font-size: 8em;
-    margin: 0;
-    padding: 0;
+    height: 250px;
   }
 
   nav {
