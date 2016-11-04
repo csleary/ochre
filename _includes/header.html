@@ -5,24 +5,30 @@
   <meta charset="UTF-8">
   <meta name="description" content="{{ site.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script async src="/js/jquery.stellar.min.js"></script>
-  <script async src="/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="/js/jquery.stellar.min.js"></script>
+  <script src="/js/script.js"></script>
   <title>{{ site.title }} | {{ page.title }}</title>
   {% seo title=false %}
 </head>
 
 <body>
   <a href="/">
-    <header data-stellar-background-ratio="0.5">
-    </header>
+    <header data-stellar-background-ratio="0.5"></header>
   </a>
   <nav>
-    <a href="/" {% if page.title == "Blog" %}id="current"{% endif %}>Blog</a>
-    <a href="/music/" {% if page.title == "Music" %}id="current"{% endif %}>Music</a>
-    <a href="/mastering/" {% if page.title == "Mastering" %}id="current"{% endif %}>Mastering</a>
-    <a href="/portfolio/" {% if page.title == "Portfolio" %}id="current"{% endif %}>Portfolio</a>
-    <a href="/merch/" {% if page.title == "Merch" %}id="current"{% endif %}>Merch</a>
-    <a href="/biography/" {% if page.title == "Biography" %}id="current"{% endif %}>Biography</a>
-    <a href="/contact/" {% if page.title == "Contact" %}id="current"{% endif %}>Contact</a>
+    <ul class="nav-menu" id="main-nav">
+      <li><a href="/" {% if page.title == "Blog" %}id="current"{% endif %}>Blog</a></li>
+      <li><a href="/music/" {% if page.title == "Music" %}id="current"{% endif %}>Music</a></li>
+      <li><a href="/mastering/" {% if page.title == "Mastering" %}id="current"{% endif %}>Mastering</a></li>
+      <li><a href="/portfolio/" {% if page.title == "Portfolio" %}id="current"{% endif %}>Portfolio</a></li>
+      <li><a href="/merch/" {% if page.title == "Merch" %}id="current"{% endif %}>Merch</a></li>
+      <li><a href="/biography/" {% if page.title == "Biography" %}id="current"{% endif %}>Biography</a></li>
+      <li><a href="/contact/" {% if page.title == "Contact" %}id="current"{% endif %}>Contact</a></li>
+      <li class="nav-icon">
+        <a href="javascript:void(0);" onclick="nav()">&#9776;</a>
+      </li>
+    </ul>
   </nav>
