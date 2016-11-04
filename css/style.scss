@@ -338,6 +338,7 @@ aside .module {
 aside {
   background: $light-beige;
   padding: 40px;
+  line-height: 1.6em;
 }
 
 aside ul {
@@ -404,17 +405,17 @@ img {
 
 img.alignleft {
   float: left;
-  margin: 0 1em 1em 0;
+  margin: 1em 1em 1em 0;
 }
 
 img.aligncenter {
   display: block;
-  margin: 0 auto 1em auto;
+  margin: 1em auto;
 }
 
 img.alignright {
   float: right;
-  margin: 0 0 1em 1em;
+  margin: 1em 0 1em 1em;
 }
 
 video {
