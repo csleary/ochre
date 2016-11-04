@@ -105,9 +105,11 @@ a#site-header {
 }
 
 nav {
+  background-color: $light-beige;
   color: #333;
   font-family: $sans;
   font-size: 2em;
+  margin-bottom: 20px;
   padding: 10px;
 }
 
@@ -125,7 +127,6 @@ ul.nav-menu li {
 }
 
 ul.nav-menu li
-// :not(:first-child)
 {
   display: none;
 }
@@ -133,7 +134,7 @@ ul.nav-menu li
 ul.nav-menu li a {
   display: inline-block;
   color: #333;
-  padding: 0 15px 5px 15px;
+  padding: 0;
   text-decoration: none;
 }
 
@@ -166,7 +167,6 @@ ul.nav-menu.responsive li a:hover,
 ul.nav-menu.responsive li a#current,
 ul.nav-menu li.nav-icon a:hover {
   border-bottom: 0;
-  padding-bottom: 5px;
 }
 
 ul.nav-menu li.nav-icon {
@@ -254,7 +254,6 @@ article a.entry-title,
 .entry-meta .date a:before {
   font: normal 16px/1 'Genericons';
   content: '\f303';
-  // margin-right: 0.2em;
 }
 
 .entry-meta .categories:before {
@@ -619,7 +618,9 @@ aside form input.button {
   }
 
   nav {
+    background: none;
     font-size: 2em;
+    margin-bottom: 0;
     padding: 35px;
   }
 
@@ -629,6 +630,10 @@ aside form input.button {
 
   ul.nav-menu li.nav-icon {
     display: none;
+  }
+
+  ul.nav-menu li a {
+    padding: 0 15px 5px 15px;
   }
 
   #wrapper {
