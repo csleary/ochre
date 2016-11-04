@@ -14,6 +14,7 @@ $mono: "Inconsolata", monospace;
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Serif|Inconsolata');
 @import url('genericons/genericons.css');
 @import url('syntax.css');
+@import url('plyr.css');
 
 @-ms-viewport {
   width: extend-to-zoom;
@@ -422,6 +423,22 @@ video {
   width: 100%;
   height: auto;
 }
+
+a.vid-vimeo h2,
+a.vid-youtube h2 {
+  display: inline-block;
+}
+
+a.vid-vimeo:after,
+a.vid-youtube:after {
+  color: #999;
+  font: normal 32px/1 'Genericons';
+  vertical-align: -0.2em;
+  padding-left: 0.2em;
+}
+
+a.vid-vimeo:after { content: '\f212'; }
+a.vid-youtube:after { content: '\f213'; }
 
 /* Code */
 
