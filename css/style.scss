@@ -490,6 +490,7 @@ form input {
   padding: 10px;
   margin-bottom: 20px;
   width: 100%;
+  -webkit-appearance: none;
 }
 
 form textarea {
@@ -509,7 +510,6 @@ form input:focus, form textarea:focus {
 form .send {
   background: #fff;
   border: 5px solid #000;
-  border-radius: 0;
   color: #000;
   cursor: pointer;
   float: right;
