@@ -483,6 +483,7 @@ form {
 form input {
   background: #fff;
   border: 5px solid $dark-beige;
+  border-radius: 0;
   color: #000;
   font-family: $serif;
   font-size: 1em;
@@ -496,11 +497,13 @@ form input {
 form textarea {
   background: #fff;
   border: 5px solid $dark-beige;
+  border-radius: 0;
   color: #000;
   font-family: $serif;
   font-size: 1em;
   padding: 10px;
   width: 100%;
+  -webkit-appearance: none;
 }
 
 form input:focus, form textarea:focus {
@@ -510,14 +513,16 @@ form input:focus, form textarea:focus {
 form .send {
   background: #fff;
   border: 5px solid #000;
+  border-radius: 0;
   color: #000;
   cursor: pointer;
   float: right;
   font-family: $sans;
   font-size: 1.5em;
   margin-top: 20px;
-  width: 33%;
+  width: 50%;
   transition: color 0.5s, background 0.5s;
+  -webkit-appearance: none;
 }
 
 form .send:hover,
@@ -673,6 +678,10 @@ iframe {
   section{
     flex: 1;
     padding: 0 40px;
+  }
+
+  form .send {
+    width: 33%;
   }
 
   aside {
