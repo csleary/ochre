@@ -5,10 +5,25 @@
   <meta charset="UTF-8">
   <meta name="description" content="{{ site.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-  <script src="/js/jquery.stellar.min.js"></script>
-  <script src="/js/script.js"></script>
-  <script defer src="/js/contact.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous" async></script>
+  <script src="/js/jquery.stellar.min.js" async></script>
+  <script>
+    $(function() {
+      $.stellar({
+        horizontalScrolling: false,
+      });
+    });
+
+    function nav() {
+      var x = document.getElementById("main-nav");
+      if (x.className === "nav-menu") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav-menu";
+      }
+    }
+  </script>
+  <script src="/js/contact.js" defer></script>
   <title>{{ site.title }} | {{ page.title }}</title>
   {% seo title=false %}
 </head>
