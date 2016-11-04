@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
   <meta name="description" content="{{ site.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="/js/jquery.stellar.min.js"></script>
   <script src="/js/script.js"></script>
+  <script defer src="/js/contact.js"></script>
   <title>{{ site.title }} | {{ page.title }}</title>
   {% seo title=false %}
 </head>
@@ -28,7 +27,7 @@
       <li><a href="/biography/" {% if page.title == "Biography" %}id="current"{% endif %}>Biography</a></li>
       <li><a href="/contact/" {% if page.title == "Contact" %}id="current"{% endif %}>Contact</a></li>
       <li class="nav-icon">
-        <a href="javascript:void(0);" onclick="nav()">&#9776;</a>
+        <a href="javascript:void(0);" onclick="nav()">Menu</a>
       </li>
     </ul>
   </nav>

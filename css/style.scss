@@ -91,7 +91,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   flex: none;
-  height: 250px;
+  height: 100px;
 }
 
 a#site-header {
@@ -162,12 +162,8 @@ ul.nav-menu.responsive li a {
   text-align: center;
 }
 
-ul.nav-menu.responsive li a:hover {
-}
-
-ul.nav-menu.responsive li a#current {
-}
-
+ul.nav-menu.responsive li a:hover,
+ul.nav-menu.responsive li a#current,
 ul.nav-menu li.nav-icon a:hover {
   border-bottom: 0;
   padding-bottom: 5px;
@@ -179,10 +175,20 @@ ul.nav-menu li.nav-icon {
   padding-bottom: 0;
 }
 
+ul.nav-menu li.nav-icon a:after {
+  font: normal 16px/1 'Genericons';
+  content: '\f431';
+}
+
 ul.nav-menu.responsive li.nav-icon {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+ul.nav-menu.responsive li.nav-icon a:after {
+  font: normal 16px/1 'Genericons';
+  content: '\f432';
 }
 
 #wrapper {
@@ -273,7 +279,7 @@ blockquote {
   margin: 2em;
 }
 
-blockquote::before {
+blockquote:before {
   color: #666;
   font: normal 32px/1 'Genericons';
   content: '\f106';
@@ -551,14 +557,12 @@ aside form input.button {
   font: normal 32px/1 'Genericons';
   content: '\f429';
   vertical-align: -0.25em;
-  // padding-left: 0.2em;
 }
 
 .pagination a.previous:before {
   font: normal 32px/1 'Genericons';
   content: '\f430';
   vertical-align: -0.25em;
-  // padding-right: 0.2em;
 }
 
 /* Music Page */
@@ -610,6 +614,10 @@ aside form input.button {
 /* Large Screens */
 
 @media (min-width: 769px) {
+  header {
+    height: 250px;
+  }
+
   nav {
     font-size: 2em;
     padding: 35px;
