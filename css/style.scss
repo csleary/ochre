@@ -610,6 +610,11 @@ aside form input.button {
   height: 100%;
 }
 
+iframe {
+  border: 0;
+  overflow: hidden;
+}
+
 /* Large Screens */
 
 @media (min-width: 769px) {
