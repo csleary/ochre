@@ -2,7 +2,7 @@ title: Ochre
 description: Music by Christopher Leary
 author: Chris
 url: http://ochremusic.com
-baseurl: ""
+baseurl:
 
 twitter:
   username: ochremusic
@@ -16,7 +16,7 @@ google_site_verification:
 
 excerpt_separator: <!--more-->
 highlighter: rouge
-permalink: /:year/:month/:title/
+permalink: /:year/:month/:day/:title/
 
 paginate_path: "page:num"
 paginate: 10
@@ -48,3 +48,5 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - sync.sh
+  - upload.sh
