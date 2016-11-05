@@ -141,13 +141,11 @@ ul.nav-menu li a {
 
 ul.nav-menu li a:hover {
   border-bottom: 5px solid $dark-beige;
-  padding-bottom: 0;
 }
 
 ul.nav-menu li a#current {
   color: $orange;
   border-bottom: 5px solid $orange;
-  padding-bottom: 0;
 }
 
 ul.nav-menu.responsive {
