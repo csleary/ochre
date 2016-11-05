@@ -557,7 +557,8 @@ aside form input.button {
 
 /* Pagination */
 
-.pagination {
+.pagination,
+.post-nav {
   font-family: $sans;
   font-size: 1.5em;
 }
@@ -570,20 +571,32 @@ aside form input.button {
   margin-left: 0.5em;
 }
 
-.pagination a.previous {
+.pagination a.previous, {
   margin-right: 0.5em;
 }
 
-.pagination a.next:after {
+.pagination a.next:after,
+.post-nav .next:after {
   font: normal 32px/1 'Genericons';
   content: '\f429';
   vertical-align: -0.25em;
 }
 
-.pagination a.previous:before {
+.pagination a.previous:before,
+.post-nav .previous:before {
   font: normal 32px/1 'Genericons';
   content: '\f430';
   vertical-align: -0.25em;
+}
+
+/* Post navigation */
+
+.post-nav {
+  margin-top: 40px;
+}
+
+.post-nav .next {
+  float: right;
 }
 
 /* Music Page */
