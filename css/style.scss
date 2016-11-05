@@ -88,7 +88,7 @@ p {
 }
 
 header {
-  background-image: url("/assets/header.png");
+  background-image: url("{{ site.baseurl }}/assets/header.png");
   background-repeat: no-repeat;
   background-size: cover;
   flex: none;
@@ -660,7 +660,12 @@ iframe {
   }
 
   ul.nav-menu li a {
-    padding: 0 15px 5px 15px;
+    padding: 0 15px 10px 15px;
+  }
+
+  ul.nav-menu li a:hover,
+  ul.nav-menu li a#current {
+    padding-bottom: 5px;
   }
 
   #wrapper {

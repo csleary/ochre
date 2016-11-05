@@ -1,7 +1,8 @@
 title: Ochre
 description: Music by Christopher Leary
 author: Chris
-url:
+url: http://ochremusic.com
+baseurl: ""
 
 twitter:
   username: ochremusic

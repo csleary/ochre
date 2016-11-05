@@ -4,10 +4,10 @@
   <div id="blog">
     {% for post in paginator.posts %}
     <article>
-      <a class="entry-title" href="{{ post.url }}">{{ post.title }}</a>
+      <a class="entry-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       <div class="entry-meta">
         <span class="date">
-          <a href="{{ post.url }}" title="Permalink">
+          <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink">
             {% assign d = post.date | date: "%-d"  %}
             {% case d %}
               {% when '1' or '21' or '31' %}{{ d }}st

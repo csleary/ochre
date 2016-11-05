@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }} | {{ page.title }}</title>
@@ -9,18 +9,18 @@
 </head>
 
 <body>
-  <a href="/">
+  <a href="{{ site.baseurl }}/">
     <header data-stellar-background-ratio="0.5"></header>
   </a>
   <nav>
     <ul class="nav-menu" id="main-nav">
-      <li><a href="/" {% if page.title == "Blog" %}id="current"{% endif %}>Blog</a></li>
-      <li><a href="/music/" {% if page.title == "Music" %}id="current"{% endif %}>Music</a></li>
-      <li><a href="/mastering/" {% if page.title == "Mastering" %}id="current"{% endif %}>Mastering</a></li>
-      <li><a href="/portfolio/" {% if page.title == "Portfolio" %}id="current"{% endif %}>Portfolio</a></li>
-      <li><a href="/merch/" {% if page.title == "Merch" %}id="current"{% endif %}>Merch</a></li>
-      <li><a href="/biography/" {% if page.title == "Biography" %}id="current"{% endif %}>Biography</a></li>
-      <li><a href="/contact/" {% if page.title == "Contact" %}id="current"{% endif %}>Contact</a></li>
+      <li><a href="{{ site.baseurl }}/" {% if page.title == "Blog" %}id="current"{% endif %}>Blog</a></li>
+      <li><a href="{{ site.baseurl }}/music/" {% if page.title == "Music" %}id="current"{% endif %}>Music</a></li>
+      <li><a href="{{ site.baseurl }}/mastering/" {% if page.title == "Mastering" %}id="current"{% endif %}>Mastering</a></li>
+      <li><a href="{{ site.baseurl }}/portfolio/" {% if page.title == "Portfolio" %}id="current"{% endif %}>Portfolio</a></li>
+      <li><a href="{{ site.baseurl }}/merch/" {% if page.title == "Merch" %}id="current"{% endif %}>Merch</a></li>
+      <li><a href="{{ site.baseurl }}/biography/" {% if page.title == "Biography" %}id="current"{% endif %}>Biography</a></li>
+      <li><a href="{{ site.baseurl }}/contact/" {% if page.title == "Contact" %}id="current"{% endif %}>Contact</a></li>
       <li class="nav-icon">
         <a href="javascript:void(0);" onclick="nav()">Menu</a>
       </li>
