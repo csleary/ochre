@@ -4,7 +4,7 @@
     <span class="entry-title">{{ page.title }}</span>
     <div class="entry-meta">
       <span class="date">
-        <a href="{{ site.baseurl }}/{{ post.url }}" title="Permalink">
+        <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink">
           {% assign d = page.date | date: "%-d"  %}
           {% case d %}
           {% when '1' or '21' or '31' %}{{ d }}st
@@ -20,12 +20,12 @@
     {{ content }}
     <div class="post-nav">
       {% if page.previous.url %}
-        <a class="previous" href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+        <a class="previous-post" href="{{ page.previous.url }}">{{ page.previous.title }}</a>
       {% else %}
-        <a class="previous"></a>
+        <a class="previous-post"></a>
       {% endif %}
       {% if page.next.url %}
-        <a class="next" href="{{ page.next.url }}">{{ page.next.title }}</a>
+        <a class="next-post" href="{{ page.next.url }}">{{ page.next.title }}</a>
       {% endif %}
     </div>
   </section>

@@ -576,14 +576,14 @@ aside form input.button {
 }
 
 .pagination a.next:after,
-.post-nav .next:after {
+.post-nav .next-post:after {
   font: normal 32px/1 'Genericons';
   content: '\f429';
   vertical-align: -0.25em;
 }
 
 .pagination a.previous:before,
-.post-nav .previous:before {
+.post-nav .previous-post:before {
   font: normal 32px/1 'Genericons';
   content: '\f430';
   vertical-align: -0.25em;
@@ -595,7 +595,7 @@ aside form input.button {
   margin-top: 40px;
 }
 
-.post-nav .next {
+.post-nav .next-post {
   float: right;
 }
 

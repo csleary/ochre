@@ -12,8 +12,6 @@ facebook:
   publisher: 190149549210
   admins: 100000537844760
 
-google_site_verification:
-
 excerpt_separator: <!--more-->
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
@@ -41,6 +39,7 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jemoji
 
 sass:
   style: compressed
