@@ -56,7 +56,7 @@ body {
   font-size: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #000;
   font-family: $sans;
   font-weight: 400;
@@ -71,13 +71,14 @@ h2 {
   font-size: 2em;
 }
 
-h3 {
+h3, h4 {
   font-size: 1.5em;
 }
 
 section h1,
 section h2,
-section h3 {
+section h3,
+section h4 {
   margin-bottom: 0.5em;
 }
 
@@ -354,7 +355,7 @@ footer {
   color: #999;
   flex: none;
   font-size: 1em;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
 }
 
@@ -478,7 +479,13 @@ form {
   margin-top: 3em;
 }
 
-form input {
+#isso-thread section {
+  padding: 0;
+  margin: 0;
+}
+
+form input,
+#isso-thread input {
   background: #fff;
   border: 5px solid $dark-beige;
   border-radius: 0;
@@ -492,23 +499,29 @@ form input {
   -webkit-appearance: none;
 }
 
-form textarea {
+form textarea,
+#isso-thread .textarea,
+.isso-comment > div.text-wrapper > div.textarea-wrapper .textarea,
+.isso-postbox > .form-wrapper .textarea {
   background: #fff;
   border: 5px solid $dark-beige;
   border-radius: 0;
   color: #000;
   font-family: $serif;
   font-size: 1em;
+  margin: 0;
   padding: 10px;
   width: 100%;
   -webkit-appearance: none;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
   background: #fff;
 }
 
-form .send {
+form .send,
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .post-action > input {
   background: #fff;
   border: 5px solid #000;
   border-radius: 0;
@@ -516,7 +529,7 @@ form .send {
   cursor: pointer;
   float: right;
   font-family: $sans;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-top: 20px;
   width: 100%;
   transition: color 0.5s, background 0.5s;
@@ -524,7 +537,8 @@ form .send {
 }
 
 form .send:hover,
-aside form input.button:hover {
+aside form input.button:hover,
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .post-action > input:hover {
   background: $orange;
   border-color: $orange;
   color: #fff;
@@ -532,12 +546,186 @@ aside form input.button:hover {
 }
 
 form .send:active,
-aside form input.button:active {
+aside form input.button:active,
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .post-action > input:active {
   background: #000;
   border-color: $orange;
   color: $orange;
   transition: color 0s, background 0s;
 }
+
+/* Isso Specific */
+
+#isso-root {
+  clear: both;
+}
+
+section #isso-thread {
+  padding: 0 40px;
+}
+
+#isso-thread {
+  padding: 0;
+  margin: 0;
+}
+
+#isso-thread .textarea.placeholder {
+  color: #999;
+}
+
+.isso-comment > div.text-wrapper > div.text p,
+.isso-comment > div.text-wrapper > div.text p:last-child {
+  margin: 20px 0;
+}
+
+#isso-thread div.isso-postbox p {
+  margin: 0;
+}
+
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
+  background: #fff;
+  border: 5px solid $dark-beige;
+  border-top: 0;
+  border-radius: 0;
+  color: #000;
+  font-family: $serif;
+  font-size: 1em;
+  display: inline-block;
+  float: left;
+  padding: 10px;
+  margin: 0;
+  width: 33.33%;
+  -webkit-appearance: none;
+}
+
+#isso-thread .textarea {
+  height: 6em;
+  overflow: scroll;
+}
+
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper input[type="email"] {
+  border-left: 0;
+  border-right: 0;
+}
+
+#isso-root div.text-wrapper > div.isso-comment-header,
+#isso-root div.text-wrapper > div.isso-comment-footer {
+  font-family: $sans;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-header .spacer,
+.isso-comment > div.text-wrapper > .isso-comment-header a.permalink,
+.isso-comment > div.text-wrapper > .isso-comment-header .note,
+.isso-comment > div.text-wrapper > .isso-comment-header a.parent {
+  color: #999;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-header .spacer:hover,
+.isso-comment > div.text-wrapper > .isso-comment-header a.permalink:hover,
+.isso-comment > div.text-wrapper > .isso-comment-header .note:hover,
+.isso-comment > div.text-wrapper > .isso-comment-header a.parent:hover {
+  color: #333;
+}
+
+.isso-comment {
+  clear: both;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+.isso-comment > div.avatar,
+.isso-postbox > .avatar {
+  display: block;
+  float: left;
+  width: 60px;
+  margin: 0 1em 1em 0;
+}
+.isso-postbox > .avatar {
+  float: left;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+.isso-comment > div.avatar > svg,
+.isso-postbox > .avatar > svg {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.isso-comment > div.text-wrapper {
+  display: block;
+}
+
+#isso-root .isso-comment .isso-follow-up {
+  padding-left: 80px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-header .spacer {
+  padding: 0 .5em;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-header .note {
+  float: right;
+}
+.isso-comment > div.text-wrapper > .isso-comment-header .author {
+  color: #333;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-footer >  {
+  position: relative;
+  top: .2em;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-footer > a + a {
+  padding-left: 1em;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-footer .votes {
+  color: #333;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-footer .upvote svg,
+.isso-comment > div.text-wrapper > .isso-comment-footer .downvote svg {
+  position: relative;
+  top: .2em;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-footer > span.spacer {
+  padding-right: 1px;
+}
+
+.isso-comment .isso-postbox {
+  margin-top: 20px;
+}
+
+.isso-comment.isso-no-votes span.votes {
+  display: none;
+}
+
+.isso-postbox > .form-wrapper {
+  display: block;
+  padding: 0;
+}
+
+.isso-postbox > .form-wrapper > .auth-section,
+.isso-postbox > .form-wrapper > .auth-section .post-action {
+  display: block;
+}
+
+.isso-comment:not(:first-of-type),
+.isso-follow-up .isso-comment {
+  border-top: 2px solid $light-beige;
+}
+
+.isso-follow-up .isso-comment {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Sidebar Forms */
 
 aside form input {
   width: 100%;
@@ -592,7 +780,7 @@ aside form input.button {
 /* Post navigation */
 
 .post-nav {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .post-nav .next-post {
@@ -696,8 +884,9 @@ iframe {
     padding: 0 40px;
   }
 
-  form .send {
-    width: 33%;
+  form .send,
+  #isso-thread .isso-postbox > .form-wrapper > .auth-section .post-action > input {
+    width: 33.33%;
   }
 
   aside {
