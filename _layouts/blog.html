@@ -4,8 +4,10 @@
   <div id="blog">
     {% for post in paginator.posts %}
     <article>
-      <a class="entry-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <h1><a class="entry-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
       <div class="entry-meta">
+
         <span class="date">
           <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink">
             {% assign d = post.date | date: "%-d"  %}
@@ -48,7 +50,7 @@
 
         <span class="comments">
           <script data-isso="//45.55.246.24/" src="//ochremusic.com/isso/js/count.min.js"></script>
-          <a href="{{ site.baseurl }}{{ post.url }}#isso-thread"></a>
+          <a href="{{ site.baseurl }}{{ post.url }}#isso-thread">Comments</a>
         </span>
 
       </div>
@@ -60,7 +62,6 @@
     </article>
     {% endfor %}
 
-  <!-- Pagination links -->
     <div class="pagination">
       {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>

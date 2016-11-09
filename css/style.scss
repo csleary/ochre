@@ -1,11 +1,15 @@
 ---
 ---
 $orange: #ea5727;
+$red: #f00;
 $black: #231d24;
 $dark-beige: #ccb89c;
 $light-beige: #f2ede6;
 $twitter-blue: #6aa9e0;
 $facebook-blue: #49629d;
+$light-grey: #999;
+$mid-grey: #666;
+$dark-grey: #333;
 
 $serif: "PT Serif", serif;
 $sans: "PT Sans Narrow", sans-serif;
@@ -63,11 +67,7 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-h1 {
-  font-size: 3em;
-}
-
-h2 {
+h1, h2 {
   font-size: 2em;
 }
 
@@ -82,6 +82,7 @@ section h4 {
   margin-bottom: 0.5em;
 }
 
+section h1.entry-title { margin-bottom: 0; }
 
 p {
   line-height: 1.6em;
@@ -108,7 +109,7 @@ a#site-header {
 
 nav {
   background-color: $light-beige;
-  color: #333;
+  color: $dark-grey;
   font-family: $sans;
   font-size: 2em;
   margin-bottom: 20px;
@@ -135,7 +136,7 @@ ul.nav-menu li
 
 ul.nav-menu li a {
   display: inline-block;
-  color: #333;
+  color: $dark-grey;
   padding: 0;
   text-decoration: none;
 }
@@ -218,7 +219,6 @@ aside a:visited {
 
 .entry-title {
   font-family: $sans;
-  font-size: 2em;
 }
 
 section a.entry-title,
@@ -227,7 +227,7 @@ article a.entry-title {
 }
 
 .entry-meta .date a {
-  color: #333;
+  color: $dark-grey;
 }
 
 .entry-meta .date a:hover {
@@ -282,14 +282,14 @@ article a.entry-title {
 
 blockquote {
   display: block;
-  color: #666;
-  border-left: 5px solid #666;
+  color: $mid-grey;
+  border-left: 5px solid $mid-grey;
   padding-left: 1em;
   margin: 2em;
 }
 
 // blockquote:before {
-//   color: #666;
+//   color: $mid-grey;
 //   font: normal 32px/1 'Genericons';
 //   content: '\f106';
 //   vertical-align: -0.2em;
@@ -362,7 +362,7 @@ aside li {
 /* Footer */
 
 footer {
-  color: #999;
+  color: $light-grey;
   flex: none;
   font-size: 1em;
   padding: 40px;
@@ -370,7 +370,7 @@ footer {
 }
 
 footer a {
-  color: #999;
+  color: $light-grey;
 }
 
 .genericon-twitter,
@@ -440,7 +440,7 @@ a.vid-youtube h2 {
 
 a.vid-vimeo:after,
 a.vid-youtube:after {
-  color: #999;
+  color: $light-grey;
   font: normal 32px/1 'Genericons';
   vertical-align: -0.2em;
   padding-left: 0.2em;
@@ -460,25 +460,22 @@ code {
   background: $light-beige;
   color: #000;
   font-family: $mono;
-  border-radius: 3px;
   padding: 0.2em;
 }
 
 pre code {
   background: inherit;
   color: inherit;
-  border-radius: none;
-  padding: none;
+  padding: 0;
 }
 
 
 .lineno {
-  color: #999;
+  color: $light-grey;
 }
 
 .highlight {
   background: $light-beige;
-  border-radius: 4px;
   margin: 10px;
   padding: 0.5em;
 }
@@ -580,7 +577,7 @@ section #isso-thread {
 }
 
 #isso-thread .textarea.placeholder {
-  color: #999;
+  color: $light-grey;
 }
 
 .isso-comment > div.text-wrapper > div.text p,
@@ -625,7 +622,7 @@ section #isso-thread {
 
 .isso-comment > div.text-wrapper > .isso-comment-header a.permalink,
 .isso-comment > div.text-wrapper > .isso-comment-header a.parent {
-  color: #999;
+  color: $light-grey;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header a.permalink:hover,
@@ -671,7 +668,7 @@ section #isso-thread {
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .spacer {
-  color: #999;
+  color: $light-grey;
   padding: 0 .5em;
 }
 
@@ -680,7 +677,12 @@ section #isso-thread {
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .author {
-  color: #333;
+  color: $dark-grey;
+  font-size: 1.2em;
+}
+
+.isso-comment > div.text-wrapper > .isso-comment-header .author.chris {
+  color: $red;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer >  {
@@ -693,17 +695,20 @@ section #isso-thread {
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer .votes {
-  color: #333;
+  color: $dark-grey;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer .upvote svg,
 .isso-comment > div.text-wrapper > .isso-comment-footer .downvote svg {
+  fill: $light-grey;
   position: relative;
   top: .2em;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer > span.spacer {
-  padding-right: 1px;
+  color: $light-grey;
+  font-weight: 700;
+  padding-right: 2px;
 }
 
 .isso-comment .isso-postbox {
@@ -768,7 +773,7 @@ aside form input.button {
   margin-left: 0.5em;
 }
 
-.pagination a.previous, {
+.pagination a.previous {
   margin-right: 0.5em;
 }
 
@@ -883,7 +888,7 @@ iframe {
     flex: 1;
   }
 
-  .entry-title {
+  h1 {
     font-size: 3em;
   }
 
