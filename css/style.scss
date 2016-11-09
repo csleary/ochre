@@ -222,9 +222,12 @@ aside a:visited {
 }
 
 section a.entry-title,
-article a.entry-title,
-.entry-meta .date a {
+article a.entry-title {
   color: #000;
+}
+
+.entry-meta .date a {
+  color: #333;
 }
 
 .entry-meta .date a:hover {
@@ -244,7 +247,8 @@ article a.entry-title,
 
 .entry-meta .date a:before,
 .entry-meta .categories:before,
-.entry-meta .tags:before {
+.entry-meta .tags:before,
+.entry-meta .comments:before {
   display: inline-block;
   vertical-align: -0.2em;
   -webkit-font-smoothing: antialiased;
@@ -261,13 +265,19 @@ article a.entry-title,
   content: '\f301';
 }
 
-.entry-meta .categories {
-  margin-right: 20px;
+.entry-meta .categories,
+.entry-meta .tags {
+  margin-right: 1em;
 }
 
 .entry-meta .tags:before {
   font: normal 16px/1 'Genericons';
   content: '\f302';
+}
+
+.entry-meta .comments:before {
+  font: normal 16px/1 'Genericons';
+  content: '\f300';
 }
 
 blockquote {
@@ -613,18 +623,15 @@ section #isso-thread {
   font-family: $sans;
 }
 
-.isso-comment > div.text-wrapper > .isso-comment-header .spacer,
 .isso-comment > div.text-wrapper > .isso-comment-header a.permalink,
-.isso-comment > div.text-wrapper > .isso-comment-header .note,
 .isso-comment > div.text-wrapper > .isso-comment-header a.parent {
   color: #999;
 }
 
-.isso-comment > div.text-wrapper > .isso-comment-header .spacer:hover,
 .isso-comment > div.text-wrapper > .isso-comment-header a.permalink:hover,
-.isso-comment > div.text-wrapper > .isso-comment-header .note:hover,
-.isso-comment > div.text-wrapper > .isso-comment-header a.parent:hover {
-  color: #333;
+.isso-comment > div.text-wrapper > .isso-comment-header a.parent:hover
+.isso-comment > div.text-wrapper > .isso-comment-header .author a:hover {
+  color: $orange;
 }
 
 .isso-comment {
@@ -664,12 +671,14 @@ section #isso-thread {
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .spacer {
+  color: #999;
   padding: 0 .5em;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .note {
   float: right;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-header .author {
   color: #333;
 }
