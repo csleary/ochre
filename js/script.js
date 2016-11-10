@@ -48,10 +48,12 @@ $contactForm.submit(function(e) {
   });
 });
 
-window.onload = function() {
-  $("svg[data-hash='5652f831c72d']")
-  .parent()
-  .next("div.text-wrapper")
-  .find("a.author")
-  .addClass("chris");
-};
+$(window).load(function() {
+  setTimeout(function(){
+    $("svg[data-hash='5652f831c72d']")
+    .parent()
+    .next("div.text-wrapper")
+    .find("a.author")
+    .addClass("chris");
+  }, 500);
+});
