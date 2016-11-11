@@ -568,7 +568,7 @@ aside form input.button:active,
 }
 
 section #isso-thread {
-  padding: 0 40px;
+  padding: 0;
 }
 
 #isso-thread {
@@ -663,7 +663,7 @@ section #isso-thread {
 }
 
 #isso-root .isso-comment .isso-follow-up {
-  padding-left: 80px;
+  padding-left: 20px;
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -920,7 +920,16 @@ iframe {
   aside form input.button {
     width: 50%;
   }
+
   .bc-player {
     width: 360px;
+  }
+
+  section #isso-thread {
+    padding: 0 40px;
+  }
+
+  #isso-root .isso-comment .isso-follow-up {
+    padding-left: 80px;
   }
 }
