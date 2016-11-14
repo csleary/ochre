@@ -41,10 +41,12 @@ $contactForm.submit(function(e) {
 
 $(window).load(function() {
   setTimeout(function(){
-    $("svg[data-hash='5652f831c72d']")
-    .parent()
-    .next("div.text-wrapper")
-    .find("a.author")
-    .addClass("chris");
+    $("svg[data-hash='5652f831c72d']").each(function( i ) {
+      $(this).parent()
+      .next("div.text-wrapper")
+      .find("a.author")
+      .first()
+      .addClass("chris");
+    });
   }, 500);
 });

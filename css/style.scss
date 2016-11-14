@@ -1,4 +1,5 @@
 ---
+
 ---
 $orange: #ea5727;
 $red: #f00;
@@ -226,19 +227,20 @@ article a.entry-title {
   color: #000;
 }
 
+.entry-meta {
+  font-family: $sans;
+  display: block;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 2em;
+}
+
 .entry-meta .date a {
   color: $dark-grey;
 }
 
 .entry-meta .date a:hover {
   color: $orange;
-}
-
-.entry-meta {
-  font-family: $sans;
-  display: block;
-  font-size: 1em;
-  font-weight: 400;
 }
 
 .entry-meta .date {
@@ -302,7 +304,7 @@ blockquote p {
 /* Sidebar */
 
 aside .module {
-  margin-top: 40px;
+  margin-top: 2em;
 }
 
 .spotify:after {
@@ -406,6 +408,14 @@ article li {
 section li a:link,
 section li a:link {
   border-bottom: 0;
+}
+
+.credits {
+  font-size: 0.75em;
+}
+
+.credits a:hover {
+  text-decoration: underline;
 }
 
 /* Images */
@@ -751,6 +761,10 @@ section #isso-thread {
 
 /* Sidebar Forms */
 
+aside form {
+  margin: 1em 0;
+}
+
 aside form input {
   width: 100%;
 }
@@ -820,7 +834,7 @@ aside form input.button {
 .album {
   width: 100%;
   min-height: 360px;
-  margin: 20px 0 60px 0;
+  margin-bottom: 4em;
 }
 
 .album img {
@@ -839,13 +853,27 @@ aside form input.button {
   padding-bottom: 1em;
 }
 
-.credits {
-  font-size: 0.75em;
+.album div.gallery {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: scroll;
 }
 
-.credits a:hover {
-  text-decoration: underline;
+.album div.gallery > img {
+  flex: auto;
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  object-fit: cover;
 }
+
+.album span.spacer {
+  padding: 0 0.5em;
+}
+
 /* Responsive embeds */
 
 .embed-container {
@@ -917,6 +945,10 @@ iframe {
   section{
     flex: 1;
     padding: 0 40px;
+  }
+
+  .album div.gallery > img {
+    height: 140px;
   }
 
   form .send,
