@@ -3,7 +3,7 @@ description: Music by Christopher Leary
 author: Christopher Leary
 url: http://ochremusic.com
 baseurl:
-logo: assets/logo.png
+logo: /assets/logo.png
 
 excerpt_separator: <!--more-->
 highlighter: rouge
@@ -15,9 +15,17 @@ paginate: 10
 twitter:
   username: ochremusic
 facebook:
-  app_id:
+  app_id: 341352649553991
   publisher: 190149549210
   admins: 100000537844760
+
+social:
+  name: Ochre
+  links:
+    - https://twitter.com/
+    - https://www.facebook.com/ochremusic
+    - http://soundcloud.com/ochre
+    - https://ochre.bandcamp.com/
 
 defaults:
   -
@@ -26,6 +34,7 @@ defaults:
       type: pages
     values:
       layout: page
+      image: /assets/logo.png
   -
     scope:
       path: ""
@@ -33,6 +42,7 @@ defaults:
     values:
       layout: post
       category:
+      image: /assets/logo.png
 
 sass:
   style: compressed

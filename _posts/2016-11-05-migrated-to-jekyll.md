@@ -5,6 +5,7 @@ date: 2016-11-05 16:21
 published: true
 categories: Misc
 tags: [web dev, jekyll, wordpress]
+image:
 ---
 I thought I'd shake things up a bit here and migrate the site over to [Jekyll](https://jekyllrb.com/) rather than use Wordpress -- possibly permanently, but let's see how we go. There's been a lot to absorb in learning how Jekyll works, including some new web dev paradigms for me, such as the Ruby infrastructure, CLI site building and what not, but it's been an interesting week trying to figure this all out.<!--more-->
 
