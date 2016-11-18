@@ -3,6 +3,8 @@ description: Music by Christopher Leary
 author: Christopher Leary
 url: http://ochremusic.com
 baseurl:
+logo: assets/logo.png
+
 excerpt_separator: <!--more-->
 highlighter: rouge
 permalink: /:year/:month/:day/:title/

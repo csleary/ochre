@@ -375,12 +375,16 @@ footer a {
   color: $light-grey;
 }
 
+.bottom-nav {
+  padding-bottom: 1em;
+}
+
 .genericon-twitter,
 .genericon-facebook,
 .genericon-home,
 .genericon-top {
   font-size: 32px;
-  padding: 0 0.5em;
+  margin: 0 0.3em;
 }
 
 .genericon-facebook:hover {
@@ -849,17 +853,13 @@ aside form input.button {
   height: 360px;
 }
 
-.bottom-nav {
-  padding-bottom: 1em;
-}
-
 .album div.gallery {
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .album div.gallery > img {
