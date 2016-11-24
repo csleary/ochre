@@ -22,10 +22,11 @@ facebook:
 social:
   name: Ochre
   links:
-    - https://twitter.com/
+    - https://twitter.com/ochremusic
     - https://www.facebook.com/ochremusic
     - http://soundcloud.com/ochre
     - https://ochre.bandcamp.com/
+    - https://bandcamp.ochremusic.com/
 
 defaults:
   -
@@ -57,6 +58,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - sync.sh
-  - upload.sh
+  - "*.sh"
   - js/script.js
