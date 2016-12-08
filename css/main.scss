@@ -1,6 +1,6 @@
 ---
-
 ---
+
 $orange: #ea5727;
 $red: #f00;
 $black: #231d24;
@@ -17,9 +17,9 @@ $sans: "PT Sans Narrow", sans-serif;
 $mono: "Inconsolata", monospace;
 
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Serif|Inconsolata');
-@import url('genericons/genericons.css');
-@import url('syntax.css');
-@import url('plyr.css');
+@import 'genericons/genericons';
+@import 'syntax';
+@import 'plyr';
 
 @-ms-viewport {
   width: extend-to-zoom;
@@ -382,12 +382,12 @@ footer a {
 
 .genericon-facebook:hover {
   color: $facebook-blue;
-  transition: .1s ease-in;
+  transition: .2s ease-in;
 }
 
 .genericon-twitter:hover {
   color: $twitter-blue;
-  transition: .1s ease-in;
+  transition: .2s ease-in;
 }
 
 section ul,

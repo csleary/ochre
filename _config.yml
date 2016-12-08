@@ -46,6 +46,7 @@ defaults:
       image: /assets/logo.png
 
 sass:
+  sass_dir: _sass
   style: compressed
 
 gems:
@@ -53,11 +54,13 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-autoprefixer
   - jemoji
 
 exclude:
+  - .DS_Store
   - Gemfile
   - Gemfile.lock
   - "*.sh"
-  - js/script.js
+  - src/
   - bower_components/
