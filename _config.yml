@@ -60,3 +60,4 @@ exclude:
   - Gemfile.lock
   - "*.sh"
   - js/script.js
+  - bower_components/
