@@ -240,7 +240,7 @@ article a.entry-title {
 }
 
 .entry-meta .date a:hover {
-  color: $orange;
+  // color: $orange;
 }
 
 .entry-meta .date {
@@ -585,6 +585,9 @@ section #isso-thread {
   margin: 0;
 }
 
+form input::placeholder,
+textarea::placeholder,
+#isso-thread input::placeholder,
 #isso-thread .textarea.placeholder {
   color: $dark-beige;
 }

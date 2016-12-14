@@ -1,6 +1,6 @@
 title: Ochre
 description: Music by Christopher Leary
-author: Christopher Leary
+author: ochremusic
 url: http://ochremusic.com
 baseurl:
 logo: /assets/logo.png
@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
-paginate_path: "/page:num/"
+paginate_path: /page/:num/
 paginate: 10
 
 twitter:
