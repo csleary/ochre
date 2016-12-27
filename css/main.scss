@@ -136,6 +136,7 @@ ul.nav-menu li
 }
 
 ul.nav-menu li a {
+  border-bottom: 5px solid transparent;
   display: inline-block;
   color: $dark-grey;
   padding: 0;
@@ -456,9 +457,10 @@ img {
   height: auto;
 }
 
+/* See media queries for large screen alignment */
 img.alignleft {
-  float: left;
-  margin: 1rem 1rem 1rem 0;
+  display: block;
+  margin: 1rem auto;
 }
 
 img.aligncenter {
@@ -467,8 +469,8 @@ img.aligncenter {
 }
 
 img.alignright {
-  float: right;
-  margin: 1rem 0 1rem 1rem;
+  display: block;
+  margin: 1rem auto;
 }
 
 video {
@@ -984,7 +986,7 @@ iframe {
   }
 
   aside {
-    flex: 0 0 400px;
+    flex: 0 0 33.33%;
   }
 
   form input {
@@ -1005,5 +1007,15 @@ iframe {
 
   #isso-root .isso-comment .isso-follow-up {
     padding-left: 4rem;
+  }
+
+  img.alignleft {
+    float: left;
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  img.alignright {
+    float: right;
+    margin: 1rem 0 1rem 1rem;
   }
 }
