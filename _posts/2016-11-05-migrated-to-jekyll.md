@@ -7,7 +7,7 @@ categories: Misc
 tags: [web dev, jekyll, wordpress]
 image:
 ---
-I thought I'd shake things up a bit here and migrate the site over to [Jekyll](https://jekyllrb.com/) rather than use Wordpress -- possibly permanently, but let's see how we go. There's been a lot to absorb in learning how Jekyll works, including some new web dev paradigms for me, such as the Ruby infrastructure, CLI site building and what not, but it's been an interesting week trying to figure this all out.<!--more-->
+I thought I'd shake things up a bit here and migrate the site over to [Jekyll](https://jekyllrb.com/) rather than use Wordpress -- possibly permanently, but let's see how we go. There's been a lot to absorb in learning how Jekyll works, including some new web dev paradigms for me, such as the Ruby infrastructure, CLI site building and whatnot, but it's been an interesting week trying to figure this all out.<!--more-->
 
 The main difference between Wordpress and Jekyll is that the former is dynamic, looking up posts, pages, comments and settings from a central database, while the latter is completely static. Jekyll sites need to undergo a build process every time a new post is added, or if just the footer is tweaked -- the entire site will need to be rebuilt and uploaded. It's a little bit daunting to have to do this, but thankfully the process can be automated. And if you use Github pages to host your site it's particularly straightforward, as the site is automatically rebuilt once you push a new version to it, which is extremely nifty (not to mention free).
 

@@ -69,25 +69,25 @@ h1, h2, h3, h4 {
 }
 
 h1, h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3, h4 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 section h1,
 section h2,
 section h3,
 section h4 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 section h1.entry-title { margin-bottom: 0; }
 
 p {
-  line-height: 1.6em;
-  margin: 1em 0;
+  line-height: 1.6rem;
+  margin: 1rem 0;
 }
 
 header {
@@ -103,7 +103,7 @@ a#site-header {
 }
 
 #site-header {
-  font-size: 8em;
+  font-size: 8rem;
   margin: 0;
   padding: 0;
 }
@@ -112,9 +112,9 @@ nav {
   background-color: $light-beige;
   color: $dark-grey;
   font-family: $sans;
-  font-size: 2em;
-  margin-bottom: 20px;
-  padding: 5px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding: .25rem;
 }
 
 ul.nav-menu {
@@ -180,6 +180,7 @@ ul.nav-menu li.nav-icon {
 ul.nav-menu li.nav-icon a:after {
   font: normal 16px/1 'Genericons';
   content: '\f431';
+  padding-left: .5rem;
 }
 
 ul.nav-menu.responsive li.nav-icon {
@@ -201,11 +202,11 @@ ul.nav-menu.responsive li.nav-icon a:after {
 
 #blog,
 section {
-  padding: 0 20px;
+  padding: 0 1rem;
 }
 
 article {
-  margin-bottom: 60px;
+  margin-bottom: 3rem;
 }
 
 section a:link,
@@ -230,9 +231,32 @@ article a.entry-title {
 .entry-meta {
   font-family: $sans;
   display: block;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
+}
+
+.entry-meta .date,
+.entry-meta .categories,
+.entry-meta .tags {
+  margin-right: 1rem;
+}
+
+.entry-meta .date,
+.entry-meta .categories,
+.entry-meta .tags,
+.entry-meta .comments {
+  display: inline-block;
+}
+
+.entry-meta .date a:before,
+.entry-meta .categories:before,
+.entry-meta .tags:before,
+.entry-meta .comments:before {
+  display: inline-block;
+  vertical-align: -0.2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .entry-meta .date a {
@@ -243,18 +267,8 @@ article a.entry-title {
   // color: $orange;
 }
 
-.entry-meta .date {
-  margin-right: 1em;
-}
-
-.entry-meta .date a:before,
-.entry-meta .categories:before,
-.entry-meta .tags:before,
-.entry-meta .comments:before {
-  display: inline-block;
-  vertical-align: -0.2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.entry-meta .comments {
+  float: right;
 }
 
 .entry-meta .date a:before {
@@ -267,11 +281,6 @@ article a.entry-title {
   content: '\f301';
 }
 
-.entry-meta .categories,
-.entry-meta .tags {
-  margin-right: 1em;
-}
-
 .entry-meta .tags:before {
   font: normal 16px/1 'Genericons';
   content: '\f302';
@@ -282,11 +291,36 @@ article a.entry-title {
   content: '\f300';
 }
 
+.page-meta {
+  margin: 2rem 0;
+}
+
+.page-meta .categories,
+.page-meta .tags {
+  margin-bottom: 1rem;
+}
+
+.page-meta a:link,
+.page-meta a:visited,
+.page-meta a:active {
+  color: #fff;
+}
+
+.page-meta a:hover {
+  color: $orange;
+}
+
+.page-meta a:link {
+  background-color: $black;
+  border-radius: .25rem;
+  padding: .2rem .3rem .1rem .3rem;
+}
+
 blockquote {
   display: block;
   color: $mid-grey;
   border-left: 5px solid $mid-grey;
-  padding-left: 1em;
+  padding-left: 1rem;
   margin: 2em;
 }
 
@@ -297,39 +331,39 @@ blockquote p {
 /* Sidebar */
 
 aside .module {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .spotify:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f515';
-  vertical-align: -0.2em;
-  padding-left: 0.2em;
+  vertical-align: -0.2rem;
+  padding-left: 0.2rem;
 }
 
 .newsletter:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f463';
-  vertical-align: -0.2em;
-  padding-left: 0.2em;
+  vertical-align: -0.2rem;
+  padding-left: 0.2rem;
 }
 
 .shows:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f307';
-  vertical-align: -0.2em;
-  padding-left: 0.2em;
+  vertical-align: -0.2rem;
+  padding-left: 0.2rem;
 }
 
 .tips:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
   content: '\f221';
-  vertical-align: -0.2em;
-  padding-left: 0.2em;
+  vertical-align: -0.2rem;
+  padding-left: 0.2rem;
 }
 
 .links:after {
@@ -342,8 +376,8 @@ aside .module {
 
 aside {
   background: $light-beige;
-  padding: 40px;
-  line-height: 1.6em;
+  padding: 2rem;
+  line-height: 1.6rem;
 }
 
 aside ul {
@@ -359,8 +393,8 @@ aside li {
 footer {
   color: $light-grey;
   flex: none;
-  font-size: 1em;
-  padding: 40px;
+  font-size: 1rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -369,7 +403,7 @@ footer a {
 }
 
 .bottom-nav {
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
 .genericon-twitter,
@@ -377,7 +411,7 @@ footer a {
 .genericon-home,
 .genericon-top {
   font-size: 32px;
-  margin: 0 0.3em;
+  margin: 0 0.3rem;
 }
 
 .genericon-facebook:hover {
@@ -393,13 +427,13 @@ footer a {
 section ul,
 article ul {
   margin: 10px 0;
-  padding: 0 2em;
+  padding: 0 2rem;
 }
 
 section li,
 article li {
-  line-height: 1.6em;
-  padding-bottom: 0.5em;
+  line-height: 1.6rem;
+  padding-bottom: 0.5rem;
 }
 
 section li a:link,
@@ -408,7 +442,7 @@ section li a:link {
 }
 
 .credits {
-  font-size: 0.75em;
+  font-size: 0.75rem;
 }
 
 .credits a:hover {
@@ -424,17 +458,17 @@ img {
 
 img.alignleft {
   float: left;
-  margin: 1em 1em 1em 0;
+  margin: 1rem 1rem 1rem 0;
 }
 
 img.aligncenter {
   display: block;
-  margin: 1em auto;
+  margin: 1rem auto;
 }
 
 img.alignright {
   float: right;
-  margin: 1em 0 1em 1em;
+  margin: 1rem 0 1rem 1rem;
 }
 
 video {
@@ -451,8 +485,8 @@ a.vid-vimeo:after,
 a.vid-youtube:after {
   color: $light-grey;
   font: normal 32px/1 'Genericons';
-  vertical-align: -0.2em;
-  padding-left: 0.2em;
+  vertical-align: -0.2rem;
+  padding-left: 0.2rem;
 }
 
 a.vid-vimeo:after { content: '\f212'; }
@@ -469,7 +503,7 @@ code {
   background: $light-beige;
   color: #000;
   font-family: $mono;
-  padding: 0.2em;
+  padding: 0.2rem;
 }
 
 pre code {
@@ -485,14 +519,14 @@ pre code {
 
 .highlight {
   background: $light-beige;
-  margin: 10px;
-  padding: 0.5em;
+  margin: .5rem;
+  padding: .5rem;
 }
 
 /* Forms */
 
 form {
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 
 #isso-thread section {
@@ -507,10 +541,10 @@ form input,
   border-radius: 0;
   color: #000;
   font-family: $serif;
-  font-size: 1em;
+  font-size: 1rem;
   display: block;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: .75rem;
+  margin-bottom: 1rem;
   width: 100%;
   -webkit-appearance: none;
 }
@@ -524,9 +558,9 @@ form textarea,
   border-radius: 0;
   color: #000;
   font-family: $serif;
-  font-size: 1em;
+  font-size: 1rem;
   margin: 0;
-  padding: 10px;
+  padding: .75rem;
   width: 100%;
   -webkit-appearance: none;
 }
@@ -545,8 +579,8 @@ form .send,
   cursor: pointer;
   float: right;
   font-family: $sans;
-  font-size: 1.2em;
-  margin-top: 20px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
   width: 100%;
   transition: color 0.5s, background 0.5s;
   -webkit-appearance: none;
@@ -594,7 +628,7 @@ textarea::placeholder,
 
 .isso-comment > div.text-wrapper > div.text p,
 .isso-comment > div.text-wrapper > div.text p:last-child {
-  margin: 20px 0;
+  margin: 1rem 0;
 }
 
 #isso-thread div.isso-postbox p {
@@ -608,17 +642,17 @@ textarea::placeholder,
   border-radius: 0;
   color: #000;
   font-family: $serif;
-  font-size: 1em;
+  font-size: 1rem;
   display: inline-block;
   float: left;
-  padding: 10px;
+  padding: .75rem;
   margin: 0;
   width: 33.33%;
   -webkit-appearance: none;
 }
 
 #isso-thread .textarea {
-  height: 6em;
+  height: 6rem;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -646,8 +680,8 @@ textarea::placeholder,
 
 .isso-comment {
   clear: both;
-  padding: 20px 0;
-  margin: 20px 0;
+  padding: 1rem 0;
+  margin: 1rem 0;
 }
 
 .isso-comment > div.avatar,
@@ -655,7 +689,7 @@ textarea::placeholder,
   display: block;
   float: left;
   width: 60px;
-  margin: 0 1em 1em 0;
+  margin: 0 1rem 1rem 0;
 }
 .isso-postbox > .avatar {
   float: left;
@@ -675,14 +709,14 @@ textarea::placeholder,
 }
 
 #isso-root .isso-comment .isso-follow-up {
-  padding-left: 20px;
+  padding-left: 1rem;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .spacer {
   color: $light-grey;
-  padding: 0 .5em;
+  padding: 0 .5rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .note {
@@ -691,30 +725,30 @@ textarea::placeholder,
 
 .isso-comment > div.text-wrapper > .isso-comment-header .author {
   color: $dark-grey;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .author.chris {
   background-color: rgba(255, 192, 203, 0.5);
-  border-radius: 28%;
+  border-radius: .25rem;
   color: $red;
-  padding: .1em .3em .1em .3em;
+  padding: .2rem .3rem .1rem .3rem;
   transition: .2s;
   transition-timing-function: ease-in-out;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer >  {
   position: relative;
-  top: .2em;
+  top: .2rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer > a + a {
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer .votes {
   color: $dark-grey;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   padding-right: 2px;
 }
 
@@ -722,7 +756,7 @@ textarea::placeholder,
 .isso-comment > div.text-wrapper > .isso-comment-footer .downvote svg {
   fill: $light-grey;
   position: relative;
-  top: .2em;
+  top: .2rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer > span.spacer {
@@ -732,7 +766,7 @@ textarea::placeholder,
 }
 
 .isso-comment .isso-postbox {
-  margin-top: 20px;
+  margin-top: 1rem;
 }
 
 .isso-comment.isso-no-votes span.votes {
@@ -762,7 +796,7 @@ textarea::placeholder,
 /* Sidebar Forms */
 
 aside form {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 aside form input {
@@ -776,7 +810,7 @@ aside form input.button {
   color: #000;
   cursor: pointer;
   font-family: $sans;
-  font-size: 1.2em;
+  font-size: 1rem;
   width: 100%;
   transition: color 0.5s, background 0.5s;
 }
@@ -786,7 +820,8 @@ aside form input.button {
 .pagination,
 .post-nav {
   font-family: $sans;
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .pagination a {
@@ -794,32 +829,28 @@ aside form input.button {
 }
 
 .pagination a.next {
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
 
 .pagination a.previous {
-  margin-right: 0.5em;
+  margin-right: 0.5rem;
 }
 
 .pagination a.next:after,
 .post-nav .next-post:after {
   font: normal 32px/1 'Genericons';
   content: '\f429';
-  vertical-align: -0.25em;
+  vertical-align: -0.25rem;
 }
 
 .pagination a.previous:before,
 .post-nav .previous-post:before {
   font: normal 32px/1 'Genericons';
   content: '\f430';
-  vertical-align: -0.25em;
+  vertical-align: -0.25rem;
 }
 
 /* Post navigation */
-
-.post-nav {
-  margin: 40px 0;
-}
 
 .post-nav .next-post {
   float: right;
@@ -834,7 +865,7 @@ aside form input.button {
 .album {
   width: 100%;
   min-height: 360px;
-  margin-bottom: 4em;
+  margin-bottom: 4rem;
 }
 
 .album img {
@@ -867,7 +898,7 @@ aside form input.button {
 }
 
 .album span.spacer {
-  padding: 0 0.5em;
+  padding: 0 0.5rem;
 }
 
 /* Responsive embeds */
@@ -878,7 +909,7 @@ aside form input.button {
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  margin: 20px 0;
+  margin: 2rem 0;
 }
 
 .embed-container iframe,
@@ -906,9 +937,9 @@ iframe {
 
   nav {
     background: none;
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 0;
-    padding: 35px;
+    padding: 2rem;
   }
 
   ul.nav-menu li {
@@ -920,12 +951,12 @@ iframe {
   }
 
   ul.nav-menu li a {
-    padding: 0 15px 10px 15px;
+    padding: 0 1.5rem .5rem 1.5rem;
   }
 
   ul.nav-menu li a:hover,
   ul.nav-menu li a#current {
-    padding-bottom: 5px;
+    padding-bottom: .25rem;
   }
 
   #wrapper {
@@ -934,13 +965,13 @@ iframe {
   }
 
   h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
 
   #blog,
   section{
     flex: 1;
-    padding: 0 40px;
+    padding: 0 2rem;
   }
 
   .album div.gallery > img {
@@ -969,10 +1000,10 @@ iframe {
   }
 
   section #isso-thread {
-    padding: 0 40px;
+    padding: 0 2rem;
   }
 
   #isso-root .isso-comment .isso-follow-up {
-    padding-left: 80px;
+    padding-left: 4rem;
   }
 }

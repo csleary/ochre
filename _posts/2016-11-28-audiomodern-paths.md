@@ -11,7 +11,7 @@ Sample instrument developers [Audiomodern](https://audiomodern.com/shop/sample-p
 
 They've wrapped 1GB of loops in a custom Kontakt-based instrument module for managing, mixing and arranging the stems, as well as applying a suite of integrated effects, with everything synced to the host tempo. All loops are also available in ACID, Apple Loops, WAV and REX formats, so they can easily be tailored to your platform of choice and edited/processed further.
 
-Luckily, *Paths* appears to qualify for their seasonal sale, too, so you can use the coupon AMHOLIDAY16 to get 25% off at the checkout.
+Luckily, *Paths* appears to qualify for their seasonal sale too, so you can use the coupon AMHOLIDAY16 to get 25% off at the checkout.
 
 There's a wealth of material in there for you to adapt and remix, hopefully inspiring plenty of new music. Here's a quick preview:
 
