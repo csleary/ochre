@@ -875,11 +875,15 @@ aside form input.button {
   margin: 0;
 }
 
+.album div.art-player {
+  margin: 1rem 0;
+}
+
 .bc-player {
   display: inline-block;
   border: 0;
   width: 100%;
-  height: 360px;
+  height: 360px
 }
 
 .album div.gallery {
@@ -976,6 +980,10 @@ iframe {
     padding: 0 2rem;
   }
 
+  .bc-player {
+    width: 360px;
+  }
+
   .album div.gallery > img {
     height: 140px;
   }
@@ -995,10 +1003,6 @@ iframe {
 
   aside form input.button {
     width: 50%;
-  }
-
-  .bc-player {
-    width: 360px;
   }
 
   section #isso-thread {

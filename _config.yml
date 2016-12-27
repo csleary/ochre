@@ -57,8 +57,7 @@ gems:
   - jekyll-autoprefixer
   - jemoji
 
-include:
-  - "/_pages/"
+include: ['_pages']
 
 exclude:
   - .DS_Store
