@@ -862,6 +862,7 @@ aside form input.button {
 
 .album-title {
   margin: 0;
+  text-align: center;
 }
 
 .album {
@@ -870,23 +871,25 @@ aside form input.button {
   margin-bottom: 4rem;
 }
 
+.album h2 {
+  text-align: center;
+}
+
 .album img {
   padding: 0;
   margin: 0;
 }
 
-.album div.art-player {
-  margin: 1rem 0;
+.album .player {
+  margin: 1rem 0 2rem;
 }
 
-.album .album-art {
+.album iframe {
+  border: 0;
   height: 360px;
   width: 360px;
-}
-
-.album .bc-player {
-  width: 360px;
-  height: 360px;
+  display: block;
+  margin: 0 auto;
 }
 
 .album div.gallery {
