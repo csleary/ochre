@@ -886,8 +886,8 @@ aside form input.button {
 
 .album iframe {
   border: 0;
-  height: 360px;
-  width: 360px;
+  height: 300px;
+  width: 300px;
   display: block;
   margin: 0 auto;
 }
@@ -985,6 +985,11 @@ iframe {
   section{
     flex: 1;
     padding: 0 2rem;
+  }
+
+  .album iframe {
+    height: 480px;
+    width: 480px;
   }
 
   .album div.gallery > img {
