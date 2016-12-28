@@ -879,11 +879,14 @@ aside form input.button {
   margin: 1rem 0;
 }
 
-.bc-player {
-  display: inline-block;
-  border: 0;
-  width: 100%;
-  height: 360px
+.album .album-art {
+  height: 360px;
+  width: 360px;
+}
+
+.album .bc-player {
+  width: 360px;
+  height: 360px;
 }
 
 .album div.gallery {
@@ -932,6 +935,7 @@ aside form input.button {
 iframe {
   border: 0;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Large Screens */
@@ -978,10 +982,6 @@ iframe {
   section{
     flex: 1;
     padding: 0 2rem;
-  }
-
-  .bc-player {
-    width: 360px;
   }
 
   .album div.gallery > img {
