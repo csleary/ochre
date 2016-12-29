@@ -3,7 +3,7 @@
   <p>
     <iframe src="https://embed.spotify.com/follow/1/?uri=spotify:artist:0OmHDBh5styCXDWKwz58Ts&size=basic&theme=light" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
   </p>
-  
+
   <a href="http://eepurl.com/c9Kck"><h3 class="newsletter module">Newsletter</h3></a>
   <p>
     Sign up to be notified about new releases as soon as they’re available.
@@ -52,6 +52,14 @@
     <li><a href="http://melograf.com/">Melograf Mastering</a></li>
     <li><a href="http://nkurence.com/">nkurence</a></li>
   </ul>
+
+  <h3 class="module">Recent Posts</h3>
+  <ul>
+    {% for post in site.posts limit:5 %}
+      <li><a href="{{ post.url }}">{{ post.title | smartify }}</a></li>
+    {% endfor %}
+  </ul>
+
   <h3 class="module">Melograf Mastering</h3>
   <p>
     Please visit <a href="http://melograf.com/">Melograf Mastering</a> for more information about my mastering work.
