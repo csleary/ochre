@@ -5,12 +5,14 @@ $orange: #ea5727;
 $red: #f00;
 $black: #231d24;
 $dark-beige: #ccb89c;
+$medium-beige: #e2d6c6;
 $light-beige: #f2ede6;
 $twitter-blue: #6aa9e0;
 $facebook-blue: #49629d;
 $light-grey: #999;
 $mid-grey: #666;
 $dark-grey: #333;
+$shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.25);
 
 $serif: "PT Serif", serif;
 $sans: "PT Sans Narrow", sans-serif;
@@ -503,6 +505,7 @@ pre {
 
 code {
   background: $light-beige;
+  border-bottom: 2px solid $medium-beige;
   color: #000;
   font-family: $mono;
   padding: 0.2rem;
@@ -886,6 +889,7 @@ aside form input.button {
 
 .album iframe {
   border: 0;
+  box-shadow: $shadow;
   height: 300px;
   width: 300px;
   display: block;
