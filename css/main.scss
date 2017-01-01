@@ -263,7 +263,7 @@ article a.entry-title {
 }
 
 .entry-meta .date a {
-  color: $dark-grey;
+  color: #000;
 }
 
 .entry-meta .date a:hover {
@@ -336,6 +336,21 @@ blockquote p {
 aside .module {
   margin-top: 2rem;
 }
+
+#spotify,
+#soundcloud,
+#facebook,
+#twitter {
+  background-color: $dark-beige;
+  border-radius: .25rem;
+  color: $light-beige;
+  font-family: $sans;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: .2rem .3rem .1rem .3rem;
+  margin-right: .5rem;
+}
+
 
 .spotify:after {
   color: $dark-beige;
@@ -505,7 +520,7 @@ pre {
 
 code {
   background: $light-beige;
-  border-bottom: 2px solid $medium-beige;
+  border-bottom: 2px solid $dark-beige;
   color: #000;
   font-family: $mono;
   padding: 0.2rem;

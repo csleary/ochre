@@ -50,3 +50,13 @@ $(window).load(function() {
     });
   }, 500);
 });
+
+var socialAPI = new WebSocket("ws://ochremusic.com/followers/");
+socialAPI.onmessage = function (event) {
+  var followers = JSON.parse(event.data);
+  document.getElementById('spotify').textContent = followers.spotify;
+  document.getElementById('soundcloud').textContent = followers.soundcloud;
+  document.getElementById('facebook').textContent = followers.facebook;
+  document.getElementById('twitter').textContent = followers.twitter;
+  // console.log(followers);
+};
