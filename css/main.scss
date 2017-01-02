@@ -5,7 +5,6 @@ $orange: #ea5727;
 $red: #f00;
 $black: #231d24;
 $dark-beige: #ccb89c;
-$medium-beige: #e2d6c6;
 $light-beige: #f2ede6;
 $twitter-blue: #6aa9e0;
 $facebook-blue: #49629d;
@@ -13,6 +12,8 @@ $light-grey: #999;
 $mid-grey: #666;
 $dark-grey: #333;
 $shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.25);
+$rounded: .25rem;
+$rounded-padding: 2px 4px 1px 4px;
 
 $serif: "PT Serif", serif;
 $sans: "PT Sans Narrow", sans-serif;
@@ -315,8 +316,8 @@ article a.entry-title {
 
 .page-meta a:link {
   background-color: $black;
-  border-radius: .25rem;
-  padding: .2rem .3rem .1rem .3rem;
+  border-radius: $rounded;
+  padding: $rounded-padding;
 }
 
 blockquote {
@@ -342,12 +343,12 @@ aside .module {
 #facebook,
 #twitter {
   background-color: $dark-beige;
-  border-radius: .25rem;
+  border-radius: $rounded;
   color: $light-beige;
   font-family: $sans;
   font-size: 1rem;
   font-weight: 400;
-  padding: .2rem .3rem .1rem .3rem;
+  padding: $rounded-padding;
   margin-right: .5rem;
 }
 
@@ -750,9 +751,9 @@ textarea::placeholder,
 
 .isso-comment > div.text-wrapper > .isso-comment-header .author.chris {
   background-color: rgba(255, 192, 203, 0.5);
-  border-radius: .25rem;
+  border-radius: $rounded;
   color: $red;
-  padding: .2rem .3rem .1rem .3rem;
+  padding: $rounded-padding;
   transition: .2s;
   transition-timing-function: ease-in-out;
 }

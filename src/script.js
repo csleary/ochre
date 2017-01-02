@@ -10,7 +10,7 @@ $contactForm.submit(function(e) {
   var defaultSubmitText = $submit.val();
 
   $.ajax({
-    url: "//formspree.io/mail@ochremusic.com",
+    url: "//formspree.io/" + "mail" + "@" + "ochremusic" + "." + "com",
     method: "POST",
     data: $(this).serialize(),
     dataType: "json",
@@ -52,11 +52,13 @@ $(window).load(function() {
 });
 
 var socialAPI = new WebSocket("ws://ochremusic.com/followers/");
+// var socialAPI = new WebSocket("ws://localhost:8081");
 socialAPI.onmessage = function (event) {
   var followers = JSON.parse(event.data);
   document.getElementById('spotify').textContent = followers.spotify;
   document.getElementById('soundcloud').textContent = followers.soundcloud;
   document.getElementById('facebook').textContent = followers.facebook;
   document.getElementById('twitter').textContent = followers.twitter;
+  document.getElementById('mailchimp').textContent = followers.mailchimp;
   // console.log(followers);
 };
