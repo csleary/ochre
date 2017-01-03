@@ -51,8 +51,7 @@ $(window).load(function() {
   }, 500);
 });
 
-// var ws = new WebSocket("ws://ochremusic.com/followers/");
-var ws = new WebSocket("ws://localhost:8081");
+var ws = new WebSocket("ws://ochremusic.com/followers/:8081");
 ws.onmessage = function (event) {
   var followers = JSON.parse(event.data);
   document.getElementById('spotify').textContent = followers.spotify;
