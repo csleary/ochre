@@ -51,14 +51,19 @@ $(window).load(function() {
   }, 500);
 });
 
-var socialAPI = new WebSocket("ws://ochremusic.com/followers/");
-// var socialAPI = new WebSocket("ws://localhost:8081");
-socialAPI.onmessage = function (event) {
+// var ws = new WebSocket("ws://ochremusic.com/followers/");
+var ws = new WebSocket("ws://localhost:8081");
+ws.onmessage = function (event) {
   var followers = JSON.parse(event.data);
   document.getElementById('spotify').textContent = followers.spotify;
   document.getElementById('soundcloud').textContent = followers.soundcloud;
   document.getElementById('facebook').textContent = followers.facebook;
   document.getElementById('twitter').textContent = followers.twitter;
   document.getElementById('mailchimp').textContent = followers.mailchimp;
+  document.getElementById('gig-date').textContent = followers.date;
+  document.getElementById('gig-venue').textContent = followers.venue;
+  document.getElementById('gig-location').textContent = followers.location;
+  document.getElementById('gig-time').textContent = followers.time;
+  document.getElementById('gig-link').href = followers.link;
   // console.log(followers);
 };

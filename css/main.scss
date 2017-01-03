@@ -6,8 +6,10 @@ $red: #f00;
 $black: #231d24;
 $dark-beige: #ccb89c;
 $light-beige: #f2ede6;
-$twitter-blue: #6aa9e0;
-$facebook-blue: #49629d;
+$twitter-blue: #55acee;
+$facebook-blue: #3b5998;
+$spotify-green: #1ed760;
+$soundcloud-orange: #f50;
 $light-grey: #999;
 $mid-grey: #666;
 $dark-grey: #333;
@@ -308,6 +310,7 @@ article a.entry-title {
 .page-meta a:visited,
 .page-meta a:active {
   color: #fff;
+  transition: .1s ease-in;
 }
 
 .page-meta a:hover {
@@ -350,8 +353,28 @@ aside .module {
   font-weight: 400;
   padding: $rounded-padding;
   margin-right: .5rem;
+  transition: .1s ease-in;
 }
 
+#spotify:hover {
+  background-color: $spotify-green;
+  color: #fff;
+}
+
+#soundcloud:hover {
+  background-color: $soundcloud-orange;
+  color: #fff;
+}
+
+#facebook:hover {
+  background-color: $facebook-blue;
+  color: #fff;
+}
+
+#twitter:hover {
+  background-color: $twitter-blue;
+  color: #fff;
+}
 
 .spotify:after {
   color: $dark-beige;
@@ -367,6 +390,13 @@ aside .module {
   content: '\f463';
   vertical-align: -0.5rem;
   padding-left: 0.5rem;
+}
+
+.shows {
+  background-image: url("{{ site.baseurl }}/assets/by-songkick-pink.svg");
+  background-size: 4rem;
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
 .shows:after {
@@ -431,16 +461,15 @@ footer a {
 .genericon-top {
   font-size: 32px;
   margin: 0 0.3rem;
+  transition: .2s ease-in;
 }
 
 .genericon-facebook:hover {
   color: $facebook-blue;
-  transition: .2s ease-in;
 }
 
 .genericon-twitter:hover {
   color: $twitter-blue;
-  transition: .2s ease-in;
 }
 
 section ul,
