@@ -414,6 +414,12 @@ aside .module {
   width: 28px;
 }
 
+#songkick li:not(:last-child) {
+  border-bottom: 1px dashed $dark-beige;
+  padding-bottom: .25rem;
+  margin-bottom: .25rem;
+}
+
 .tips:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';

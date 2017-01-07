@@ -11,15 +11,38 @@ ws.onmessage = function (event) {
   document.getElementById('facebook').textContent = data.facebook;
   document.getElementById('twitter').textContent = data.twitter;
   document.getElementById('mailchimp').textContent = data.mailchimp;
-  document.getElementById('gig-date').textContent = data.date;
-  document.getElementById('gig-venue').textContent = data.venue;
-  document.getElementById('gig-location').textContent = data.location;
-  document.getElementById('gig-time').textContent = data.time;
-  document.getElementById('gig-link').href = data.link;
+  songkickList = data.songkick;
+
+  function songkick(array) {
+    // Create the list element:
+    var list = document.createElement('ul');
+    for(var i = 0; i < array.length; i++) {
+      // Create the list item:
+      var item = document.createElement('li');
+      // Set its contents:
+      item.appendChild(document.createTextNode(array[i].date));
+      // Create the link:
+      var a = document.createElement('a');
+      var linkText = document.createTextNode(array[i].venue);
+      a.appendChild(linkText);
+      a.title = "Visit the event page on Songkick.";
+      a.href = array[i].link;
+      item.appendChild(a);
+
+      item.appendChild(document.createTextNode(array[i].location));
+      item.appendChild(document.createTextNode(array[i].time));
+      // Add it to the list:
+      list.appendChild(item);
+    }
+    // Finally, return the constructed list:
+    return list;
+  }
+  var placeholder = document.getElementById('sk-none');
+  document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
+  console.log(data);
 };
 
 var $contactForm = $("#contact-form");
-
 $contactForm.submit(function(e) {
   e.preventDefault();
   var $submit = $("input:submit", $contactForm);
