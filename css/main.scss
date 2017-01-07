@@ -392,19 +392,26 @@ aside .module {
   padding-left: 0.5rem;
 }
 
-.shows {
-  background-image: url("{{ site.baseurl }}/assets/by-songkick-pink.svg");
-  background-size: 5rem;
-  background-position: right center;
-  background-repeat: no-repeat;
-}
+// .shows {
+//   background-image: url("{{ site.baseurl }}/assets/by-songkick-pink.svg");
+//   background-size: 5rem;
+//   background-position: right center;
+//   background-repeat: no-repeat;
+// }
 
-.shows:after {
-  color: $dark-beige;
-  font: normal 32px/1 'Genericons';
-  content: '\f307';
-  vertical-align: -0.5rem;
-  padding-left: 0.5rem;
+// .shows:after {
+//   color: $dark-beige;
+//   font: normal 32px/1 'Genericons';
+//   content: '\f307';
+//   vertical-align: -0.5rem;
+//   padding-left: 0.5rem;
+// }
+
+.shows .sk-badge-pink {
+  vertical-align: -0.4rem;
+  margin-left: 0.8rem;
+  height: 28px;
+  width: 28px;
 }
 
 .tips:after {
@@ -412,7 +419,7 @@ aside .module {
   font: normal 32px/1 'Genericons';
   content: '\f221';
   vertical-align: -0.4rem;
-  padding-left: 0.5rem;
+  padding-left: 0.4rem;
 }
 
 .links:after {
@@ -420,7 +427,7 @@ aside .module {
   font: normal 32px/1 'Genericons';
   content: '\f107';
   vertical-align: -0.6rem;
-  padding-left: 0.5rem;
+  padding-left: 0.4rem;
 }
 
 aside {

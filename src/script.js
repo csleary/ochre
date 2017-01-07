@@ -2,6 +2,22 @@ $.stellar({
   horizontalScrolling: false
 });
 
+var ws = new WebSocket("ws://ochremusic.com/followers/");
+// var ws = new WebSocket("ws://localhost:8081");
+ws.onmessage = function (event) {
+  var data = JSON.parse(event.data);
+  document.getElementById('spotify').textContent = data.spotify;
+  document.getElementById('soundcloud').textContent = data.soundcloud;
+  document.getElementById('facebook').textContent = data.facebook;
+  document.getElementById('twitter').textContent = data.twitter;
+  document.getElementById('mailchimp').textContent = data.mailchimp;
+  document.getElementById('gig-date').textContent = data.date;
+  document.getElementById('gig-venue').textContent = data.venue;
+  document.getElementById('gig-location').textContent = data.location;
+  document.getElementById('gig-time').textContent = data.time;
+  document.getElementById('gig-link').href = data.link;
+};
+
 var $contactForm = $("#contact-form");
 
 $contactForm.submit(function(e) {
@@ -50,19 +66,3 @@ $(window).load(function() {
     });
   }, 500);
 });
-
-var ws = new WebSocket("ws://ochremusic.com/followers/:8081");
-ws.onmessage = function (event) {
-  var followers = JSON.parse(event.data);
-  document.getElementById('spotify').textContent = followers.spotify;
-  document.getElementById('soundcloud').textContent = followers.soundcloud;
-  document.getElementById('facebook').textContent = followers.facebook;
-  document.getElementById('twitter').textContent = followers.twitter;
-  document.getElementById('mailchimp').textContent = followers.mailchimp;
-  document.getElementById('gig-date').textContent = followers.date;
-  document.getElementById('gig-venue').textContent = followers.venue;
-  document.getElementById('gig-location').textContent = followers.location;
-  document.getElementById('gig-time').textContent = followers.time;
-  document.getElementById('gig-link').href = followers.link;
-  // console.log(followers);
-};
