@@ -2,15 +2,15 @@ $.stellar({
   horizontalScrolling: false
 });
 
-var ws = new WebSocket("ws://ochremusic.com/followers/");
+var ws = new WebSocket('ws://ochremusic.com/followers/');
 // var ws = new WebSocket("ws://localhost:8081");
 ws.onmessage = function (event) {
   var data = JSON.parse(event.data);
-  document.getElementById('spotify').textContent = data.spotify;
-  document.getElementById('soundcloud').textContent = data.soundcloud;
-  document.getElementById('facebook').textContent = data.facebook;
-  document.getElementById('twitter').textContent = data.twitter;
-  document.getElementById('mailchimp').textContent = data.mailchimp;
+  $('#followers .spotify').html(data.spotify);
+  $('#followers .soundcloud').html(data.soundcloud);
+  $('#followers .facebook').html(data.facebook);
+  $('#followers .twitter').html(data.twitter);
+  $('aside #mailchimp').html(data.mailchimp);
   songkickList = data.songkick;
 
   function songkick(array) {
@@ -39,31 +39,31 @@ ws.onmessage = function (event) {
   }
   var placeholder = document.getElementById('sk-none');
   document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
-  console.log(data);
+  // console.log(data);
 };
 
-var $contactForm = $("#contact-form");
+var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
   e.preventDefault();
-  var $submit = $("input:submit", $contactForm);
+  var $submit = $('input:submit', $contactForm);
   var defaultSubmitText = $submit.val();
 
   $.ajax({
     url: "//formspree.io/" + "mail" + "@" + "ochremusic" + "." + "com",
-    method: "POST",
+    method: 'POST',
     data: $(this).serialize(),
-    dataType: "json",
+    dataType: 'json',
     beforeSend: function() {
       //$contactForm.append("<div class="alert alert--loading">Sending message…</div>");
-      $submit.attr("disabled", true).val("Sending message…");
+      $submit.attr('disabled', true).val("Sending message…");
     },
     success: function(data) {
       //$contactForm.append("<div class="alert alert--success">Message sent!</div>");
       $submit.val("Message sent!");
-      $("#contact-form")[0].reset();
+      $('#contact-form')[0].reset();
       setTimeout(function() {
         //$(".alert--success").remove();
-        $submit.attr("disabled", false).val(defaultSubmitText);
+        $submit.attr('disabled', false).val(defaultSubmitText);
       }, 5000);
     },
     error: function(err) {
@@ -72,7 +72,7 @@ $contactForm.submit(function(e) {
       $submit.val("Sending failed, sorry.");
       setTimeout(function() {
         //$(".alert--error").remove();
-        $submit.attr("disabled", false).val(defaultSubmitText);
+        $submit.attr('disabled', false).val(defaultSubmitText);
       }, 5000);
     }
   });
@@ -80,12 +80,12 @@ $contactForm.submit(function(e) {
 
 $(window).load(function() {
   setTimeout(function(){
-    $("svg[data-hash='5652f831c72d']").each(function( i ) {
+    $('svg[data-hash="5652f831c72d"]').each(function( i ) {
       $(this).parent()
-      .next("div.text-wrapper")
-      .find("a.author")
+      .next('div.text-wrapper')
+      .find('a.author')
       .first()
-      .addClass("chris");
+      .addClass('chris');
     });
   }, 500);
 });

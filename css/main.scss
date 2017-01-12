@@ -341,10 +341,14 @@ aside .module {
   margin-top: 2rem;
 }
 
-#spotify,
-#soundcloud,
-#facebook,
-#twitter {
+#followers li:not(:last-child) {
+  margin-bottom: .25rem;
+}
+
+#followers .spotify,
+#followers .soundcloud,
+#followers .facebook,
+#followers .twitter {
   background-color: $dark-beige;
   border-radius: $rounded;
   color: $light-beige;
@@ -356,33 +360,33 @@ aside .module {
   transition: .1s ease-in;
 }
 
-#spotify:hover {
+#followers .spotify:hover {
   background-color: $spotify-green;
   color: #fff;
 }
 
-#soundcloud:hover {
+#followers .soundcloud:hover {
   background-color: $soundcloud-orange;
   color: #fff;
 }
 
-#facebook:hover {
+#followers .facebook:hover {
   background-color: $facebook-blue;
   color: #fff;
 }
 
-#twitter:hover {
+#followers .twitter:hover {
   background-color: $twitter-blue;
   color: #fff;
 }
 
-.spotify:after {
-  color: $dark-beige;
-  font: normal 32px/1 'Genericons';
-  content: '\f515';
-  vertical-align: -0.5rem;
-  padding-left: 0.5rem;
-}
+// .spotify:after {
+//   color: $dark-beige;
+//   font: normal 32px/1 'Genericons';
+//   content: '\f515';
+//   vertical-align: -0.5rem;
+//   padding-left: 0.5rem;
+// }
 
 .newsletter:after {
   color: $dark-beige;
@@ -409,7 +413,7 @@ aside .module {
 
 .shows .sk-badge-pink {
   vertical-align: -0.4rem;
-  margin-left: 0.8rem;
+  margin-left: 0.6rem;
   height: 28px;
   width: 28px;
 }
@@ -425,7 +429,7 @@ aside .module {
   font: normal 32px/1 'Genericons';
   content: '\f221';
   vertical-align: -0.4rem;
-  padding-left: 0.4rem;
+  padding-left: 0.3rem;
 }
 
 .links:after {
@@ -433,7 +437,7 @@ aside .module {
   font: normal 32px/1 'Genericons';
   content: '\f107';
   vertical-align: -0.6rem;
-  padding-left: 0.4rem;
+  padding-left: 0.1rem;
 }
 
 aside {
