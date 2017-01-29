@@ -37,9 +37,11 @@ ws.onmessage = function (event) {
     // Finally, return the constructed list:
     return list;
   }
-  var placeholder = document.getElementById('sk-none');
-  document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
-  // console.log(data);
+  if (songkickList.length !== 0) {
+    var placeholder = document.getElementById('sk-none');
+    document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
+  }
+  console.log(data);
 };
 
 var $contactForm = $('#contact-form');
