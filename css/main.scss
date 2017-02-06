@@ -15,7 +15,7 @@ $mid-grey: #666;
 $dark-grey: #333;
 $shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.25);
 $rounded: .25rem;
-$rounded-padding: 2px 4px 1px 4px;
+$rounded-padding: 2px 4px 2px 4px;
 
 $serif: "PT Serif", serif;
 $sans: "PT Sans Narrow", sans-serif;
@@ -235,10 +235,10 @@ article a.entry-title {
 }
 
 .entry-meta {
-  font-family: $sans;
+  // font-family: $sans;
   display: block;
-  font-size: 1rem;
-  font-weight: 400;
+  // font-size: 1rem;
+  // font-weight: 400;
   margin-bottom: 2rem;
 }
 
@@ -352,9 +352,9 @@ aside .module {
   background-color: $dark-beige;
   border-radius: $rounded;
   color: $light-beige;
-  font-family: $sans;
-  font-size: 1rem;
-  font-weight: 400;
+  // font-family: $sans;
+  // font-size: 1rem;
+  // font-weight: 400;
   padding: $rounded-padding;
   margin-right: .5rem;
   transition: .1s ease-in;
@@ -645,8 +645,8 @@ form .send,
   color: #000;
   cursor: pointer;
   float: right;
-  font-family: $sans;
-  font-size: 1.2rem;
+  // font-family: $sans;
+  // font-size: 1.2rem;
   margin-top: 1rem;
   width: 100%;
   transition: color 0.5s, background 0.5s;
@@ -876,8 +876,8 @@ aside form input.button {
   border-radius: 0;
   color: #000;
   cursor: pointer;
-  font-family: $sans;
-  font-size: 1rem;
+  // font-family: $sans;
+  // font-size: 1rem;
   width: 100%;
   transition: color 0.5s, background 0.5s;
 }
