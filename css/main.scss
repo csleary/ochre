@@ -15,7 +15,7 @@ $mid-grey: #666;
 $dark-grey: #333;
 $shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.25);
 $rounded: .25rem;
-$rounded-padding: 2px 4px 2px 4px;
+$rounded-padding: 2px 5px 2px 5px;
 
 $serif: "PT Serif", serif;
 $sans: "PT Sans Narrow", sans-serif;
@@ -235,10 +235,7 @@ article a.entry-title {
 }
 
 .entry-meta {
-  // font-family: $sans;
   display: block;
-  // font-size: 1rem;
-  // font-weight: 400;
   margin-bottom: 2rem;
 }
 
@@ -267,10 +264,6 @@ article a.entry-title {
 
 .entry-meta .date a {
   color: #000;
-}
-
-.entry-meta .date a:hover {
-  // color: $orange;
 }
 
 .entry-meta .comments {
@@ -352,9 +345,6 @@ aside .module {
   background-color: $dark-beige;
   border-radius: $rounded;
   color: $light-beige;
-  // font-family: $sans;
-  // font-size: 1rem;
-  // font-weight: 400;
   padding: $rounded-padding;
   margin-right: .5rem;
   transition: .1s ease-in;
@@ -380,14 +370,6 @@ aside .module {
   color: #fff;
 }
 
-// .spotify:after {
-//   color: $dark-beige;
-//   font: normal 32px/1 'Genericons';
-//   content: '\f515';
-//   vertical-align: -0.5rem;
-//   padding-left: 0.5rem;
-// }
-
 .newsletter:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
@@ -395,21 +377,6 @@ aside .module {
   vertical-align: -0.5rem;
   padding-left: 0.5rem;
 }
-
-// .shows {
-//   background-image: url("{{ site.baseurl }}/assets/by-songkick-pink.svg");
-//   background-size: 5rem;
-//   background-position: right center;
-//   background-repeat: no-repeat;
-// }
-
-// .shows:after {
-//   color: $dark-beige;
-//   font: normal 32px/1 'Genericons';
-//   content: '\f307';
-//   vertical-align: -0.5rem;
-//   padding-left: 0.5rem;
-// }
 
 .shows .sk-badge-pink {
   vertical-align: -0.4rem;
@@ -604,8 +571,8 @@ form {
 form input,
 #isso-thread input {
   background: #fff;
-  border: 5px solid $dark-beige;
-  border-radius: 0;
+  border: 2px solid $dark-beige;
+  border-radius: $rounded;
   color: #000;
   font-family: $serif;
   font-size: 1rem;
@@ -621,12 +588,12 @@ form textarea,
 .isso-comment > div.text-wrapper > div.textarea-wrapper .textarea,
 .isso-postbox > .form-wrapper .textarea {
   background: #fff;
-  border: 5px solid $dark-beige;
-  border-radius: 0;
+  border: 2px solid $dark-beige;
+  border-radius: $rounded;
   color: #000;
   font-family: $serif;
   font-size: 1rem;
-  margin: 0;
+  margin-bottom: 1rem;
   padding: .75rem;
   width: 100%;
   -webkit-appearance: none;
@@ -640,14 +607,11 @@ form textarea:focus {
 form .send,
 #isso-thread .isso-postbox > .form-wrapper > .auth-section .post-action > input {
   background: #fff;
-  border: 5px solid #000;
-  border-radius: 0;
+  border: 2px solid #000;
+  border-radius: $rounded;
   color: #000;
   cursor: pointer;
   float: right;
-  // font-family: $sans;
-  // font-size: 1.2rem;
-  margin-top: 1rem;
   width: 100%;
   transition: color 0.5s, background 0.5s;
   -webkit-appearance: none;
@@ -704,17 +668,14 @@ textarea::placeholder,
 
 #isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
   background: #fff;
-  border: 5px solid $dark-beige;
-  border-top: 0;
-  border-radius: 0;
+  border: 2px solid $dark-beige;
+  border-radius: $rounded;
   color: #000;
   font-family: $serif;
   font-size: 1rem;
   display: inline-block;
-  float: left;
   padding: .75rem;
-  margin: 0;
-  width: 33.33%;
+  margin-bottom: 1rem;
   -webkit-appearance: none;
 }
 
@@ -722,11 +683,6 @@ textarea::placeholder,
   height: 6rem;
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-#isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper input[type="email"] {
-  border-left: 0;
-  border-right: 0;
 }
 
 #isso-root div.text-wrapper > div.isso-comment-header,
@@ -872,12 +828,10 @@ aside form input {
 
 aside form input.button {
   background: #fff;
-  border: 5px solid #000;
-  border-radius: 0;
+  border: 2px solid #000;
+  border-radius: $rounded;
   color: #000;
   cursor: pointer;
-  // font-family: $sans;
-  // font-size: 1rem;
   width: 100%;
   transition: color 0.5s, background 0.5s;
 }

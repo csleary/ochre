@@ -10,3 +10,5 @@ image: /assets/ochre-bucharest.jpg
 ![Photo of Ochre playing live at Control Club, Bucharest]({{ site.baseurl }}/assets/ochre-bucharest.jpg)
 
 Just a quick update -- you can see a clip from my recent gig at Control Club, in Bucharest, on [my Facebook page](https://www.facebook.com/ochremusic).
+
+Photo by [Andrei M](https://www.facebook.com/AndreiMusatArt).
