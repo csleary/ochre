@@ -10,6 +10,7 @@ $twitter-blue: #55acee;
 $facebook-blue: #3b5998;
 $spotify-green: #1ed760;
 $soundcloud-orange: #f50;
+$off-white: #f7f7f7;
 $light-grey: #999;
 $mid-grey: #666;
 $dark-grey: #333;
@@ -570,9 +571,9 @@ form {
 
 form input,
 #isso-thread input {
-  background: #fff;
-  border: 2px solid $dark-beige;
-  border-radius: $rounded;
+  background: $off-white;
+  border: 2px solid $light-grey;
+  border-radius: 0;
   color: #000;
   font-family: $serif;
   font-size: 1rem;
@@ -587,9 +588,9 @@ form textarea,
 #isso-thread .textarea,
 .isso-comment > div.text-wrapper > div.textarea-wrapper .textarea,
 .isso-postbox > .form-wrapper .textarea {
-  background: #fff;
-  border: 2px solid $dark-beige;
-  border-radius: $rounded;
+  background: $off-white;
+  border: 2px solid $light-grey;
+  border-radius: 0;
   color: #000;
   font-family: $serif;
   font-size: 1rem;
@@ -608,7 +609,7 @@ form .send,
 #isso-thread .isso-postbox > .form-wrapper > .auth-section .post-action > input {
   background: #fff;
   border: 2px solid #000;
-  border-radius: $rounded;
+  border-radius: 0;
   color: #000;
   cursor: pointer;
   float: right;
@@ -654,7 +655,7 @@ form input::placeholder,
 textarea::placeholder,
 #isso-thread input::placeholder,
 #isso-thread .textarea.placeholder {
-  color: $dark-beige;
+  color: $light-grey;
 }
 
 .isso-comment > div.text-wrapper > div.text p,
@@ -667,9 +668,9 @@ textarea::placeholder,
 }
 
 #isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
-  background: #fff;
-  border: 2px solid $dark-beige;
-  border-radius: $rounded;
+  background: $off-white;
+  border: 2px solid $light-grey;
+  border-radius: 0;
   color: #000;
   font-family: $serif;
   font-size: 1rem;
@@ -683,6 +684,11 @@ textarea::placeholder,
   height: 6rem;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper input:focus,
+#isso-thread .textarea:focus {
+  background: #fff;
 }
 
 #isso-root div.text-wrapper > div.isso-comment-header,
@@ -823,13 +829,19 @@ aside form {
 }
 
 aside form input {
+  background: #fff;
+  border: 2px solid $dark-beige;
   width: 100%;
+}
+
+aside form input::placeholder {
+  color: $dark-beige;
 }
 
 aside form input.button {
   background: #fff;
   border: 2px solid #000;
-  border-radius: $rounded;
+  border-radius: 0;
   color: #000;
   cursor: pointer;
   width: 100%;

@@ -41,7 +41,7 @@ ws.onmessage = function (event) {
     var placeholder = document.getElementById('sk-none');
     document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
   }
-  console.log(data);
+  // console.log(data);
 };
 
 var $contactForm = $('#contact-form');
