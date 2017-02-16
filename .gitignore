@@ -4,3 +4,6 @@ _site/
 bower_components/
 .csscomb.json
 .sass-lint.yml
+assets/epk/
+gulpfile.js
+node_modules/
