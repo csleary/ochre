@@ -67,3 +67,6 @@ exclude:
   - "*.sh"
   - src/
   - bower_components/
+  - node_modules/
+  - gulpfile.js
+  - package.json

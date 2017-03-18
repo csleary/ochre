@@ -2,6 +2,7 @@
 _site/
 *.sh
 bower_components/
+package.json
 .csscomb.json
 .sass-lint.yml
 assets/epk/

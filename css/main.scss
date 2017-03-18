@@ -498,6 +498,13 @@ img {
   height: auto;
 }
 
+div#blog article p img.peek {
+  width: 100%;
+  max-height: 28rem;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
 /* See media queries for large screen alignment */
 img.alignleft {
   display: block;
