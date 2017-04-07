@@ -357,7 +357,7 @@ aside .module {
   color: $light-beige;
   padding: $rounded-padding;
   margin-right: .5rem;
-  transition: .1s ease-in;
+  // transition: .1s ease-in;
 }
 
 #followers .spotify:hover {
@@ -502,7 +502,14 @@ div#blog article p img.peek {
   width: 100%;
   max-height: 28rem;
   object-fit: cover;
-  // object-position: 0 0;
+}
+
+img.top {
+  object-position: 0 0;
+}
+
+img.bottom {
+  object-position: 0 100%;
 }
 
 /* See media queries for large screen alignment */
