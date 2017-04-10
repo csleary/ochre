@@ -5,6 +5,7 @@ bower_components/
 package.json
 .csscomb.json
 .sass-lint.yml
+.sass-cache
 assets/epk/
 gulpfile.js
 node_modules/
