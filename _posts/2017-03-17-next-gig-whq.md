@@ -7,7 +7,7 @@ categories: [Ochre, Live]
 tags: [live, gig]
 image: /assets/machinedrum-whq.jpg
 ---
-[![Gig flyer]({{ site.baseurl }}/assets/machinedrum-whq.jpg){: .peek }]({% post_url 2017-03-17-next-gig-whq %})
+[![Gig flyer]({{ site.baseurl }}/assets/machinedrum-whq.jpg){: .peek .top }]({% post_url 2017-03-17-next-gig-whq %})
 
 This month on the 30th, I'll be playing a local gig in support of euphoric party catalyst, Machinedrum, as he brings his *Human Energy* tour to the city. I'll be joined by fellow local producer Xaatu.
 
