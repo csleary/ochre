@@ -2,7 +2,7 @@ $.stellar({
   horizontalScrolling: false
 });
 
-var ws = new WebSocket('ws://ochremusic.com/followers/');
+var ws = new WebSocket('wss://ochremusic.com/followers/');
 // var ws = new WebSocket("ws://localhost:8081");
 ws.onmessage = function (event) {
   var data = JSON.parse(event.data);
