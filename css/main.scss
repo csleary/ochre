@@ -409,6 +409,17 @@ aside .module {
   padding-left: 0.3rem;
 }
 
+.ether-address {
+  background: #fff;
+  border: 2px solid $dark-beige;
+  display: none;
+  font-family: $mono;
+  font-size: 1rem;
+  overflow: hidden;
+  padding: .2rem;
+  text-align: center;
+}
+
 .links:after {
   color: $dark-beige;
   font: normal 32px/1 'Genericons';
