@@ -44,6 +44,10 @@ ws.onmessage = function (event) {
   // console.log(data);
 };
 
+$("#ether-button").click(function(){
+  $(".ether-address").toggle();
+});
+
 var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
   e.preventDefault();
