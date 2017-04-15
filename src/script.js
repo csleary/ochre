@@ -16,7 +16,7 @@ ws.onmessage = function (event) {
   function songkick(array) {
     // Create the list element:
     var list = document.createElement('ul');
-    for(var i = 0; i < array.length; i++) {
+    for (i = 0; i < array.length; i++) {
       // Create the list item:
       var item = document.createElement('li');
       // Set its contents:
@@ -45,7 +45,7 @@ ws.onmessage = function (event) {
 };
 
 $("#ether-button").click(function(){
-  $(".ether-address").toggle();
+  $(".ether-info").toggle();
 });
 
 var $contactForm = $('#contact-form');

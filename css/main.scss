@@ -409,10 +409,13 @@ aside .module {
   padding-left: 0.3rem;
 }
 
+.ether-info {
+  display: none;
+}
+
 .ether-address {
   background: #fff;
   border: 2px solid $dark-beige;
-  display: none;
   font-family: $mono;
   font-size: 1rem;
   overflow: hidden;
