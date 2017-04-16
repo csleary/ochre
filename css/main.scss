@@ -409,19 +409,30 @@ aside .module {
   padding-left: 0.3rem;
 }
 
+.btc-info,
 .ether-info {
   display: none;
 }
 
+.btc-address,
 .ether-address {
   background: #fff;
   border: 2px solid $dark-beige;
   border-radius: 0;
   font-family: $mono;
   font-size: 1rem;
+  margin-bottom: .8rem;
   overflow: hidden;
   padding: .2rem;
   text-align: center;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.qr-btc,
+.qr-eth {
+  margin: 0 auto;
+  width: 100px;
 }
 
 .links:after {
@@ -515,7 +526,7 @@ img {
 
 div#blog article p img.peek {
   width: 100%;
-  max-height: 28rem;
+  max-height: 14rem;
   object-fit: cover;
 }
 
@@ -1089,6 +1100,10 @@ iframe {
 
   #isso-root .isso-comment .isso-follow-up {
     padding-left: 4rem;
+  }
+
+  div#blog article p img.peek {
+    max-height: 28rem;
   }
 
   img.alignleft {

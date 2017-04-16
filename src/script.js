@@ -44,8 +44,14 @@ ws.onmessage = function (event) {
   // console.log(data);
 };
 
+$("#btc-button").click(function(){
+  $(".btc-info").toggle();
+  $(".ether-info").hide();
+});
+
 $("#ether-button").click(function(){
   $(".ether-info").toggle();
+  $(".btc-info").hide();
 });
 
 var $contactForm = $('#contact-form');
