@@ -4,7 +4,7 @@ $.stellar({
 
 var ws = new WebSocket('wss://ochremusic.com/followers/');
 // var ws = new WebSocket("ws://localhost:8081");
-ws.onmessage = function (event) {
+ws.onmessage = function(event) {
   var data = JSON.parse(event.data);
   $('#followers .spotify').html(data.spotify);
   $('#followers .soundcloud').html(data.soundcloud);
@@ -14,27 +14,22 @@ ws.onmessage = function (event) {
   songkickList = data.songkick;
 
   function songkick(array) {
-    // Create the list element:
     var list = document.createElement('ul');
     for (i = 0; i < array.length; i++) {
-      // Create the list item:
       var item = document.createElement('li');
-      // Set its contents:
       item.appendChild(document.createTextNode(array[i].date));
-      // Create the link:
+      item.appendChild(document.createTextNode('\u00A0' + String.fromCharCode(8226) + '\u00A0'));
       var a = document.createElement('a');
       var linkText = document.createTextNode(array[i].venue);
       a.appendChild(linkText);
       a.title = "Visit the event page on Songkick.";
       a.href = array[i].link;
       item.appendChild(a);
-
+      item.appendChild(document.createElement('br'));
       item.appendChild(document.createTextNode(array[i].location));
       item.appendChild(document.createTextNode(array[i].time));
-      // Add it to the list:
       list.appendChild(item);
     }
-    // Finally, return the constructed list:
     return list;
   }
   if (songkickList.length !== 0) {
@@ -42,16 +37,25 @@ ws.onmessage = function (event) {
     document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
   }
   // console.log(data);
+  ws.close();
 };
 
-$("#btc-button").click(function(){
-  $(".btc-info").toggle();
-  $(".ether-info").hide();
+$("#eth-button").click(function() {
+  $(".eth-info").toggle();
+  $(".btc-info").hide();
+  $(".xem-info").hide();
 });
 
-$("#ether-button").click(function(){
-  $(".ether-info").toggle();
+$("#xem-button").click(function() {
+  $(".xem-info").toggle();
   $(".btc-info").hide();
+  $(".eth-info").hide();
+});
+
+$("#btc-button").click(function() {
+  $(".btc-info").toggle();
+  $(".eth-info").hide();
+  $(".xem-info").hide();
 });
 
 var $contactForm = $('#contact-form');
@@ -91,7 +95,7 @@ $contactForm.submit(function(e) {
 });
 
 $(window).load(function() {
-  setTimeout(function(){
+  setTimeout(function() {
     $('svg[data-hash="5652f831c72d"]').each(function( i ) {
       $(this).parent()
       .next('div.text-wrapper')

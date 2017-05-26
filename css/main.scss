@@ -15,7 +15,7 @@ $light-grey: #999;
 $mid-grey: #666;
 $dark-grey: #333;
 $shadow: 0.5rem 0.5rem 1rem 0px rgba(0, 0, 0, 0.25);
-$rounded: .25rem;
+$rounded: 0; //.25rem;
 $rounded-padding: 2px 5px 2px 5px;
 
 $serif: "PT Serif", serif;
@@ -344,20 +344,18 @@ aside .module {
   margin-top: 2rem;
 }
 
-#followers li:not(:last-child) {
-  margin-bottom: .25rem;
-}
-
+// #followers li:not(:last-child) {
+//   margin-bottom: .25rem;
+// }
+//
 #followers .spotify,
 #followers .soundcloud,
 #followers .facebook,
 #followers .twitter {
-  background-color: $dark-beige;
   border-radius: $rounded;
-  color: $light-beige;
+  color: #000;
   padding: $rounded-padding;
-  margin-right: .5rem;
-  // transition: .1s ease-in;
+  transition: background-color .2s ease-in;
 }
 
 #followers .spotify:hover {
@@ -409,13 +407,15 @@ aside .module {
   padding-left: 0.3rem;
 }
 
-.btc-info,
-.ether-info {
+.eth-info,
+.xem-info,
+.btc-info {
   display: none;
 }
 
-.btc-address,
-.ether-address {
+.eth-address,
+.xem-address,
+.btc-address {
   background: #fff;
   border: 2px solid $dark-beige;
   border-radius: 0;
@@ -429,8 +429,9 @@ aside .module {
   -webkit-appearance: none;
 }
 
-.qr-btc,
-.qr-eth {
+.qr-eth,
+.qr-xem,
+.qr-btc {
   margin: 0 auto;
   width: 100px;
 }
@@ -811,8 +812,8 @@ textarea::placeholder,
   border-radius: $rounded;
   color: $red;
   padding: $rounded-padding;
-  transition: .2s;
-  transition-timing-function: ease-in-out;
+  transition: background-color .2s, color .2s;
+  transition-timing-function: ease-in;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer >  {
