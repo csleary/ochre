@@ -2,60 +2,73 @@ $.stellar({
   horizontalScrolling: false
 });
 
-var ws = new WebSocket('wss://ochremusic.com/followers/');
-// var ws = new WebSocket("ws://localhost:8081");
-ws.onmessage = function(event) {
-  var data = JSON.parse(event.data);
-  $('#followers .spotify').html(data.spotify);
-  $('#followers .soundcloud').html(data.soundcloud);
-  $('#followers .facebook').html(data.facebook);
-  $('#followers .twitter').html(data.twitter);
-  $('aside #mailchimp').html(data.mailchimp);
-  songkickList = data.songkick;
+var socket = new WebSocket('wss://ochremusic.com/followers/');
+// var socket = new WebSocket("ws://localhost:8081");
+socket.onmessage = function(response) {
+  var data = JSON.parse(response.data);
+  switch (data.service) {
+    case 'spotify':
+      $('#followers .spotify').html(data.followers);
+      break;
+    case 'soundcloud':
+      $('#followers .soundcloud').html(data.followers);
+      break;
+    case 'facebook':
+      $('#followers .facebook').html(data.likes);
+      break;
+    case 'twitter':
+      $('#followers .twitter').html(data.followers);
+      break;
+    case 'mailchimp':
+      $('aside #mailchimp').html(data.subscribers);
+      break;
+    case 'songkick':
+      songkickList = data.gigs;
 
-  function songkick(array) {
-    var list = document.createElement('ul');
-    for (i = 0; i < array.length; i++) {
-      var item = document.createElement('li');
-      item.appendChild(document.createTextNode(array[i].date));
-      item.appendChild(document.createTextNode('\u00A0' + String.fromCharCode(8226) + '\u00A0'));
-      var a = document.createElement('a');
-      var linkText = document.createTextNode(array[i].venue);
-      a.appendChild(linkText);
-      a.title = "Visit the event page on Songkick.";
-      a.href = array[i].link;
-      item.appendChild(a);
-      item.appendChild(document.createElement('br'));
-      item.appendChild(document.createTextNode(array[i].location));
-      item.appendChild(document.createTextNode(array[i].time));
-      list.appendChild(item);
-    }
-    return list;
+      function songkick(array) {
+        var list = document.createElement('ul');
+        for (i = 0; i < array.length; i++) {
+          var item = document.createElement('li');
+          item.appendChild(document.createTextNode(array[i].date));
+          item.appendChild(document.createTextNode('\u00A0' + String.fromCharCode(8226) + '\u00A0'));
+          var a = document.createElement('a');
+          var linkText = document.createTextNode(array[i].venue);
+          a.appendChild(linkText);
+          a.title = "Visit the event page on Songkick.";
+          a.href = array[i].link;
+          item.appendChild(a);
+          item.appendChild(document.createElement('br'));
+          item.appendChild(document.createTextNode(array[i].location));
+          item.appendChild(document.createTextNode(array[i].time));
+          list.appendChild(item);
+        }
+        return list;
+      }
+
+      if (songkickList.length !== 0) {
+        var placeholder = document.getElementById('sk-none');
+        document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
+      }
+      break;
   }
-  if (songkickList.length !== 0) {
-    var placeholder = document.getElementById('sk-none');
-    document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
-  }
-  // console.log(data);
-  ws.close();
 };
 
-$("#eth-button").click(function() {
-  $(".eth-info").toggle();
-  $(".btc-info").hide();
-  $(".xem-info").hide();
+$('#eth-button').click(function() {
+  $('.eth-info').toggle();
+  $('.btc-info').hide();
+  $('.xem-info').hide();
 });
 
-$("#xem-button").click(function() {
-  $(".xem-info").toggle();
-  $(".btc-info").hide();
-  $(".eth-info").hide();
+$('#xem-button').click(function() {
+  $('.xem-info').toggle();
+  $('.btc-info').hide();
+  $('.eth-info').hide();
 });
 
-$("#btc-button").click(function() {
-  $(".btc-info").toggle();
-  $(".eth-info").hide();
-  $(".xem-info").hide();
+$('#btc-button').click(function() {
+  $('.btc-info').toggle();
+  $('.eth-info').hide();
+  $('.xem-info').hide();
 });
 
 var $contactForm = $('#contact-form');

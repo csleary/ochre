@@ -50,7 +50,7 @@ sass:
   sass_dir: _sass
   style: compressed
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
