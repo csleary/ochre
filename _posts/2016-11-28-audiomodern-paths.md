@@ -1,6 +1,6 @@
 ---
-title: Audiomodern 'Paths' Sample Library
-description: I recently contributed some music and sound design for Audiomodern's latest sample-based instrument, 'Paths'.
+title: "Audiomodern 'Paths' Sample Library"
+description: "I recently contributed some music and sound design for Audiomodern's latest sample-based instrument, 'Paths'."
 date: 2016-11-29 12:40
 published: true
 categories: [Production, Gear Talk]

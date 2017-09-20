@@ -1,9 +1,9 @@
 ---
-title: Migrated to Jekyll
-description: Detailing my decision to move off a self-hosted Wordpress site, to one using the static page generator, Jekyll.
+title: "Migrated to Jekyll"
+description: "Detailing my decision to move off a self-hosted Wordpress site, to one using the static page generator, Jekyll."
 date: 2016-11-05 16:21
 published: true
-categories: Misc
+categories: [Misc]
 tags: [web dev, jekyll, wordpress]
 image:
 ---

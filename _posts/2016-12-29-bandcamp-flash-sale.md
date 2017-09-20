@@ -1,6 +1,6 @@
 ---
-title: Bandcamp Flash Sale
-description: Thought I'd run a little Bandcamp flash sale for the few remaining days of this year.
+title: "Bandcamp Flash Sale"
+description: "Thought I'd run a little Bandcamp flash sale for the few remaining days of this year."
 date: 2016-12-29 14:30
 published: true
 categories: [Ochre]

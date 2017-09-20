@@ -42,9 +42,11 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: post
-      category:
+      category: [Ochre]
       image: /assets/logo.png
+      show_adverts: false
+      layout: post
+      published: false
 
 sass:
   sass_dir: _sass

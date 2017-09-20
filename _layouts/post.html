@@ -1,5 +1,5 @@
 {% include header.html %}
-<div id="wrapper">
+<div class="container">
   <section>
     <h1 class="entry-title">{{ page.title | smartify }}</h1>
     <div class="entry-meta">
@@ -19,6 +19,9 @@
     </div>
 
     {{ content }}
+    {% if page.show_adverts %}
+      {% include adverts.html %}
+    {% endif %}
 
     <div class="entry-meta page-meta">
       {% if page.categories.size > 0 %}

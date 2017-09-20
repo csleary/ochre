@@ -24,8 +24,14 @@
   ga('send', 'pageview');
 
   </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-9741352794151734",
+      enable_page_level_ads: true
+    });
+  </script>
 </head>
-
 <body>
   <a href="{{ site.baseurl }}/">
     <header data-stellar-background-ratio="0.5"></header>
@@ -33,11 +39,11 @@
   {% include nav.html %}
   <script>
   function nav() {
-    var x = document.getElementById("main-nav");
-    if (x.className === "nav-menu") {
-      x.className += " responsive";
-    } else {
-      x.className = "nav-menu";
-    }
+  var x = document.getElementById('main-nav');
+  if (x.className === 'nav-menu') {
+    x.className += ' responsive';
+  } else {
+    x.className = 'nav-menu';
   }
-  </script>
+}
+</script>
