@@ -9,7 +9,7 @@ image:
 ---
 I'm very happy to announce the release of my new album, *Beyond the Outer Loop*, out now for streaming and download.
 
-<iframe style="width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=506275920/size=large/bgcol=ffffff/linkcol=EA5727/tracklist=false/artwork=small/transparent=true/"></iframe>
+<iframe class="bandcamp" style="width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=506275920/size=large/bgcol=ffffff/linkcol=EA5727/tracklist=false/artwork=small/transparent=true/"></iframe>
 
 In addition to [Bandcamp](https://ochre.bandcamp.com/album/beyond-the-outer-loop), it's available on [Spotify](https://open.spotify.com/album/6gOkTOsw1ax9UYZ5zVghOu), [iTunes](https://itunes.apple.com/us/album/id1203813166?app=itunes)/[Apple Music](https://itunes.apple.com/us/album/id1203813166), [Google Play](https://play.google.com/store/music/album?id=B25oheggnkic5b6ohrzuxqvlt3q) etc.
 

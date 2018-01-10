@@ -14,9 +14,9 @@ $off-white: #f7f7f7;
 $light-grey: #999;
 $mid-grey: #666;
 $dark-grey: #333;
-$shadow: .5rem .5rem 1rem px rgba(0, 0, 0, .25);
-$rounded: .25rem;
-$rounded-padding: .125rem .4rem .25rem;
+$shadow: 0.5rem 0.5rem 1rem px rgba(0, 0, 0, 0.25);
+$rounded: 0.25rem;
+$rounded-padding: 0.125rem 0.4rem 0.25rem;
 
 $serif: 'PT Serif', serif;
 $sans: 'PT Sans Narrow', sans-serif;
@@ -117,7 +117,7 @@ nav {
   font-family: $sans;
   font-size: 2rem;
   margin-bottom: 1rem;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 section {
@@ -125,7 +125,7 @@ section {
   h2,
   h3,
   h4 {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -147,6 +147,7 @@ section {
 
     a {
       display: block;
+      position: relative;
       text-align: center;
 
       &#current,
@@ -211,7 +212,7 @@ section {
       &::after {
         content: '\f431';
         font: normal 16px/1 'Genericons';
-        padding-left: .5rem;
+        padding-left: 0.5rem;
       }
     }
   }
@@ -277,7 +278,7 @@ article a.entry-title {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
-  vertical-align: -.2rem;
+  vertical-align: -0.2rem;
 }
 
 .entry-meta .date a {
@@ -306,8 +307,8 @@ article a.entry-title {
 .entry-meta .comments:before {
   content: '\f300';
   font: normal 16px/1 'Genericons';
-  margin-right: .25rem;
-  vertical-align: -.1rem;
+  margin-right: 0.25rem;
+  vertical-align: -0.1rem;
 }
 
 .page-meta {
@@ -323,7 +324,7 @@ article a.entry-title {
 .page-meta a:visited,
 .page-meta a:active {
   color: $white;
-  transition: .1s ease-in;
+  transition: 0.1s ease-in;
 }
 
 .page-meta a:hover {
@@ -351,12 +352,12 @@ blockquote {
 sup,
 sub {
   position: relative;
-  top: -.4em;
+  top: -0.4em;
   vertical-align: baseline;
 }
 
 sub {
-  top: .4em;
+  top: 0.4em;
 }
 
 // Sidebar
@@ -386,8 +387,8 @@ aside {
 #followers .twitter {
   border-radius: $rounded;
   color: $black;
-  padding: .1rem .25rem;
-  transition: background-color .2s ease-in;
+  padding: 0.1rem 0.25rem;
+  transition: background-color 0.2s ease-in;
 }
 
 #followers .spotify:hover {
@@ -414,29 +415,29 @@ aside {
   color: $dark-beige;
   content: '\f463';
   font: normal 32px/1 'Genericons';
-  padding-left: .5rem;
-  vertical-align: -.5rem;
+  padding-left: 0.5rem;
+  vertical-align: -0.5rem;
 }
 
 .shows .sk-badge-pink {
   height: 28px;
-  margin-left: .6rem;
-  vertical-align: -.4rem;
+  margin-left: 0.6rem;
+  vertical-align: -0.4rem;
   width: 28px;
 }
 
 #songkick li:not(:last-child) {
   border-bottom: 1px dashed $dark-beige;
-  margin-bottom: .25rem;
-  padding-bottom: .25rem;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .tips:after {
   color: $dark-beige;
   content: '\f221';
   font: normal 32px/1 'Genericons';
-  padding-left: .3rem;
-  vertical-align: -.4rem;
+  padding-left: 0.3rem;
+  vertical-align: -0.4rem;
 }
 
 .eth-info,
@@ -454,9 +455,9 @@ aside {
   border-radius: 0;
   font-family: $mono;
   font-size: 1rem;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   overflow: hidden;
-  padding: .2rem;
+  padding: 0.2rem;
   text-align: center;
   width: 100%;
 }
@@ -472,8 +473,8 @@ aside {
   color: $dark-beige;
   content: '\f107';
   font: normal 32px/1 'Genericons';
-  padding-left: .1rem;
-  vertical-align: -.6rem;
+  padding-left: 0.1rem;
+  vertical-align: -0.6rem;
 }
 
 // Footer
@@ -499,8 +500,8 @@ footer {
 .genericon-home,
 .genericon-top {
   font-size: 32px;
-  margin: 0 .3rem;
-  transition: .2s ease-in;
+  margin: 0 0.3rem;
+  transition: 0.2s ease-in;
 }
 
 .genericon-facebook:hover {
@@ -520,7 +521,7 @@ article ul {
 section li,
 article li {
   line-height: 1.6rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 section li a:link,
@@ -529,7 +530,7 @@ section li a:link {
 }
 
 .credits {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .credits a:hover {
@@ -588,8 +589,8 @@ a.vid-vimeo:after,
 a.vid-youtube:after {
   color: $light-grey;
   font: normal 32px/1 'Genericons';
-  padding-left: .5rem;
-  vertical-align: -.3rem;
+  padding-left: 0.5rem;
+  vertical-align: -0.3rem;
 }
 
 a.vid-vimeo:after {
@@ -611,7 +612,7 @@ code {
   border-bottom: 2px solid $dark-beige;
   color: $black;
   font-family: $mono;
-  padding: .2rem;
+  padding: 0.2rem;
 }
 
 pre code {
@@ -626,8 +627,8 @@ pre code {
 
 .highlight {
   background: $light-beige;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 // Forms
@@ -652,7 +653,7 @@ form input,
   font-family: $serif;
   font-size: 1rem;
   margin-bottom: 1rem;
-  padding: .75rem;
+  padding: 0.75rem;
   width: 100%;
 }
 
@@ -668,7 +669,7 @@ form textarea,
   font-family: $serif;
   font-size: 1rem;
   margin-bottom: 1rem;
-  padding: .75rem;
+  padding: 0.75rem;
   width: 100%;
 }
 
@@ -691,7 +692,7 @@ form .send,
   color: $black;
   cursor: pointer;
   float: right;
-  transition: color .5s, background .5s;
+  transition: color 0.5s, background 0.5s;
   width: 100%;
 }
 
@@ -706,7 +707,7 @@ aside form input.button:hover,
   background: $orange;
   border-color: $orange;
   color: $white;
-  transition: color .2s, background .2s;
+  transition: color 0.2s, background 0.2s;
 }
 
 form .send:active,
@@ -774,7 +775,7 @@ textarea::placeholder,
   font-family: $serif;
   font-size: 1rem;
   margin-bottom: 1rem;
-  padding: .75rem;
+  padding: 0.75rem;
 }
 
 #isso-thread .textarea {
@@ -856,7 +857,7 @@ textarea::placeholder,
 
 .isso-comment > div.text-wrapper > .isso-comment-header .spacer {
   color: $light-grey;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .note {
@@ -869,17 +870,17 @@ textarea::placeholder,
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-header .author.chris {
-  background-color: rgba(255, 192, 203, .5);
+  background-color: rgba(255, 192, 203, 0.5);
   border-radius: $rounded;
   color: $red;
   padding: $rounded-padding;
-  transition: background-color .2s, color .2s;
+  transition: background-color 0.2s, color 0.2s;
   transition-timing-function: ease-in;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer >  {
   position: relative;
-  top: .2rem;
+  top: 0.2rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer > a + a {
@@ -888,7 +889,7 @@ textarea::placeholder,
 
 .isso-comment > div.text-wrapper > .isso-comment-footer .votes {
   color: $dark-grey;
-  font-size: .75rem;
+  font-size: 0.75rem;
   padding-right: 2px;
 }
 
@@ -896,7 +897,7 @@ textarea::placeholder,
 .isso-comment > div.text-wrapper > .isso-comment-footer .downvote svg {
   fill: $light-grey;
   position: relative;
-  top: .2rem;
+  top: 0.2rem;
 }
 
 .isso-comment > div.text-wrapper > .isso-comment-footer > span.spacer {
@@ -955,7 +956,7 @@ aside form input.button {
   border-radius: 0;
   color: $black;
   cursor: pointer;
-  transition: color .5s, background .5s;
+  transition: color 0.5s, background 0.5s;
   width: 100%;
 }
 
@@ -973,25 +974,25 @@ aside form input.button {
 }
 
 .pagination a.next {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .pagination a.previous {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .pagination a.next:after,
 .post-nav .next-post:after {
   content: '\f429';
   font: normal 32px/1 'Genericons';
-  vertical-align: -.25rem;
+  vertical-align: -0.25rem;
 }
 
 .pagination a.previous:before,
 .post-nav .previous-post:before {
   content: '\f430';
   font: normal 32px/1 'Genericons';
-  vertical-align: -.25rem;
+  vertical-align: -0.25rem;
 }
 
 // Post navigation
@@ -1053,7 +1054,7 @@ aside form input.button {
 }
 
 .album span.spacer {
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 // Responsive embeds
@@ -1084,6 +1085,10 @@ iframe {
   width: 100%;
 }
 
+iframe.bandcamp {
+  margin-top: 2rem;
+}
+
 // Large Screens
 
 @media (min-width: 769px) {
@@ -1107,12 +1112,12 @@ iframe {
   }
 
   ul.nav-menu li a {
-    padding: 0 1.5rem .5rem 1.5rem;
+    padding: 0 1.5rem 0.5rem 1.5rem;
   }
 
   ul.nav-menu li a:hover,
   ul.nav-menu li a#current {
-    padding-bottom: .25rem;
+    padding-bottom: 0.25rem;
   }
 
   .container {
