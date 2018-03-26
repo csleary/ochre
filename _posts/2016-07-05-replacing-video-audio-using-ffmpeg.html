@@ -7,7 +7,6 @@ published: true
 status: publish
 categories: Video
 tags: [apps, tips]
-show_adverts: false
 ---
 <p>
   Up until recently I used Quicktime to switch audio tracks for the odd music and showreel video, but since it will no longer be updated for Windows, and can possibly lead to your PC getting the clap, I figured I'd better find an alternative option. Enter <a href="https://www.ffmpeg.org/">ffmpeg</a>. It's a very powerful, free command line tool that I'd previously only worked with in tandem with some sort of GUI or partner app, and had never really tried to work with it on its own due to its bewildering plethora of options. But after a little trial and error I've settled on the following commands to replace audio streams in video files, (re)encoding where necessary, and avoiding video transcoding if possible in order to retain video image quality.
@@ -15,7 +14,6 @@ show_adverts: false
 <p>
   I installed ffmpeg using <a href="https://chocolatey.org/">Chocolatey</a>, a very useful package manager for Windows, similar in operation to those you'd find on Linux (well, it's not quite as good as APT or DNF/YUM, say, but it's the best we've got at the moment).
 </p>
-{% include adverts.html %}
 <p>
   In Windows 10, you can shift-right click in the Explorer directory that houses your video file to open a command window (just select the very handy 'Open command window here' option).
 </p>
