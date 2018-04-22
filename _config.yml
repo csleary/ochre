@@ -63,12 +63,13 @@ plugins:
 include: ['_pages']
 
 exclude:
+  - "*.sh"
+  - "*.rdb"
   - .DS_Store
+  - bower_components/
   - Gemfile
   - Gemfile.lock
-  - "*.sh"
-  - src/
-  - bower_components/
-  - node_modules/
   - gulpfile.js
+  - node_modules/
   - package.json
+  - src/
