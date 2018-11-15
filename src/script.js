@@ -2,56 +2,56 @@ $.stellar({
   horizontalScrolling: false
 });
 
-var socket = new WebSocket('wss://ochremusic.com/followers/');
+// var socket = new WebSocket('wss://ochremusic.com/followers/');
 // var socket = new WebSocket("ws://localhost:8081");
-socket.onmessage = function(response) {
-  var data = JSON.parse(response.data);
-  switch (data.service) {
-    case 'spotify':
-      $('#followers .spotify').html(data.followers);
-      break;
-    case 'soundcloud':
-      $('#followers .soundcloud').html(data.followers);
-      break;
-    case 'facebook':
-      $('#followers .facebook').html(data.likes);
-      break;
-    case 'twitter':
-      $('#followers .twitter').html(data.followers);
-      break;
-    case 'mailchimp':
-      $('aside #mailchimp').html(data.subscribers);
-      break;
-    case 'songkick':
-      songkickList = data.gigs;
-
-      function songkick(gig) {
-        var list = document.createElement('ul');
-        for (i = 0; i < gig.length; i++) {
-          var item = document.createElement('li');
-          item.appendChild(document.createTextNode(gig[i].date));
-          item.appendChild(document.createTextNode('\u00A0' + String.fromCharCode(8226) + '\u00A0'));
-          var a = document.createElement('a');
-          var linkText = document.createTextNode(gig[i].venue);
-          a.appendChild(linkText);
-          a.title = "Visit the event page on Songkick.";
-          a.href = gig[i].link;
-          item.appendChild(a);
-          item.appendChild(document.createElement('br'));
-          item.appendChild(document.createTextNode(gig[i].location));
-          item.appendChild(document.createTextNode(gig[i].time));
-          list.appendChild(item);
-        }
-        return list;
-      }
-
-      if (songkickList) {
-        var placeholder = document.getElementById('sk-none');
-        document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
-      }
-      break;
-  }
-};
+// socket.onmessage = function(response) {
+//   var data = JSON.parse(response.data);
+//   switch (data.service) {
+//     case 'spotify':
+//       $('#followers .spotify').html(data.followers);
+//       break;
+//     case 'soundcloud':
+//       $('#followers .soundcloud').html(data.followers);
+//       break;
+//     case 'facebook':
+//       $('#followers .facebook').html(data.likes);
+//       break;
+//     case 'twitter':
+//       $('#followers .twitter').html(data.followers);
+//       break;
+//     case 'mailchimp':
+//       $('aside #mailchimp').html(data.subscribers);
+//       break;
+//     case 'songkick':
+//       songkickList = data.gigs;
+//
+//       function songkick(gig) {
+//         var list = document.createElement('ul');
+//         for (i = 0; i < gig.length; i++) {
+//           var item = document.createElement('li');
+//           item.appendChild(document.createTextNode(gig[i].date));
+//           item.appendChild(document.createTextNode('\u00A0' + String.fromCharCode(8226) + '\u00A0'));
+//           var a = document.createElement('a');
+//           var linkText = document.createTextNode(gig[i].venue);
+//           a.appendChild(linkText);
+//           a.title = "Visit the event page on Songkick.";
+//           a.href = gig[i].link;
+//           item.appendChild(a);
+//           item.appendChild(document.createElement('br'));
+//           item.appendChild(document.createTextNode(gig[i].location));
+//           item.appendChild(document.createTextNode(gig[i].time));
+//           list.appendChild(item);
+//         }
+//         return list;
+//       }
+//
+//       if (songkickList) {
+//         var placeholder = document.getElementById('sk-none');
+//         document.getElementById('songkick').replaceChild(songkick(songkickList), placeholder);
+//       }
+//       break;
+//   }
+// };
 
 $('#eth-button').click(function() {
   $('.eth-info').toggle();

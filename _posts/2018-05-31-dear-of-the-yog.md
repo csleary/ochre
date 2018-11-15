@@ -12,7 +12,7 @@ Touched Music released this Roel Funcken remix album a few days back, called _De
 
 The second piece is my remix of Roel Funcken's _Android Robson_, in which I've cherry-picked a melody and rebuild the track around it with some Evolver and guitar pedals.
 
-As ever with Touched, all proceeds from the album sales go to charity, which in this case is the Soi Dog Foundation, a charity that rescues dogs from the dogmeat trade in Asia. Anyone who knows Roel knows how much of an animal lover he is, so it's been a pleasure to help him help abused and maltreated Dogs.
+As ever with Touched, all proceeds from the album sales go to charity, which in this case is the Soi Dog Foundation, a charity that rescues dogs from the dogmeat trade in Asia. Anyone who knows Roel knows how much of an animal lover he is, so it's been a pleasure to do something to help him help abused and maltreated Dogs.
 
 In addition to the usual download formats, _DotY_ is also available on a limited digipak CD.
 
