@@ -2,6 +2,26 @@ $.stellar({
   horizontalScrolling: false
 });
 
+$.get("https://ochremusic.com/api/spotify", function(data) {
+  $("#followers .spotify").html(data.spotify);
+});
+
+$.get("https://ochremusic.com/api/soundcloud", function(data) {
+  $("#followers .soundcloud").html(data.soundcloud);
+});
+
+$.get("https://ochremusic.com/api/facebook", function(data) {
+  $("#followers .facebook").html(data.facebook);
+});
+
+$.get("https://ochremusic.com/api/twitter", function(data) {
+  $("#followers .twitter").html(data.twitter);
+});
+
+$.get("https://ochremusic.com/api/mailchimp", function(data) {
+  $("aside #mailchimp").html(data.mailchimp);
+});
+
 // var socket = new WebSocket('wss://ochremusic.com/followers/');
 // var socket = new WebSocket("ws://localhost:8081");
 // socket.onmessage = function(response) {
@@ -53,46 +73,46 @@ $.stellar({
 //   }
 // };
 
-$('#eth-button').click(function() {
-  $('.eth-info').toggle();
-  $('.btc-info').hide();
-  $('.xem-info').hide();
+$("#eth-button").click(function() {
+  $(".eth-info").toggle();
+  $(".btc-info").hide();
+  $(".xem-info").hide();
 });
 
-$('#xem-button').click(function() {
-  $('.xem-info').toggle();
-  $('.btc-info').hide();
-  $('.eth-info').hide();
+$("#xem-button").click(function() {
+  $(".xem-info").toggle();
+  $(".btc-info").hide();
+  $(".eth-info").hide();
 });
 
-$('#btc-button').click(function() {
-  $('.btc-info').toggle();
-  $('.eth-info').hide();
-  $('.xem-info').hide();
+$("#btc-button").click(function() {
+  $(".btc-info").toggle();
+  $(".eth-info").hide();
+  $(".xem-info").hide();
 });
 
-var $contactForm = $('#contact-form');
+var $contactForm = $("#contact-form");
 $contactForm.submit(function(e) {
   e.preventDefault();
-  var $submit = $('input:submit', $contactForm);
+  var $submit = $("input:submit", $contactForm);
   var defaultSubmitText = $submit.val();
 
   $.ajax({
     url: "//formspree.io/" + "mail" + "@" + "ochremusic" + "." + "com",
-    method: 'POST',
+    method: "POST",
     data: $(this).serialize(),
-    dataType: 'json',
+    dataType: "json",
     beforeSend: function() {
       //$contactForm.append("<div class="alert alert--loading">Sending message…</div>");
-      $submit.attr('disabled', true).val("Sending message…");
+      $submit.attr("disabled", true).val("Sending message…");
     },
     success: function(data) {
       //$contactForm.append("<div class="alert alert--success">Message sent!</div>");
       $submit.val("Message sent!");
-      $('#contact-form')[0].reset();
+      $("#contact-form")[0].reset();
       setTimeout(function() {
         //$(".alert--success").remove();
-        $submit.attr('disabled', false).val(defaultSubmitText);
+        $submit.attr("disabled", false).val(defaultSubmitText);
       }, 5000);
     },
     error: function(err) {
@@ -101,7 +121,7 @@ $contactForm.submit(function(e) {
       $submit.val("Sending failed, sorry.");
       setTimeout(function() {
         //$(".alert--error").remove();
-        $submit.attr('disabled', false).val(defaultSubmitText);
+        $submit.attr("disabled", false).val(defaultSubmitText);
       }, 5000);
     }
   });
@@ -109,12 +129,13 @@ $contactForm.submit(function(e) {
 
 $(window).load(function() {
   setTimeout(function() {
-    $('svg[data-hash="5652f831c72d"]').each(function( i ) {
-      $(this).parent()
-      .next('div.text-wrapper')
-      .find('a.author')
-      .first()
-      .addClass('chris');
+    $('svg[data-hash="5652f831c72d"]').each(function(i) {
+      $(this)
+        .parent()
+        .next("div.text-wrapper")
+        .find("a.author")
+        .first()
+        .addClass("chris");
     });
   }, 500);
 });
