@@ -30,16 +30,14 @@ social:
     - https://www.youtube.com/user/ochremusic
 
 defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
+  - scope:
+      path: '' # an empty string here means all files in the project
       type: pages
     values:
       layout: page
       image: /assets/logo.png
-  -
-    scope:
-      path: ""
+  - scope:
+      path: ''
       type: posts
     values:
       category: [Ochre]
@@ -63,8 +61,8 @@ plugins:
 include: ['_pages']
 
 exclude:
-  - "*.sh"
-  - "*.rdb"
+  - '*.sh'
+  - '*.rdb'
   - .DS_Store
   - bower_components/
   - Gemfile
