@@ -5,15 +5,10 @@
     <div class="entry-meta">
       <span class="date">
         <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink">
-          {% assign d = page.date | date: "%-d"  %}
-          {% case d %}
-          {% when '1' or '21' or '31' %}{{ d }}st
-          {% when '2' or '22' %}{{ d }}nd
-          {% when '3' or '23' %}{{ d }}rd
-          {% else %}{{ d }}th
-          {% endcase %}of
-          {{ page.date | date: "%B" }},
-          {{ page.date | date: "%Y" }}
+          {% assign d = page.date | date: "%-d" %} {% case d %} {% when '1' or
+          '21' or '31' %}{{ d }}st {% when '2' or '22' %}{{ d }}nd {% when '3'
+          or '23' %}{{ d }}rd {% else %}{{ d }}th {% endcase %}of {{ page.date |
+          date: "%B" }}, {{ page.date | date: "%Y" }}
         </a>
       </span>
     </div>
@@ -23,18 +18,19 @@
     <div class="entry-meta page-meta">
       {% if page.categories.size > 0 %}
       <div class="categories">
-        {% assign categories = page.categories %}
-        {% for category in categories %}
-        <a href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>
+        {% assign categories = page.categories %} {% for category in categories
+        %}
+        <a href="{{ site.baseurl }}/categories/#{{ category | slugify }}"
+          >{{ category }}</a
+        >
         {% endfor %}
       </div>
-      {% endif %}
-
-      {% if page.tags.size > 0 %}
+      {% endif %} {% if page.tags.size > 0 %}
       <div class="tags">
-        {% assign tags = page.tags %}
-        {% for tag in tags %}
-        <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag | downcase }}</a>
+        {% assign tags = page.tags %} {% for tag in tags %}
+        <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}"
+          >{{ tag | downcase }}</a
+        >
         {% endfor %}
       </div>
       {% endif %}
@@ -42,15 +38,14 @@
 
     <div class="post-nav">
       {% if page.previous.url %}
-      <a class="previous-post" href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-      {% else %}
-      <a class="previous-post"></a>
-      {% endif %}
-      {% if page.next.url %}
+      <a class="previous-post" href="{{ page.previous.url }}"
+        >{{ page.previous.title }}</a
+      >
+      {% else %} <a class="previous-post"></a> {% endif %} {% if page.next.url
+      %}
       <a class="next-post" href="{{ page.next.url }}">{{ page.next.title }}</a>
       {% endif %}
     </div>
-    <!-- {% include comments.html %} -->
   </section>
   {% include sidebar.html %}
 </div>

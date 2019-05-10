@@ -4,71 +4,42 @@
   <div class="blog">
     {% for post in paginator.posts %}
     <article>
-      <h1><a class="entry-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | smartify }}</a></h1>
+      <h1>
+        <a class="entry-title" href="{{ site.baseurl }}{{ post.url }}"
+          >{{ post.title | smartify }}</a
+        >
+      </h1>
 
       <div class="entry-meta">
-
         <div class="date">
           <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink">
-            {% assign d = post.date | date: "%-d"  %}
-            {% case d %}
-            {% when '1' or '21' or '31' %}{{ d }}st
-            {% when '2' or '22' %}{{ d }}nd
-            {% when '3' or '23' %}{{ d }}rd
-            {% else %}{{ d }}th
-            {% endcase %}of
-            {{ post.date | date: "%B" }},
-            {{ post.date | date: "%Y" }}
+            {% assign d = post.date | date: "%-d" %} {% case d %} {% when '1' or
+            '21' or '31' %}{{ d }}st {% when '2' or '22' %}{{ d }}nd {% when '3'
+            or '23' %}{{ d }}rd {% else %}{{ d }}th {% endcase %}of {{ post.date
+            | date: "%B" }}, {{ post.date | date: "%Y" }}
           </a>
         </div>
+      </div>
 
-        <!-- {% if post.categories.size > 0 %}
-        <span class="categories">
-        {% assign categories = page.categories %}
-        {% for category in categories %}
-        <a href="{{ site.baseurl }}/categories/#{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
-        {% endfor %}
-      </span>
-      {% endif %}
+      {{ post.excerpt }} {% if post.content contains site.excerpt_separator %}
+      <a href="{{ post.url | prepend: site.baseurl }}">Read on&hellip;</a> {%
+      endif %}
+    </article>
+    {% endfor %}
 
-      {% if post.tags.size > 0 %}
-      <span class="tags">
-      {% assign tags = page.tags %}
-      {% for tag in tags %}
-      <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag | downcase }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
-      {% endfor %}
-    </span>
-    {% endif %} -->
-
-    <!-- <div class="comments">
-      <script async data-isso="https://ochremusic.com/isso/" src="https://ochremusic.com/isso/js/count.min.js"></script>
-      <a href="{{ site.baseurl }}{{ post.url }}#isso-thread">Comments</a>
-    </div> -->
-
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      {% else %} <span class="previous"></span> {% endif %}
+      <span class="page_number"
+        >Page: {{ paginator.page }} of {{ paginator.total_pages }}</span
+      >
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a> {% else %}
+      <span class="next"></span> {% endif %}
+    </div>
   </div>
 
-  {{ post.excerpt }}
-  {% if post.content contains site.excerpt_separator %}
-  <a href="{{ post.url | prepend: site.baseurl }}">Read on&hellip;</a>
-  {% endif %}
-</article>
-{% endfor %}
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-  {% else %}
-  <span class="previous"></span>
-  {% endif %}
-  <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-  <span class="next"></span>
-  {% endif %}
-</div>
-</div>
-
-{% include sidebar.html %}
+  {% include sidebar.html %}
 </div>
 {% include footer.html %}

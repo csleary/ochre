@@ -98,7 +98,7 @@ h4 {
 }
 
 header {
-  background-image: url('{{ site.baseurl }}/assets/header.jpg');
+  //  background-image: url('{{ site.baseurl }}/assets/header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   flex: none;
@@ -344,7 +344,9 @@ sub {
 
 sub {
   top: 0.4em;
-} // Sidebar
+}
+
+// Sidebar
 
 aside {
   background: $light-beige;
@@ -422,35 +424,6 @@ aside {
   font: normal 32px/1 'Genericons';
   padding-left: 0.3rem;
   vertical-align: -0.4rem;
-}
-
-.eth-info,
-.xem-info,
-.btc-info {
-  display: none;
-}
-
-.eth-address,
-.xem-address,
-.btc-address {
-  -webkit-appearance: none;
-  background: $white;
-  border: 2px solid $dark-beige;
-  border-radius: 0;
-  font-family: $mono;
-  font-size: 1rem;
-  margin-bottom: 0.8rem;
-  overflow: hidden;
-  padding: 0.2rem;
-  text-align: center;
-  width: 100%;
-}
-
-.qr-eth,
-.qr-xem,
-.qr-btc {
-  margin: 0 auto;
-  width: 100px;
 }
 
 .links:after {
@@ -731,11 +704,15 @@ aside form input.button {
   content: '\f430';
   font: normal 32px/1 'Genericons';
   vertical-align: -0.5rem;
-} // Post navigation
+}
+
+// Post navigation
 
 .post-nav .next-post {
   float: right;
-} // Music Page
+}
+
+// Music Page
 
 .album-title {
   margin: 0;
@@ -789,7 +766,9 @@ aside form input.button {
 
 .album span.spacer {
   padding: 0 0.5rem;
-} // Responsive embeds
+}
+
+// Responsive embeds
 
 .embed-container {
   height: 0;
@@ -819,6 +798,19 @@ iframe {
 
 iframe.bandcamp {
   margin-top: 2rem;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.error {
+  color: $red;
 }
 
 // Large Screens
