@@ -56,32 +56,23 @@
 
   <h3 class="links module">Links</h3>
   <ul>
-    <li>
-      <a href="https://play.spotify.com/artist/0OmHDBh5styCXDWKwz58Ts"
-        >Spotify</a
-      >
-    </li>
-    <li><a href="https://ochre.bandcamp.com/">Bandcamp</a></li>
-    <li>
-      <a href="https://caelus.ochremusic.com/">Project Caelus Microsite</a>
-    </li>
-    <li><a href="https://resonate.is/profile/3409/">Resonate</a></li>
-    <li>
-      <a href="https://itunes.apple.com/us/artist/ochre/id84229320">iTunes</a>
-    </li>
-    <li><a href="http://soundcloud.com/ochre">SoundCloud</a></li>
-    <li><a href="https://twitter.com/ochremusic">Twitter</a></li>
-    <li><a href="https://www.facebook.com/ochremusic">Facebook</a></li>
-    <li><a href="http://www.discogs.com/artist/Ochre">Discogs</a></li>
-    <li><a href="https://www.youtube.com/user/ochremusic">YouTube</a></li>
-    <li><a href="http://melograf.com/">Melograf Mastering</a></li>
-    <li><a href="http://nkurence.com/">nkurence</a></li>
+    {% for link in site.data.links %}
+      <li>
+        <a href="{{ link.url }}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 
   <h3 class="module">Recent Posts</h3>
   <ul>
     {% for post in site.posts limit:5 %}
-    <li><a href="{{ post.url }}">{{ post.title | smartify }}</a></li>
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title | smartify }}
+        </a>
+      </li>
     {% endfor %}
   </ul>
 

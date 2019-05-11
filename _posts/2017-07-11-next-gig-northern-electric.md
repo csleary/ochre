@@ -6,9 +6,9 @@ published: true
 categories: [Ochre, Live]
 tags: [live, gig]
 image: /assets/NE2017.jpg
+image-alt: 'Gig flyer'
+image-class: 'top'
 ---
-
-[![Gig flyer](){: data-src="{{ site.baseurl }}/assets/NE2017.jpg" .peek .top .lazyload }]({% post_url 2017-07-11-next-gig-northern-electric %})
 
 I'll be playing at The Cluny 2 on Saturday 22nd July, as part of this year's _Northern Electric Festival_, which takes place across various Ouseburn venues for the entire weekend.
 

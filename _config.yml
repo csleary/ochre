@@ -1,12 +1,11 @@
 title: Ochre
 description: Official site of musician and composer Christopher Leary.
-author: ochremusic
-url: http://ochremusic.com
+author: Chris
+url: https://ochremusic.com
 baseurl:
 logo: /assets/logo.png
 
 excerpt_separator: <!--more-->
-highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
 paginate_path: /page/:num/
@@ -24,7 +23,7 @@ social:
   links:
     - https://twitter.com/ochremusic
     - https://www.facebook.com/ochremusic
-    - http://soundcloud.com/ochre
+    - https://soundcloud.com/ochre
     - https://ochre.bandcamp.com/
     - https://bandcamp.ochremusic.com/
     - https://www.youtube.com/user/ochremusic
@@ -41,13 +40,11 @@ defaults:
       type: posts
     values:
       category: [Ochre]
-      image: /assets/logo.png
-      show_adverts: false
+      image-alt: ''
       layout: post
       published: false
 
 sass:
-  sass_dir: _sass
   style: compressed
 
 plugins:

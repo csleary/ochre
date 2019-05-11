@@ -1,25 +1,17 @@
 <nav>
   <ul class="nav-menu" id="main-nav">
+    {% for item in site.data.nav %}
     <li>
-      <a href="{{ site.baseurl }}/" {% if page.url == "/" %}id="current"{% endif %}>
-        Blog
+      <a
+        href="{{ item.url }}"
+        {% if item.url == page.url %}
+          id="current"
+        {% endif %}
+      >
+        {{ item.title }}
       </a>
     </li>
-    <li>
-      <a href="https://bandcamp.ochremusic.com">
-        Music
-      </a>
-    </li>
-    <li>
-      <a href="{{ site.baseurl }}/biography/" {% if page.title == "Biography" %}id="current"{% endif %}>
-        Biography
-      </a>
-    </li>
-    <li>
-      <a href="{{ site.baseurl }}/contact/" {% if page.title == "Contact" %}id="current"{% endif %}>
-        Contact
-      </a>
-    </li>
+    {% endfor %}
     <li class="nav-icon">
       <a href="javascript:void(0);" onclick="nav()">
         Menu

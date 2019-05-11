@@ -1,0 +1,8 @@
+- url: '/'
+  title: 'Blog'
+- url: 'https://bandcamp.ochremusic.com/'
+  title: 'Music'
+- url: '/biography/'
+  title: 'Biography'
+- url: '/contact/'
+  title: 'Contact'

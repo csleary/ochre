@@ -6,9 +6,8 @@ published: true
 categories: [Ochre]
 tags: [album, vinyl, toytronic, lapsus, nkurence]
 image: /assets/MOCKUP_OCHRE_LP-PS03.jpg
+image-alt: 'A Midsummer Nice Dream (15th Anniversary Edition) vinyl'
 ---
-
-[![A Midsummer Nice Dream (15th Anniversary Edition) vinyl](){: data-src="{{ site.baseurl }}/assets/MOCKUP_OCHRE_LP-PS03.jpg" .peek .lazyload }]({% post_url 2019-04-17-a-midsummer-nice-dream-15th-anniversary-ed %})
 
 I'm sure the rather fetching image above is self-explanatory, but this year marks the fifteenth anniversary of _A Midsummer Nice Dream_, originally released on London's Toytronic Records in late 2004, now due for a spruced-up rerelease on Barcelona's Lapsus Records. Lapsus have been extremely supportive of my work over the years, so it's a pleasure to work with them to deliver a special rerelease of 'Midsummer' on double vinyl and digital.
 
