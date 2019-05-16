@@ -37,7 +37,10 @@
       content="/assets/icons/browserconfig.xml?v=oLaPG4klyy"
     />
     <meta name="theme-color" content="#ffffff" />
-    <title>{{ page.title | smartify }} | {{ site.title }}</title>
+    <title>
+      {% if page.title %} {{ page.title | smartify }} | {{ site.title }} {% else
+      %} {{ site.title }} | {{ site.description }} {% endif %}
+    </title>
     {% seo title=false %}
   </head>
 
@@ -49,7 +52,9 @@
         data-stellar-background-ratio="0.5"
       ></header>
     </a>
+
     {% include nav.html %}
+
     <script>
       function nav() {
         var x = document.getElementById('main-nav');

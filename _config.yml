@@ -1,5 +1,5 @@
 title: Ochre
-description: Official site of musician and composer Christopher Leary.
+description: Music by Christopher Leary.
 author: Chris
 url: https://ochremusic.com
 baseurl:
@@ -7,7 +7,6 @@ logo: /assets/logo.png
 
 excerpt_separator: <!--more-->
 permalink: /:year/:month/:day/:title/
-
 paginate_path: /page/:num/
 paginate: 10
 
@@ -30,7 +29,7 @@ social:
 
 defaults:
   - scope:
-      path: '' # an empty string here means all files in the project
+      path: ''
       type: pages
     values:
       layout: page

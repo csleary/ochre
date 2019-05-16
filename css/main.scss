@@ -63,6 +63,12 @@ a {
   &:visited {
     text-decoration: none;
   }
+
+  &:link,
+  &:visited {
+    color: $orange;
+    text-decoration: none;
+  }
 }
 
 body {
@@ -233,16 +239,6 @@ article {
   margin-bottom: 3rem;
 }
 
-section a:link,
-section a:visited,
-article a:link,
-article a:visited,
-aside a:link,
-aside a:visited {
-  color: $orange;
-  text-decoration: none;
-}
-
 .entry-title {
   font-family: $sans;
 }
@@ -260,20 +256,15 @@ article a.entry-title {
 .entry-meta .date,
 .entry-meta .categories,
 .entry-meta .tags {
-  margin-right: 1rem;
-}
-
-.entry-meta .date,
-.entry-meta .categories,
-.entry-meta .tags {
   display: inline-block;
+  margin-right: 1rem;
 }
 
 .entry-meta .date a:before,
 .entry-meta .categories:before,
 .entry-meta .tags:before {
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   display: inline-block;
   vertical-align: -0.2rem;
 }
@@ -282,17 +273,17 @@ article a.entry-title {
   color: $black;
 }
 
-.entry-meta .date a:before {
+.entry-meta .date a::before {
   content: '\f303';
   font: normal 16px/1 'Genericons';
 }
 
-.entry-meta .categories:before {
+.entry-meta .categories::before {
   content: '\f301';
   font: normal 16px/1 'Genericons';
 }
 
-.entry-meta .tags:before {
+.entry-meta .tags::before {
   content: '\f302';
   font: normal 16px/1 'Genericons';
 }
@@ -324,7 +315,7 @@ article a.entry-title {
 }
 
 .page-meta a:link:not(:first-of-type) {
-  margin-left: .25rem;
+  margin-left: 0.25rem;
 }
 
 blockquote {
@@ -401,7 +392,7 @@ aside {
   color: $white;
 }
 
-.newsletter:after {
+.newsletter::after {
   color: $dark-beige;
   content: '\f463';
   font: normal 32px/1 'Genericons';
@@ -436,7 +427,9 @@ aside {
   font: normal 32px/1 'Genericons';
   padding-left: 0.1rem;
   vertical-align: -0.6rem;
-} // Footer
+}
+
+// Footer
 
 footer {
   color: $light-grey;
@@ -447,6 +440,12 @@ footer {
 
   a {
     color: $light-grey;
+
+    &:link,
+    &:visited {
+      color: $light-grey;
+      text-decoration: none;
+    }
   }
 }
 
@@ -494,7 +493,9 @@ section li a:link {
 
 .credits a:hover {
   text-decoration: underline;
-} /* Images */
+}
+
+// Images
 
 img {
   height: auto;
@@ -513,7 +514,9 @@ img.top {
 
 img.bottom {
   object-position: 0 100%;
-} // See media queries for large screen alignment
+}
+
+// See media queries for large screen alignment
 
 img.alignleft {
   display: block;
@@ -583,7 +586,9 @@ pre code {
   background: $light-beige;
   margin: 0.5rem;
   padding: 0.5rem;
-} // Forms
+}
+
+// Forms
 
 form {
   margin-top: 3rem;
@@ -808,6 +813,7 @@ iframe.bandcamp {
 .lazyloading {
   opacity: 0;
 }
+
 .lazyloaded {
   opacity: 1;
   transition: opacity 300ms;
@@ -840,7 +846,7 @@ iframe.bandcamp {
   }
 
   ul.nav-menu li a {
-    padding: 0 1.5rem 0.5rem 1.5rem;
+    padding: 0 1.5rem 0.5rem;
   }
 
   ul.nav-menu li a:hover,
@@ -884,8 +890,8 @@ iframe.bandcamp {
   }
 
   aside {
-    order: 2;
     flex: 1 0 auto;
+    order: 2;
     width: 33.33%;
   }
 

@@ -5,7 +5,6 @@ date: 2017-02-24 11:10
 published: true
 categories: [Ochre]
 tags: [btol, album, bandcamp]
-image:
 ---
 I'm very happy to announce the release of my new album, *Beyond the Outer Loop*, out now for streaming and download.
 

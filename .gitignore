@@ -2,10 +2,6 @@
 _site/
 *.sh
 bower_components/
-package.json
-.csscomb.json
-.htmlhintrc
-.sass-lint.yml
 .sass-cache
 gulpfile.js
 node_modules/
