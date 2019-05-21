@@ -126,11 +126,31 @@ nav {
 }
 
 section {
+  li {
+    line-height: 1.6rem;
+    padding-bottom: 0.5rem;
+
+    a {
+      &:link {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  ul {
+    margin: 10px 0;
+    padding: 0 2rem;
+  }
+
   h1,
   h2,
   h3,
   h4 {
     margin-bottom: 0.5rem;
+  }
+
+  .entry-title {
+    color: $black;
   }
 }
 
@@ -224,10 +244,8 @@ section {
 }
 
 .container {
-  align-items: stretch;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
 }
 
 .blog,
@@ -237,85 +255,109 @@ section {
 
 article {
   margin-bottom: 3rem;
+
+  li {
+    line-height: 1.6rem;
+    padding-bottom: 0.5rem;
+
+    a {
+      &:link {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  ul {
+    margin: 10px 0;
+    padding: 0 2rem;
+  }
+
+  .entry-title {
+    color: $black;
+  }
 }
 
 .entry-title {
   font-family: $sans;
 }
 
-section a.entry-title,
-article a.entry-title {
-  color: $black;
-}
-
 .entry-meta {
-  display: block;
-  margin-bottom: 2rem;
-}
-
-.entry-meta .date,
-.entry-meta .categories,
-.entry-meta .tags {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-.entry-meta .date a:before,
-.entry-meta .categories:before,
-.entry-meta .tags:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  vertical-align: -0.2rem;
-}
-
-.entry-meta .date a {
   color: $black;
-}
+  margin-bottom: 2rem;
+  margin-right: 1rem;
 
-.entry-meta .date a::before {
-  content: '\f303';
-  font: normal 16px/1 'Genericons';
-}
+  a {
+    color: $black;
+  }
 
-.entry-meta .categories::before {
-  content: '\f301';
-  font: normal 16px/1 'Genericons';
-}
+  ::before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    vertical-align: -0.2rem;
+  }
 
-.entry-meta .tags::before {
-  content: '\f302';
-  font: normal 16px/1 'Genericons';
+  .date {
+    display: inline-block;
+
+    a {
+      &::before {
+        content: '\f303';
+        font: normal 16px/1 'Genericons';
+      }
+    }
+  }
+
+  .categories {
+    display: inline-block;
+
+    &::before {
+      content: '\f301';
+      font: normal 16px/1 'Genericons';
+    }
+  }
+
+  .tags {
+    display: inline-block;
+
+    &::before {
+      content: '\f302';
+      font: normal 16px/1 'Genericons';
+    }
+  }
 }
 
 .page-meta {
   margin: 2rem 0;
-}
 
-.page-meta .categories,
-.page-meta .tags {
-  margin-bottom: 1rem;
-}
+  .categories,
+  .tags {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
 
-.page-meta a:link,
-.page-meta a:visited,
-.page-meta a:active {
-  color: $white;
-  transition: 0.1s ease-in;
-}
+  a {
+    &:link {
+      background-color: $black;
+      border-radius: $rounded;
+      padding: $rounded-padding;
 
-.page-meta a:hover {
-  color: $orange;
-}
+      &:not(:first-of-type) {
+        margin-left: 0.25rem;
+      }
+    }
 
-.page-meta a:link {
-  background-color: $black;
-  border-radius: $rounded;
-  padding: $rounded-padding;
-}
+    &:link,
+    &:visited,
+    &:active {
+      color: $white;
+      transition: 0.1s ease-in;
+    }
 
-.page-meta a:link:not(:first-of-type) {
-  margin-left: 0.25rem;
+    &:hover {
+      color: $orange;
+    }
+  }
 }
 
 blockquote {
@@ -341,8 +383,6 @@ sub {
   top: 0.4em;
 }
 
-// Sidebar
-
 aside {
   background: $light-beige;
   line-height: 1.6rem;
@@ -353,83 +393,125 @@ aside {
     list-style-type: none;
   }
 
-  .module {
-    margin-top: 2rem;
-  }
-
   ul {
     padding: 0;
   }
+
+  form {
+    margin: 1rem 0;
+
+    input {
+      background: $white;
+      border: 2px solid $dark-beige;
+      width: 100%;
+
+      &::placeholder {
+        color: $dark-beige;
+      }
+    }
+  }
+
+  .button {
+    background: $white;
+    border: 2px solid $black;
+    border-radius: 0;
+    color: $black;
+    cursor: pointer;
+    transition: color 0.5s, background 0.5s;
+    width: 100%;
+  }
+
+  .module {
+    margin-top: 2rem;
+  }
 }
 
-#followers .spotify,
-#followers .soundcloud,
-#followers .facebook,
-#followers .twitter {
+.spotify,
+.soundcloud,
+.facebook,
+.twitter {
   border-radius: $rounded;
   color: $black;
   padding: 0.1rem 0.25rem;
   transition: background-color 0.2s ease-in;
 }
 
-#followers .spotify:hover {
-  background-color: $spotify-green;
-  color: $white;
+.spotify {
+  &:hover {
+    background-color: $spotify-green;
+    color: $white;
+  }
 }
 
-#followers .soundcloud:hover {
-  background-color: $soundcloud-orange;
-  color: $white;
+.soundcloud {
+  &:hover {
+    background-color: $soundcloud-orange;
+    color: $white;
+  }
 }
 
-#followers .facebook:hover {
-  background-color: $facebook-blue;
-  color: $white;
+.facebook {
+  &:hover {
+    background-color: $facebook-blue;
+    color: $white;
+  }
 }
 
-#followers .twitter:hover {
-  background-color: $twitter-blue;
-  color: $white;
+.twitter {
+  &:hover {
+    background-color: $twitter-blue;
+    color: $white;
+  }
 }
 
-.newsletter::after {
-  color: $dark-beige;
-  content: '\f463';
-  font: normal 32px/1 'Genericons';
-  padding-left: 0.5rem;
-  vertical-align: -0.5rem;
+.newsletter {
+  &::after {
+    color: $dark-beige;
+    content: '\f463';
+    font: normal 32px/1 'Genericons';
+    padding-left: 0.5rem;
+    vertical-align: -0.5rem;
+  }
 }
 
-.shows .sk-badge-pink {
-  height: 28px;
-  margin-left: 0.6rem;
-  vertical-align: -0.4rem;
-  width: 28px;
+.shows {
+  .sk-badge-pink {
+    height: 28px;
+    margin-left: 0.6rem;
+    vertical-align: -0.4rem;
+    width: 28px;
+  }
 }
 
-#songkick li:not(:last-child) {
-  border-bottom: 1px dashed $dark-beige;
-  margin-bottom: 0.25rem;
-  padding-bottom: 0.25rem;
+#songkick {
+  li {
+    &:not(:last-child) {
+      border-bottom: 1px dashed $dark-beige;
+      margin-bottom: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
 }
 
-.tips::after {
-  color: $dark-beige;
-  content: '\f221';
-  font: normal 32px/1 'Genericons';
-  padding-left: 0.3rem;
-  vertical-align: -0.4rem;
+.tips {
+  &::after {
+    color: $dark-beige;
+    content: '\f221';
+    font: normal 32px/1 'Genericons';
+    padding-left: 0.3rem;
+    vertical-align: -0.4rem;
+  }
 }
 
-.links:after {
-  color: $dark-beige;
-  content: '\f107';
-  font: normal 32px/1 'Genericons';
-  padding-left: 0.1rem;
-  vertical-align: -0.6rem;
+.links {
+  &::after {
+    color: $dark-beige;
+    content: '\f107';
+    font: normal 32px/1 'Genericons';
+    padding-left: 0.1rem;
+    vertical-align: -0.6rem;
+  }
 }
-
-// Footer
 
 footer {
   color: $light-grey;
@@ -462,37 +544,26 @@ footer {
   transition: 0.2s ease-in;
 }
 
-.genericon-facebook:hover {
-  color: $facebook-blue;
+.genericon-facebook {
+  &:hover {
+    color: $facebook-blue;
+  }
 }
 
-.genericon-twitter:hover {
-  color: $twitter-blue;
-}
-
-section ul,
-article ul {
-  margin: 10px 0;
-  padding: 0 2rem;
-}
-
-section li,
-article li {
-  line-height: 1.6rem;
-  padding-bottom: 0.5rem;
-}
-
-section li a:link,
-section li a:link {
-  border-bottom: 0;
+.genericon-twitter {
+  &:hover {
+    color: $twitter-blue;
+  }
 }
 
 .credits {
   font-size: 0.75rem;
-}
 
-.credits a:hover {
-  text-decoration: underline;
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 // Images
@@ -500,68 +571,46 @@ section li a:link {
 img {
   height: auto;
   max-width: 100%;
+
+  &.peek {
+    max-height: 14rem;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &.top {
+    object-position: 0 0;
+  }
+
+  &.bottom {
+    object-position: 0 100%;
+  }
+
+  &.alignleft {
+    display: block;
+    margin: 1rem auto;
+  }
+
+  &.aligncenter {
+    display: block;
+    margin: 1rem auto;
+  }
+
+  &.alignright {
+    display: block;
+    margin: 1rem auto;
+  }
 }
-
-img.peek {
-  max-height: 14rem;
-  object-fit: cover;
-  width: 100%;
-}
-
-img.top {
-  object-position: 0 0;
-}
-
-img.bottom {
-  object-position: 0 100%;
-}
-
-// See media queries for large screen alignment
-
-img.alignleft {
-  display: block;
-  margin: 1rem auto;
-}
-
-img.aligncenter {
-  display: block;
-  margin: 1rem auto;
-}
-
-img.alignright {
-  display: block;
-  margin: 1rem auto;
-}
-
-video {
-  height: auto;
-  width: 100%;
-}
-
-a.vid-vimeo h2,
-a.vid-youtube h2 {
-  display: inline-block;
-}
-
-a.vid-vimeo:after,
-a.vid-youtube:after {
-  color: $light-grey;
-  font: normal 32px/1 'Genericons';
-  padding-left: 0.5rem;
-  vertical-align: -0.3rem;
-}
-
-a.vid-vimeo:after {
-  content: '\f212';
-}
-
-a.vid-youtube:after {
-  content: '\f213';
-} // Code
 
 pre {
   font-family: $mono;
   margin: 0;
+
+  code {
+    background: inherit;
+    color: inherit;
+    padding: 0;
+  }
 }
 
 code {
@@ -570,12 +619,6 @@ code {
   color: $black;
   font-family: $mono;
   padding: 0.2rem;
-}
-
-pre code {
-  background: inherit;
-  color: inherit;
-  padding: 0;
 }
 
 .lineno {
@@ -588,96 +631,72 @@ pre code {
   padding: 0.5rem;
 }
 
-// Forms
-
 form {
   margin-top: 3rem;
-}
 
-form input {
-  -webkit-appearance: none;
-  background: $off-white;
-  border: 2px solid $light-grey;
-  border-radius: 0;
-  color: $black;
-  display: block;
-  font-family: $serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  width: 100%;
-}
+  input {
+    -webkit-appearance: none;
+    background: $off-white;
+    border: 2px solid $light-grey;
+    border-radius: 0;
+    color: $black;
+    display: block;
+    font-family: $serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    width: 100%;
 
-form textarea {
-  -webkit-appearance: none;
-  background: $off-white;
-  border: 2px solid $light-grey;
-  border-radius: 0;
-  color: $black;
-  font-family: $serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  width: 100%;
-}
+    &:focus {
+      background: $white;
+    }
+  }
 
-form input:focus,
-form textarea:focus {
-  background: $white;
-}
+  .send {
+    -webkit-appearance: none;
+    background: $white;
+    border: 2px solid $black;
+    border-radius: 0;
+    color: $black;
+    cursor: pointer;
+    float: right;
+    transition: color 0.5s, background 0.5s;
+    width: 100%;
+  }
 
-form .send {
-  -webkit-appearance: none;
-  background: $white;
-  border: 2px solid $black;
-  border-radius: 0;
-  color: $black;
-  cursor: pointer;
-  float: right;
-  transition: color 0.5s, background 0.5s;
-  width: 100%;
-}
+  .button,
+  .send {
+    &:hover {
+      background: $orange;
+      border-color: $orange;
+      color: $white;
+      transition: color 0.2s, background 0.2s;
+    }
 
-form .send:hover,
-aside form input.button:hover {
-  background: $orange;
-  border-color: $orange;
-  color: $white;
-  transition: color 0.2s, background 0.2s;
-}
+    &:active {
+      background: $black;
+      border-color: $orange;
+      color: $orange;
+      transition: color 0s, background 0s;
+    }
+  }
 
-form .send:active,
-aside form input.button:active {
-  background: $black;
-  border-color: $orange;
-  color: $orange;
-  transition: color 0s, background 0s;
-}
+  textarea {
+    -webkit-appearance: none;
+    background: $off-white;
+    border: 2px solid $light-grey;
+    border-radius: 0;
+    color: $black;
+    font-family: $serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    width: 100%;
 
-// Sidebar Forms
-
-aside form {
-  margin: 1rem 0;
-}
-
-aside form input {
-  background: $white;
-  border: 2px solid $dark-beige;
-  width: 100%;
-}
-
-aside form input::placeholder {
-  color: $dark-beige;
-}
-
-aside form input.button {
-  background: $white;
-  border: 2px solid $black;
-  border-radius: 0;
-  color: $black;
-  cursor: pointer;
-  transition: color 0.5s, background 0.5s;
-  width: 100%;
+    &:focus {
+      background: $white;
+    }
+  }
 }
 
 // Pagination
@@ -689,92 +708,52 @@ aside form input.button {
   margin-bottom: 2rem;
 }
 
-.pagination a {
-  color: $orange;
-}
+.pagination {
+  a {
+    color: $orange;
 
-.pagination a.next {
-  margin-left: 0.5rem;
-}
+    &.next {
+      margin-left: 0.5rem;
 
-.pagination a.previous {
-  margin-right: 0.5rem;
-}
+      &::after {
+        content: '\f429';
+        font: normal 32px/1 'Genericons';
+        vertical-align: -0.5rem;
+      }
+    }
 
-.pagination a.next::after,
-.post-nav .next-post::after {
-  content: '\f429';
-  font: normal 32px/1 'Genericons';
-  vertical-align: -0.5rem;
-}
+    &.previous {
+      margin-right: 0.5rem;
 
-.pagination a.previous::before,
-.post-nav .previous-post::before {
-  content: '\f430';
-  font: normal 32px/1 'Genericons';
-  vertical-align: -0.5rem;
+      &::before {
+        content: '\f430';
+        font: normal 32px/1 'Genericons';
+        vertical-align: -0.5rem;
+      }
+    }
+  }
 }
 
 // Post navigation
 
-.post-nav .next-post {
-  float: right;
-}
+.post-nav {
+  .next-post {
+    float: right;
 
-// Music Page
+    &::after {
+      content: '\f429';
+      font: normal 32px/1 'Genericons';
+      vertical-align: -0.5rem;
+    }
+  }
 
-.album-title {
-  margin: 0;
-  text-align: center;
-}
-
-.album {
-  margin-bottom: 4rem;
-  min-height: 360px;
-  width: 100%;
-}
-
-.album h2 {
-  text-align: center;
-}
-
-.album img {
-  margin: 0;
-  padding: 0;
-}
-
-.album .player {
-  margin: 1rem 0 2rem;
-}
-
-.album iframe {
-  border: 0;
-  box-shadow: $shadow;
-  display: block;
-  height: 300px;
-  margin: 0 auto;
-  width: 300px;
-}
-
-.album div.gallery {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.album div.gallery > img {
-  flex: auto;
-  height: 100px;
-  margin: 2px;
-  object-fit: cover;
-  width: 100px;
-}
-
-.album span.spacer {
-  padding: 0 0.5rem;
+  .previous-post {
+    &::before {
+      content: '\f430';
+      font: normal 32px/1 'Genericons';
+      vertical-align: -0.5rem;
+    }
+  }
 }
 
 // Responsive embeds
@@ -786,17 +765,17 @@ aside form input.button {
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
-}
 
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-  border: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  iframe,
+  object,
+  embed {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
 
 iframe {
@@ -805,7 +784,7 @@ iframe {
   width: 100%;
 }
 
-iframe.bandcamp {
+.bandcamp {
   margin-top: 2rem;
 }
 
@@ -837,21 +816,23 @@ iframe.bandcamp {
     padding: 2rem;
   }
 
-  ul.nav-menu li {
-    display: inline-block;
-  }
+  .nav-menu {
+    li {
+      display: inline-block;
 
-  ul.nav-menu li.nav-icon {
-    display: none;
-  }
+      &.nav-icon {
+        display: none;
+      }
 
-  ul.nav-menu li a {
-    padding: 0 1.5rem 0.5rem;
-  }
+      a {
+        padding: 0 1.5rem 0.5rem;
 
-  ul.nav-menu li a:hover,
-  ul.nav-menu li a#current {
-    padding-bottom: 0.25rem;
+        &:hover,
+        &#current {
+          padding-bottom: 0.25rem;
+        }
+      }
+    }
   }
 
   .container {
@@ -864,19 +845,9 @@ iframe.bandcamp {
 
   .blog,
   section {
-    flex: 1 0 auto;
+    flex: 2 1 800px;
     order: 1;
     padding: 0 2rem;
-    width: 66.66%;
-  }
-
-  .album iframe {
-    height: 480px;
-    width: 480px;
-  }
-
-  .album div.gallery > img {
-    height: 140px;
   }
 
   form {
@@ -890,20 +861,19 @@ iframe.bandcamp {
   }
 
   aside {
-    flex: 1 0 auto;
+    flex: 1 1 400px;
     order: 2;
-    width: 33.33%;
-  }
 
-  aside form input.button {
-    width: 50%;
-  }
-
-  img.peek {
-    max-height: 28rem;
+    .button {
+      width: 50%;
+    }
   }
 
   img {
+    &.peek {
+      max-height: 28rem;
+    }
+
     &.alignleft {
       float: left;
       margin: 1rem 1rem 1rem 0;
