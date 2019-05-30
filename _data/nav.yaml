@@ -2,6 +2,8 @@
   title: 'Blog'
 - url: 'https://bandcamp.ochremusic.com/'
   title: 'Music'
+  external: true
+  label: 'To Bandcamp…'
 - url: '/biography/'
   title: 'Biography'
 - url: '/contact/'

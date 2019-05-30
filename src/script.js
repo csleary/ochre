@@ -1,5 +1,5 @@
 $.stellar({
-  horizontalScrolling: false,
+  horizontalScrolling: false
 });
 
 document.addEventListener('lazybeforeunveil', function(e) {
@@ -43,15 +43,10 @@ $('#list-subscribe').submit(function(event) {
     $submit.prop('disabled', false).val(defaultSubmitText);
     if (res.error && res.status === 'subscribed') {
       $('#list-res-error').html('Error: ' + res.error);
-      $('#list-res').html(
-        'You can update your profile <a href="' + res.updateUrl + '">here</a>.'
-      );
+      $('#list-res').html('You can update your profile <a href="' + res.updateUrl + '">here</a>.');
       return;
     }
-    if (
-      res.error &&
-      (res.status === 'unsubscribed' || res.status === 'pending')
-    ) {
+    if (res.error && (res.status === 'unsubscribed' || res.status === 'pending')) {
       $('#list-res-error').html('Error: ' + res.error);
       $('#list-res').html(
         'You can always resubscribe <a href="http://eepurl.com/gphAPb">here</a>. You will receive a confirmation opt-in email.'
@@ -69,31 +64,39 @@ $('#list-subscribe').submit(function(event) {
 });
 
 var $contactForm = $('#contact-form');
+
 $contactForm.submit(function(e) {
   e.preventDefault();
   var $submit = $('input:submit', $contactForm);
   var defaultSubmitText = $submit.val();
 
-  $.ajax({
-    url: '//formspree.io/' + 'mail' + '@' + 'ochremusic' + '.' + 'com',
-    method: 'POST',
+  $.post({
+    url: 'https://ochremusic.com/api/contact',
     data: $(this).serialize(),
     dataType: 'json',
     beforeSend: function() {
-      $submit.attr('disabled', true).val('Sending message…');
+      $submit.prop('disabled', true).val('Sending message…');
     },
-    success: function(data) {
+    success: function(res) {
+      $contactForm.append("<div class='success'>" + res.success + '</div>');
       $submit.val('Message sent!');
       $('#contact-form')[0].reset();
       setTimeout(function() {
-        $submit.attr('disabled', false).val(defaultSubmitText);
+        $('.success').fadeOut(function() {
+          $(this).remove();
+        });
+        $submit.prop('disabled', false).val(defaultSubmitText);
       }, 5000);
     },
     error: function(err) {
-      $submit.val('Sending failed, sorry.');
+      $contactForm.append("<div class='error'>" + err.error + '</div>');
+      $submit.val('Sending failed!');
       setTimeout(function() {
-        $submit.attr('disabled', false).val(defaultSubmitText);
+        $('.error').fadeOut(function() {
+          $(this).remove();
+        });
+        $submit.prop('disabled', false).val(defaultSubmitText);
       }, 5000);
-    },
+    }
   });
 });

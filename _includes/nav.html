@@ -7,6 +7,11 @@
         {% if item.url == page.url %}
           id="current"
         {% endif %}
+        {% if item.external %}
+          class="external"
+          data-label="{{ item.label }}"
+        {% endif %}
+
       >
         {{ item.title }}
       </a>

@@ -8,9 +8,7 @@
         >
       </li>
       <li>
-        <a href="http://soundcloud.com/ochre"
-          ><span class="soundcloud"></span>&nbsp;SoundCloud</a
-        >
+        <a href="http://soundcloud.com/ochre"><span class="soundcloud"></span>&nbsp;SoundCloud</a>
       </li>
       <li>
         <a href="https://www.facebook.com/ochremusic"
@@ -18,31 +16,20 @@
         >
       </li>
       <li>
-        <a href="https://twitter.com/ochremusic"
-          ><span class="twitter"></span>&nbsp;Twitter</a
-        >
+        <a href="https://twitter.com/ochremusic"><span class="twitter"></span>&nbsp;Twitter</a>
       </li>
     </ul>
   </div>
 
-  <a href="http://eepurl.com/c9Kck"
-    ><h3 class="newsletter module">Newsletter</h3></a
-  >
-  <p>
-    Join <span id="mailchimp">my</span> subscribers and be notified about new
-    releases.
-  </p>
+  <a href="http://eepurl.com/c9Kck"><h3 class="newsletter module">Newsletter</h3></a>
+  <p>Join <span id="mailchimp">my</span> subscribers and be notified about new releases.</p>
 
   <div>
-    <form
-      id="list-subscribe"
-      action="https://ochremusic.com/api/list-subscribe"
-      method="post"
-    >
+    <form id="list-subscribe" action="https://ochremusic.com/api/list-subscribe" method="post">
       <label for="email">Your email address:</label>
       <input type="email" name="email" placeholder="Email" required />
       <input class="button" type="submit" value="Subscribe" />
-      <div id="list-res-error" class="error"></div>
+      <div id="list-res-error" class="list-error"></div>
       <div id="list-res"></div>
     </form>
   </div>
@@ -57,28 +44,20 @@
   <h3 class="links module">Links</h3>
   <ul>
     {% for link in site.data.links %}
-      <li>
-        <a href="{{ link.url }}">
-          {{ link.title }}
-        </a>
-      </li>
+    <li><a href="{{ link.url }}"> {{ link.title }} </a></li>
     {% endfor %}
   </ul>
 
   <h3 class="module">Recent Posts</h3>
   <ul>
     {% for post in site.posts limit:5 %}
-      <li>
-        <a href="{{ post.url }}">
-          {{ post.title | smartify }}
-        </a>
-      </li>
+    <li><a href="{{ post.url }}"> {{ post.title | smartify }} </a></li>
     {% endfor %}
   </ul>
 
   <h3 class="module">Melograf Mastering</h3>
   <p>
-    Please visit <a href="https://melograf.com/">Melograf Mastering</a> for more
-    information about my mastering work.
+    Please visit <a href="https://melograf.com/">Melograf Mastering</a> for more information about
+    my mastering work.
   </p>
 </aside>

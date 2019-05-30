@@ -3,7 +3,9 @@
 
 $orange: #ea5727;
 $red: #f00;
-$black: #231d24;
+$pink: #ffc0cb;
+$dark-green: #008000;
+$light-green: #90ee90;
 $dark-beige: #ccb89c;
 $light-beige: #f2ede6;
 $twitter-blue: #55acee;
@@ -15,6 +17,7 @@ $off-white: #f7f7f7;
 $light-grey: #999;
 $mid-grey: #666;
 $dark-grey: #333;
+$black: #231d24;
 $shadow: 0.5rem 0.5rem 1rem px rgba(0, 0, 0, 0.25);
 $rounded: 0.25rem;
 $rounded-padding: 0.125rem 0.4rem 0.25rem;
@@ -164,7 +167,6 @@ section {
 .nav-menu {
   list-style-type: none;
   margin: 0;
-  overflow: hidden;
   padding: 0;
 
   &.responsive {
@@ -175,33 +177,51 @@ section {
       position: relative;
       text-align: center;
 
-      &#current,
       &:hover {
-        border-bottom: 5px solid transparent;
+        border: 0;
+        color: $dark-beige;
+
+        &.external {
+          position: relative;
+
+          &::after {
+            bottom: -1rem;
+            height: fit-content;
+            left: unset;
+            right: 1rem;
+          }
+        }
       }
     }
 
     li {
       display: inline;
       float: none;
-    }
 
-    .nav-icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+      #current {
+        border: 0;
+      }
 
-      a {
-        &::after {
-          content: '\f432';
-          font: normal 16px/1 'Genericons';
+      &.nav-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        a {
+          &::after {
+            content: '\f405';
+            font: normal 16px/1 'Genericons';
+          }
+
+          &:hover {
+            color: $dark-grey;
+          }
         }
       }
     }
   }
 
   a {
-    border-bottom: 5px solid transparent;
     color: $dark-grey;
     display: inline-block;
     padding: 0;
@@ -209,6 +229,22 @@ section {
 
     &:hover {
       border-bottom: 5px solid $dark-beige;
+
+      &.external {
+        position: relative;
+
+        &::after {
+          background: $dark-grey;
+          bottom: -2.5rem;
+          color: $off-white;
+          content: attr(data-label);
+          font-size: 1rem;
+          left: 50%;
+          padding: 0.25rem 0.5rem;
+          position: absolute;
+          width: max-content;
+        }
+      }
     }
   }
 
@@ -230,14 +266,14 @@ section {
     padding-bottom: 0;
 
     a {
-      &:hover {
-        border-bottom: 5px solid transparent;
-      }
-
       &::after {
         content: '\f431';
         font: normal 16px/1 'Genericons';
         padding-left: 0.5rem;
+      }
+
+      &:hover {
+        border-bottom: 0;
       }
     }
   }
@@ -632,7 +668,21 @@ code {
 }
 
 form {
-  margin-top: 3rem;
+  margin-top: 2rem;
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-left {
+    flex: 1;
+    padding-right: 0;
+  }
+
+  .form-right {
+    flex: 1;
+  }
 
   input {
     -webkit-appearance: none;
@@ -652,6 +702,10 @@ form {
     }
   }
 
+  label {
+    line-height: 2rem;
+  }
+
   .send {
     -webkit-appearance: none;
     background: $white;
@@ -659,7 +713,7 @@ form {
     border-radius: 0;
     color: $black;
     cursor: pointer;
-    float: right;
+    margin-left: auto;
     transition: color 0.5s, background 0.5s;
     width: 100%;
   }
@@ -697,9 +751,23 @@ form {
       background: $white;
     }
   }
-}
 
-// Pagination
+  .success {
+    background: $light-green;
+    clear: both;
+    color: $dark-green;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .error {
+    background: $pink;
+    clear: both;
+    color: $red;
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+}
 
 .pagination,
 .post-nav {
@@ -734,8 +802,6 @@ form {
   }
 }
 
-// Post navigation
-
 .post-nav {
   .next-post {
     float: right;
@@ -755,8 +821,6 @@ form {
     }
   }
 }
-
-// Responsive embeds
 
 .embed-container {
   height: 0;
@@ -798,11 +862,9 @@ iframe {
   transition: opacity 300ms;
 }
 
-.error {
+.list-error {
   color: $red;
 }
-
-// Large Screens
 
 @media (min-width: 769px) {
   header {
@@ -825,12 +887,7 @@ iframe {
       }
 
       a {
-        padding: 0 1.5rem 0.5rem;
-
-        &:hover,
-        &#current {
-          padding-bottom: 0.25rem;
-        }
+        padding: 0 1.5rem 0.25rem;
       }
     }
   }
@@ -851,8 +908,12 @@ iframe {
   }
 
   form {
-    input {
-      width: 50%;
+    .form-wrapper {
+      flex-direction: row;
+    }
+
+    .form-left {
+      padding-right: 1.25rem;
     }
 
     .send {
