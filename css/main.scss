@@ -111,7 +111,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   flex: none;
-  height: 100px;
+  height: 4rem;
 }
 
 p {
@@ -124,11 +124,12 @@ nav {
   color: $dark-grey;
   font-family: $sans;
   font-size: 2rem;
-  margin-bottom: 1rem;
   padding: 0.25rem;
 }
 
 section {
+  padding: 0 1rem;
+
   li {
     line-height: 1.6rem;
     padding-bottom: 0.5rem;
@@ -165,6 +166,8 @@ section {
 }
 
 .nav-menu {
+  display: block;
+  justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -179,7 +182,7 @@ section {
 
       &:hover {
         border: 0;
-        color: $dark-beige;
+        margin-bottom: 0;
 
         &.external {
           position: relative;
@@ -228,21 +231,31 @@ section {
     text-decoration: none;
 
     &:hover {
-      border-bottom: 5px solid $dark-beige;
+      color: $mid-grey;
+    }
 
-      &.external {
-        position: relative;
+    &.external {
+      position: relative;
 
+      &::after {
+        background: $dark-grey;
+        bottom: -2rem;
+        color: $off-white;
+        content: attr(data-label);
+        font-size: 1rem;
+        left: 50%;
+        opacity: 0;
+        padding: 0.25rem 0.5rem;
+        position: absolute;
+        transition: opacity 0.2s ease-out;
+        visibility: hidden;
+        width: max-content;
+      }
+
+      &:hover {
         &::after {
-          background: $dark-grey;
-          bottom: -2.5rem;
-          color: $off-white;
-          content: attr(data-label);
-          font-size: 1rem;
-          left: 50%;
-          padding: 0.25rem 0.5rem;
-          position: absolute;
-          width: max-content;
+          opacity: 1;
+          visibility: visible;
         }
       }
     }
@@ -255,7 +268,6 @@ section {
     padding: 0;
 
     #current {
-      border-bottom: 5px solid $orange;
       color: $orange;
     }
   }
@@ -284,9 +296,8 @@ section {
   flex-direction: column;
 }
 
-.blog,
-section {
-  padding: 0 1rem;
+.blog {
+  padding: 1rem 1rem 0;
 }
 
 article {
@@ -553,7 +564,8 @@ footer {
   color: $light-grey;
   flex: none;
   font-size: 1rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
+  margin-top: auto;
   text-align: center;
 
   a {
@@ -565,10 +577,16 @@ footer {
       text-decoration: none;
     }
   }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .bottom-nav {
-  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .genericon-twitter,
@@ -594,6 +612,7 @@ footer {
 
 .credits {
   font-size: 0.75rem;
+  margin-top: 2rem;
 
   a {
     &:hover {
@@ -771,6 +790,8 @@ form {
 
 .pagination,
 .post-nav {
+  display: flex;
+  flex-wrap: wrap;
   font-family: $sans;
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -804,7 +825,7 @@ form {
 
 .post-nav {
   .next-post {
-    float: right;
+    margin-left: auto;
 
     &::after {
       content: '\f429';
@@ -868,17 +889,18 @@ iframe {
 
 @media (min-width: 769px) {
   header {
-    height: 250px;
+    height: 12rem;
   }
 
   nav {
     background: none;
     font-size: 2rem;
-    margin-bottom: 0;
-    padding: 2rem;
+    padding: 0.5rem;
   }
 
   .nav-menu {
+    display: flex;
+
     li {
       display: inline-block;
 
@@ -887,7 +909,7 @@ iframe {
       }
 
       a {
-        padding: 0 1.5rem 0.25rem;
+        padding: 0 1.5rem;
       }
     }
   }
@@ -902,9 +924,11 @@ iframe {
 
   .blog,
   section {
+    display: flex;
     flex: 2 1 800px;
+    flex-direction: column;
     order: 1;
-    padding: 0 2rem;
+    padding: 3rem 2rem 0;
   }
 
   form {

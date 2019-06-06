@@ -1,8 +1,8 @@
 {% include header.html %}
 <div class="container">
-<section>
-  {{ content }}
-</section>
-{% include sidebar.html %}
+  <section>
+    <div>{{ content }}</div>
+    {% include footer.html %}
+  </section>
+  {% include sidebar.html %}
 </div>
-{% include footer.html %}
