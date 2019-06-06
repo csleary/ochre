@@ -1,32 +1,44 @@
-$.stellar({
-  horizontalScrolling: false
-});
+$(document).ready(function() {
+  $.stellar({
+    horizontalScrolling: false
+  });
 
-document.addEventListener('lazybeforeunveil', function(e) {
-  var bg = e.target.getAttribute('data-bg');
-  if (bg) {
-    e.target.style.backgroundImage = 'url(' + bg + ')';
-  }
-});
+  document.addEventListener('lazybeforeunveil', function(e) {
+    var bg = e.target.getAttribute('data-bg');
+    if (bg) {
+      e.target.style.backgroundImage = 'url(' + bg + ')';
+    }
+  });
 
-$.get('https://ochremusic.com/api/spotify', function(data) {
-  $('#followers .spotify').html(data.spotify);
-});
+  $.get('https://ochremusic.com/api/spotify', function(data) {
+    $('#followers .spotify').html(data.spotify);
+  });
 
-$.get('https://ochremusic.com/api/soundcloud', function(data) {
-  $('#followers .soundcloud').html(data.soundcloud);
-});
+  $.get('https://ochremusic.com/api/soundcloud', function(data) {
+    $('#followers .soundcloud').html(data.soundcloud);
+  });
 
-$.get('https://ochremusic.com/api/facebook', function(data) {
-  $('#followers .facebook').html(data.facebook);
-});
+  $.get('https://ochremusic.com/api/facebook', function(data) {
+    $('#followers .facebook').html(data.facebook);
+  });
 
-$.get('https://ochremusic.com/api/twitter', function(data) {
-  $('#followers .twitter').html(data.twitter);
-});
+  $.get('https://ochremusic.com/api/twitter', function(data) {
+    $('#followers .twitter').html(data.twitter);
+  });
 
-$.get('https://ochremusic.com/api/mailchimp', function(data) {
-  $('aside #mailchimp').html(data.mailchimp);
+  $.get('https://ochremusic.com/api/mailchimp', function(data) {
+    $('aside #mailchimp').html(data.mailchimp);
+  });
+
+  var nav = $('nav');
+  $(window).scroll(function() {
+    var y = $(document).scrollTop();
+    if (y) {
+      nav.addClass('sticky');
+    } else {
+      nav.removeClass('sticky');
+    }
+  });
 });
 
 $('#list-subscribe').submit(function(event) {

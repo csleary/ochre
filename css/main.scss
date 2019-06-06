@@ -75,12 +75,15 @@ a {
 }
 
 body {
-  background: $white;
-  color: $black;
-  display: flex;
-  flex-direction: column;
   font-family: $serif;
   font-size: 100%;
+  margin: 0;
+}
+
+.outer-container {
+  background: $white;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1200px;
   min-height: 100%;
@@ -120,15 +123,18 @@ p {
 }
 
 nav {
-  background-color: $light-beige;
-  color: $dark-grey;
+  background: $black;
   font-family: $sans;
   font-size: 2rem;
   padding: 0.25rem;
+  position: sticky;
+  top: 0;
+  transition: 0.125s;
+  z-index: 999;
 }
 
 section {
-  padding: 0 1rem;
+  padding: 1rem 1rem 0;
 
   li {
     line-height: 1.6rem;
@@ -158,87 +164,25 @@ section {
   }
 }
 
-#site-header {
-  color: $orange;
-  font-size: 8rem;
-  margin: 0;
-  padding: 0;
-}
-
 .nav-menu {
-  display: block;
+  display: flex;
   justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
 
-  &.responsive {
-    position: relative;
-
-    a {
-      display: block;
-      position: relative;
-      text-align: center;
-
-      &:hover {
-        border: 0;
-        margin-bottom: 0;
-
-        &.external {
-          position: relative;
-
-          &::after {
-            bottom: -1rem;
-            height: fit-content;
-            left: unset;
-            right: 1rem;
-          }
-        }
-      }
-    }
-
-    li {
-      display: inline;
-      float: none;
-
-      #current {
-        border: 0;
-      }
-
-      &.nav-icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-
-        a {
-          &::after {
-            content: '\f405';
-            font: normal 16px/1 'Genericons';
-          }
-
-          &:hover {
-            color: $dark-grey;
-          }
-        }
-      }
-    }
-  }
-
   a {
-    color: $dark-grey;
-    display: inline-block;
-    padding: 0;
-    text-decoration: none;
+    color: $light-grey;
 
     &:hover {
-      color: $mid-grey;
+      color: $off-white;
     }
 
     &.external {
       position: relative;
 
       &::after {
-        background: $dark-grey;
+        background: $black;
         bottom: -2rem;
         color: $off-white;
         content: attr(data-label);
@@ -250,6 +194,7 @@ section {
         transition: opacity 0.2s ease-out;
         visibility: hidden;
         width: max-content;
+        z-index: 999;
       }
 
       &:hover {
@@ -263,9 +208,6 @@ section {
 
   li {
     display: none;
-    float: left;
-    margin: 0;
-    padding: 0;
 
     #current {
       color: $orange;
@@ -273,19 +215,40 @@ section {
   }
 
   .nav-icon {
-    display: inline-block;
-    float: right;
-    padding-bottom: 0;
+    display: block;
+    margin-left: auto;
 
     a {
+      align-items: center;
+      display: flex;
+
       &::after {
         content: '\f431';
-        font: normal 16px/1 'Genericons';
+        font: normal 32px/1 'Genericons';
         padding-left: 0.5rem;
       }
+    }
+  }
 
-      &:hover {
-        border-bottom: 0;
+  &.responsive {
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    li {
+      display: inline;
+
+      &.nav-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        a {
+          &::after {
+            content: '\f405';
+            font: normal 32px/1 'Genericons';
+          }
+        }
       }
     }
   }
@@ -893,14 +856,16 @@ iframe {
   }
 
   nav {
-    background: none;
     font-size: 2rem;
     padding: 0.5rem;
+
+    &.sticky {
+      font-size: 1.5rem;
+      padding: 0;
+    }
   }
 
   .nav-menu {
-    display: flex;
-
     li {
       display: inline-block;
 
