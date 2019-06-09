@@ -5,6 +5,9 @@ date: 2019-01-19
 published: true
 categories: [Ochre]
 tags: [album, web dev]
+image: /assets/pc-microsite.jpg
+image-alt: 'Project Caelus microsite.'
+image-class: top
 ---
 
 I've created [a microsite for _Project Caelus_](https://caelus.ochremusic.com/), which I hope will help shed some light on the album's inspiration. Try leaving the site open while you play back the album from a high quality source. The web app will monitor audio playback using your computer's microphone, decoding pockets of data that I've woven into the audio, to reveal sites of interest for each track.

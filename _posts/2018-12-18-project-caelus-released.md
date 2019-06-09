@@ -5,6 +5,9 @@ date: 2018-12-18
 published: true
 categories: [Ochre]
 tags: [album]
+image: /assets/project-caelus.jpg
+image-alt: 'Project Caelus artwork'
+image-class: top
 ---
 
 My new album, _Project Caelus_ is out now, available for [download on Bandcamp](https://ochre.bandcamp.com/album/project-caelus) in a variety of formats up to 24-bit FLAC.

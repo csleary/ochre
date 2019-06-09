@@ -162,6 +162,10 @@ section {
   .entry-title {
     color: $black;
   }
+
+  > div {
+    margin-bottom: 2rem;
+  }
 }
 
 .nav-menu {
@@ -172,35 +176,37 @@ section {
   padding: 0;
 
   a {
-    color: $light-grey;
-
-    &:hover {
-      color: $off-white;
-    }
-
-    &.external {
-      position: relative;
-
-      &::after {
-        background: $black;
-        bottom: -2rem;
-        color: $off-white;
-        content: attr(data-label);
-        font-size: 1rem;
-        left: 50%;
-        opacity: 0;
-        padding: 0.25rem 0.5rem;
-        position: absolute;
-        transition: opacity 0.2s ease-out;
-        visibility: hidden;
-        width: max-content;
-        z-index: 999;
-      }
+    &:not(#current) {
+      color: $light-grey;
 
       &:hover {
+        color: $off-white;
+      }
+
+      &.external {
+        position: relative;
+
         &::after {
-          opacity: 1;
-          visibility: visible;
+          background: $black;
+          bottom: -2rem;
+          color: $off-white;
+          content: attr(data-label);
+          font-size: 1rem;
+          left: 50%;
+          opacity: 0;
+          padding: 0.25rem 0.5rem;
+          position: absolute;
+          transition: opacity 0.2s ease-out;
+          visibility: hidden;
+          width: max-content;
+          z-index: 999;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
     }
@@ -208,10 +214,6 @@ section {
 
   li {
     display: none;
-
-    #current {
-      color: $orange;
-    }
   }
 
   .nav-icon {
@@ -342,7 +344,8 @@ article {
 
   .categories,
   .tags {
-    margin-bottom: 1rem;
+    line-height: 2rem;
+    margin-bottom: 0.25rem;
     margin-right: 1rem;
   }
 

@@ -31,11 +31,12 @@ $(document).ready(function() {
   });
 
   var nav = $('nav');
+  var navHeight = $('nav').outerHeight();
   $(window).scroll(function() {
-    var y = $(document).scrollTop();
-    if (y) {
+    var scrollPos = $(document).scrollTop();
+    if (scrollPos > navHeight) {
       nav.addClass('sticky');
-    } else {
+    } else if (scrollPos === 0) {
       nav.removeClass('sticky');
     }
   });

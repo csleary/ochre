@@ -1,10 +1,13 @@
 ---
-title: "New Remix: Julien Mier - Well"
+title: 'New Remix: Julien Mier - Well'
 description: "New Ochre remix of Julien Mier's 'Well' out now, from his new EP _Untangle the Roots_."
 date: 2017-12-13 16:37
 published: true
 categories: [Ochre, Remixes]
 tags: [remix, julien mier, sin hilo]
+image: /assets/untangle-the-roots.jpg
+image-alt: 'Julien Mier - Untangle the Roots artwork'
+image-class:
 ---
 
 Sydney-based Dutch artist, Julien Mier, has recently released a new EP on

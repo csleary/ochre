@@ -5,6 +5,9 @@ date: 2018-05-31 21:38
 published: true
 categories: [Ochre, Remixes]
 tags: [roel funcken, touched music, charity]
+image: /assets/dear-of-the-yog.jpg
+image-alt: 'Roel Funcken - Dear of the Yog artwork'
+image-class: bottom
 ---
 
 Touched Music released this Roel Funcken remix album a few days back, called _Dear of the Yog_, which includes a couple of contributions from me. The first is a collaborative effort between me and Roel, which was initially a remix of a band whose name has unfortunately completely escaped me, which ended up being retitled with the original elements removed, so that we could release it separately.

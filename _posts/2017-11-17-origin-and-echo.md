@@ -1,10 +1,13 @@
 ---
-title: "Snow Palms - Origin and Echo"
+title: 'Snow Palms - Origin and Echo'
 description: "The new Snow Palms album, 'Origin and Echo', is out now."
 date: 2017-11-17 12:34
 published: true
 categories: [Ochre]
 tags: [snow palms, production]
+image: /assets/origin-and-echo.jpg
+image-alt: 'Snow Palms - Origin and Echo artwork'
+image-class:
 ---
 
 It's been quite a while since the first Snow Palms release, _Intervals_, way
