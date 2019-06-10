@@ -287,6 +287,44 @@ article {
   .entry-title {
     color: $black;
   }
+
+  &.status {
+    background: $black;
+    color: $off-white;
+    padding: 1rem;
+    position: relative;
+
+    .entry-meta {
+      margin: 0;
+
+      a {
+        color: $light-grey;
+      }
+    }
+
+    p {
+      margin: 0 0 0.5rem;
+    }
+
+    &::before {
+      border-right: 2rem solid $off-white;
+      border-top: 2rem solid transparent;
+      bottom: 0;
+      content: '';
+      position: absolute;
+      right: 0;
+    }
+
+    &::after {
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      border-top: 1rem solid $black;
+      bottom: -1rem;
+      content: '';
+      left: 0;
+      position: absolute;
+    }
+  }
 }
 
 .entry-title {
@@ -413,29 +451,60 @@ aside {
   form {
     margin: 1rem 0;
 
+    .input-wrapper {
+      display: flex;
+    }
+
     input {
       background: $white;
-      border: 2px solid $dark-beige;
+      border-bottom: 2px solid $dark-beige;
+      border-left: 2px solid $dark-beige;
+      border-right: 0;
+      border-top: 2px solid $dark-beige;
+      flex: 4 1 auto;
+      margin: 0;
       width: 100%;
 
       &::placeholder {
         color: $dark-beige;
       }
     }
-  }
 
-  .button {
-    background: $white;
-    border: 2px solid $black;
-    border-radius: 0;
-    color: $black;
-    cursor: pointer;
-    transition: color 0.5s, background 0.5s;
-    width: 100%;
+    button {
+      background: $white;
+      border-bottom: 2px solid $dark-beige;
+      border-left: 0;
+      border-radius: 0;
+      border-right: 2px solid $dark-beige;
+      border-top: 2px solid $dark-beige;
+      color: $black;
+      cursor: pointer;
+      flex: 1 4 auto;
+      margin: 0;
+      transition: color 0.5s, background 0.5s;
+      width: 100%;
+
+      &.genericon {
+        font-size: 32px;
+        padding: 0;
+      }
+    }
   }
 
   .module {
     margin-top: 2rem;
+  }
+}
+
+.social {
+  align-items: center;
+  display: flex;
+
+  &::after {
+    color: $dark-beige;
+    content: '\f108';
+    font: normal 32px/1 'Genericons';
+    padding-left: 0.5rem;
   }
 }
 
@@ -478,20 +547,24 @@ aside {
 }
 
 .newsletter {
+  align-items: center;
+  display: flex;
+
   &::after {
     color: $dark-beige;
     content: '\f463';
     font: normal 32px/1 'Genericons';
     padding-left: 0.5rem;
-    vertical-align: -0.5rem;
   }
 }
 
 .shows {
+  align-items: center;
+  display: flex;
+
   .sk-badge-pink {
     height: 28px;
     margin-left: 0.6rem;
-    vertical-align: -0.4rem;
     width: 28px;
   }
 }
@@ -507,22 +580,26 @@ aside {
 }
 
 .tips {
+  align-items: center;
+  display: flex;
+
   &::after {
     color: $dark-beige;
     content: '\f221';
     font: normal 32px/1 'Genericons';
     padding-left: 0.3rem;
-    vertical-align: -0.4rem;
   }
 }
 
 .links {
+  align-items: center;
+  display: flex;
+
   &::after {
     color: $dark-beige;
     content: '\f107';
     font: normal 32px/1 'Genericons';
     padding-left: 0.1rem;
-    vertical-align: -0.6rem;
   }
 }
 
@@ -916,10 +993,6 @@ iframe {
   aside {
     flex: 1 1 400px;
     order: 2;
-
-    .button {
-      width: 50%;
-    }
   }
 
   img {

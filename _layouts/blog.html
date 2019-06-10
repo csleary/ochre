@@ -8,7 +8,8 @@
       <div class="container">
         <div class="blog">
           <div>
-            {% for post in paginator.posts %}
+            {% for post in paginator.posts %} {% if post.type == 'status' %} {% include status.html
+            %} {% else %}
             <article>
               <h1>
                 <a class="entry-title" href="{{ site.baseurl }}{{ post.url }}">
@@ -41,7 +42,7 @@
               {% endif %} {{ post.excerpt }} {% if post.content contains site.excerpt_separator %}
               <a href="{{ post.url | prepend: site.baseurl }}"> Read on&hellip; </a> {% endif %}
             </article>
-            {% endfor %}
+            {% endif %} {% endfor %}
             <div class="pagination">
               {% if paginator.previous_page %}
               <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a> {% endif %}
