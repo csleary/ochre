@@ -9,24 +9,22 @@
         <section>
           <div>
             <h1 class="entry-title">{{ page.title | smartify }}</h1>
-            <div class="entry-meta">
-              <span class="date">
-                <time datetime="{{ page.date }}">
-                  <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to {{ page.title }}">
-                    {% assign d = page.date | date: "%-d" %} {% case d %} {% when '1' or '21' or
-                    '31' %} {{ d }}st {% when '2' or '22' %} {{ d }}nd {% when '3' or '23' %} {{ d
-                    }}rd {% else %} {{ d }}th {% endcase %} of {{ page.date | date: "%B" }}, {{
-                    page.date | date: "%Y" }}
-                  </a>
-                </time>
-              </span>
-            </div>
             {% if page.image %}
             <a href="{{ page.image }}">
               <img data-src="{{ page.image }}" alt="{{ page.image-alt }}" class="lazyload" />
             </a>
             {% endif %} {{ content }}
             <div class="entry-meta page-meta">
+              <div class="date">
+                <time datetime="{{ page.date }}">
+                  <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to: {{ page.title }}">
+                    Originally posted on the {% assign d = page.date | date: "%-d" %} {% case d %}
+                    {% when '1' or '21' or '31' %} {{ d }}st {% when '2' or '22' %} {{ d }}nd {%
+                    when '3' or '23' %} {{ d }}rd {% else %} {{ d }}th {% endcase %} of {{ page.date
+                    | date: "%B" }}, {{ page.date | date: "%Y" }}
+                  </a>
+                </time>
+              </div>
               {% if page.categories.size > 0 %}
               <div class="categories">
                 {% assign categories = page.categories %} {% for category in categories %}

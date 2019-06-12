@@ -21,7 +21,7 @@
                   <time datetime="{{ post.date }}">
                     <a
                       href="{{ site.baseurl }}{{ post.url }}"
-                      title="Permalink to {{ post.title }}"
+                      title="Permalink to: {{ post.title }}"
                     >
                       {% assign d = post.date | date: "%-d" %} {% case d %} {% when '1' or '21' or
                       '31' %} {{ d }}st {% when '2' or '22' %} {{ d }}nd {% when '3' or '23' %} {{ d
