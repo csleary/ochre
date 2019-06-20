@@ -1,12 +1,30 @@
 $(document).ready(function() {
-  $.stellar({
-    horizontalScrolling: false
+  var container = $('.container');
+  var containerTop;
+  var header = $('.parallax');
+  var headerPosition;
+  var lastScrollY = 0;
+  var nav = $('nav');
+
+  header.imagesLoaded({ background: true }).done(function(instance) {
+    header.addClass('lazyloaded');
   });
 
-  document.addEventListener('lazybeforeunveil', function(e) {
-    var bg = e.target.getAttribute('data-bg');
-    if (bg) {
-      e.target.style.backgroundImage = 'url(' + bg + ')';
+  $(window).scroll(function() {
+    lastScrollY = $(window).scrollTop();
+    headerPosition = lastScrollY - header.offset().top;
+    containerTop = container.offset().top;
+
+    if (lastScrollY < containerTop) {
+      header.css('backgroundPositionY', lastScrollY / 2 + 'px');
+    }
+
+    if (lastScrollY > containerTop) {
+      nav.addClass('sticky');
+    }
+
+    if (lastScrollY === 0) {
+      nav.removeClass('sticky');
     }
   });
 
@@ -27,18 +45,7 @@ $(document).ready(function() {
   });
 
   $.get('https://ochremusic.com/api/mailchimp', function(data) {
-    $('aside #mailchimp').html(data.mailchimp);
-  });
-
-  var nav = $('nav');
-  var navHeight = $('nav').outerHeight();
-  $(window).scroll(function() {
-    var scrollPos = $(document).scrollTop();
-    if (scrollPos > navHeight) {
-      nav.addClass('sticky');
-    } else if (scrollPos === 0) {
-      nav.removeClass('sticky');
-    }
+    $('aside #mailchimp').html('Join ' + data.mailchimp + ' subscribers and');
   });
 });
 

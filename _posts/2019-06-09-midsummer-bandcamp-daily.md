@@ -13,6 +13,6 @@ If you'll excuse a little auto-backpattery, I was very pleasantly surprised to n
 
 > [C]onjuring the enduring miracles of day-to-day life on our dying planet.
 >
-> --<cite>[Zoe Camp](https://daily.bandcamp.com/2019/06/07/bandcamp-essential-releases-june-7/)</cite>
+> <cite>[Zoe Camp](https://daily.bandcamp.com/2019/06/07/bandcamp-essential-releases-june-7/)</cite>
 
 We're inside our last week of preordering now before Friday's release. [Head over to Bandcamp](https://bandcamp.ochremusic.com/album/a-midsummer-nice-dream-15th-anniversary-edition) if you fancy a copy.
