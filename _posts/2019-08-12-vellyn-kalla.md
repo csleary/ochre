@@ -11,7 +11,7 @@ Earlier in the year I released the _Kalla_ EP under my new _Vellyn_ alias. The E
 
 You can find the EP on [Spotify](https://open.spotify.com/album/5199HInHTcfmfgTI8cOEAQ), Amazon, Deezer etc.
 
-Here's one of the tracks, _Rive_:
+Here's one of the tracks, 'Rive':
 
 <div class="embed-container">
   <iframe src="https://www.youtube.com/embed/ph9TzQQe05s?rel=0&amp;showinfo=0" allowfullscreen></iframe>

@@ -3,6 +3,7 @@ _site/
 *.sh
 bower_components/
 .sass-cache
+.jekyll-cache
 gulpfile.js
 node_modules/
 dump.rdb
