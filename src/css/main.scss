@@ -855,6 +855,13 @@ form {
       border-color: $orange;
       color: $white;
       transition: color 0.2s, background 0.2s;
+
+      &:disabled {
+        background: $white;
+        border-color: $light-grey;
+        color: $light-grey;
+        cursor: wait;
+      }
     }
 
     &:active {
@@ -896,6 +903,17 @@ form {
     color: $red;
     margin-bottom: 1rem;
     padding: 10px;
+  }
+
+  .subscribe {
+    &:hover {
+      &:disabled {
+        background: $white;
+        border-color: $dark-beige;
+        color: $dark-beige;
+        cursor: wait;
+      }
+    }
   }
 }
 
