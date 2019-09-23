@@ -4,7 +4,6 @@ author: Chris
 url: https://ochremusic.com
 baseurl:
 logo: /assets/logo.png
-scripts: /js/script.min.js
 
 excerpt_separator: <!--more-->
 permalink: /:year/:month/:day/:title/
@@ -55,16 +54,17 @@ plugins:
   - jekyll-autoprefixer
   - jemoji
 
+source: src
+destination: public
+
 include: ['_pages']
 
 exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json
+  - webpack/
   - '*.sh'
   - '*.rdb'
   - .DS_Store
-  - bower_components/
-  - Gemfile
-  - Gemfile.lock
-  - gulpfile.js
-  - node_modules/
-  - package.json
-  - src/

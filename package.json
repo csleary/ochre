@@ -1,0 +1,32 @@
+{
+  "name": "ochre",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack | bundle exec jekyll serve --incremental",
+    "build": "BABEL_ENV=production ./node_modules/.bin/webpack | bundle exec jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csleary/ochre.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csleary/ochre/issues"
+  },
+  "homepage": "https://github.com/csleary/ochre#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-minify": "^0.5.1",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0"
+  }
+}

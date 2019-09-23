@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <div class="outer-container">
+      {% include masthead.html %}
+      <div class="container">
+        <div class="blog">
+          <div>
+            {% for post in paginator.posts %} {% if post.type == 'status' %} {% include status.html
+            %} {% else %}
+            <article>
+              <h1>
+                <a class="entry-title" href="{{ site.baseurl }}{{ post.url }}">
+                  {{ post.title | smartify }}
+                </a>
+              </h1>
+              <div class="entry-meta">
+                <div class="date">
+                  <time datetime="{{ post.date }}">
+                    <a
+                      href="{{ site.baseurl }}{{ post.url }}"
+                      title="Permalink to: {{ post.title }}"
+                    >
+                      {% assign d = post.date | date: "%-d" %} {% case d %} {% when '1' or '21' or
+                      '31' %} {{ d }}st {% when '2' or '22' %} {{ d }}nd {% when '3' or '23' %} {{ d
+                      }}rd {% else %} {{ d }}th {% endcase %} of {{ post.date | date: "%B" }}, {{
+                      post.date | date: "%Y" }}
+                    </a>
+                  </time>
+                </div>
+              </div>
+              {% if post.image %}
+              <a href="{{ post.url }}">
+                <img
+                  data-src="{{ post.image }}"
+                  alt="{{ post.image-alt }}"
+                  class="lazyload peek{% if post.image-class %} {{ post.image-class }}{% endif %}"
+                />
+              </a>
+              {% endif %} {{ post.excerpt }} {% if post.content contains site.excerpt_separator %}
+              <a href="{{ post.url | prepend: site.baseurl }}"> Read on&hellip; </a> {% endif %}
+            </article>
+            {% endif %} {% endfor %}
+            <div class="pagination">
+              {% if paginator.previous_page %}
+              <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a> {% endif %}
+              <span class="page_number">
+                Page: {{ paginator.page }} of {{ paginator.total_pages }}
+              </span>
+              {% if paginator.next_page %}
+              <a href="{{ paginator.next_page_path }}" class="next">Next</a> {% endif %}
+            </div>
+            {% include footer.html %}
+          </div>
+        </div>
+        {% include sidebar.html %}
+      </div>
+    </div>
+    {% include scripts.html %}
+  </body>
+</html>

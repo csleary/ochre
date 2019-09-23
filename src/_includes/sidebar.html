@@ -1,0 +1,64 @@
+<aside>
+  <h3 class="social">Social</h3>
+  <div id="followers">
+    <ul>
+      <li>
+        <a href="https://play.spotify.com/artist/0OmHDBh5styCXDWKwz58Ts"
+          ><span class="spotify"></span>&nbsp;Spotify</a
+        >
+      </li>
+      <li>
+        <a href="http://soundcloud.com/ochre"><span class="soundcloud"></span>&nbsp;SoundCloud</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/ochremusic"><span class="twitter"></span>&nbsp;Twitter</a>
+      </li>
+    </ul>
+  </div>
+
+  <a href="http://eepurl.com/c9Kck"><h3 class="newsletter module">Newsletter</h3></a>
+  <p><span id="mailchimp">Subscribe to</span> be notified about new releases.</p>
+
+  <div>
+    <form id="list-subscribe" action="https://ochremusic.com/api/list-subscribe" method="post">
+      <label for="email">Your email address:</label>
+      <div class="input-wrapper">
+        <input type="email" name="email" placeholder="Email" required />
+        <button
+          aria-label="Subscribe"
+          class="button genericon genericon-next"
+          type="submit"
+        ></button>
+      </div>
+      <div id="list-res-error" class="list-error"></div>
+      <div id="list-res"></div>
+    </form>
+  </div>
+
+  <h3 class="tips module">Tip Jar</h3>
+  <p>
+    Tip via <a href="https://www.paypal.me/csleary">PayPal</a> or
+    <a href="https://bunq.me/csleary">iDeal</a>.
+  </p>
+  <p>All tips very gratefully received.</p>
+
+  <h3 class="links module">Links</h3>
+  <ul>
+    {% for link in site.data.links %}
+    <li><a href="{{ link.url }}"> {{ link.title }} </a></li>
+    {% endfor %}
+  </ul>
+
+  <h3 class="module">Recent Posts</h3>
+  <ul>
+    {% for post in site.posts limit:5 %}
+    <li><a href="{{ post.url }}"> {{ post.title | smartify }} </a></li>
+    {% endfor %}
+  </ul>
+
+  <h3 class="module">Melograf Mastering</h3>
+  <p>
+    Please visit <a href="https://melograf.com/">Melograf Mastering</a> for more information about
+    my mastering work.
+  </p>
+</aside>

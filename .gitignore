@@ -1,10 +1,8 @@
-.DS_Store
-_site/
-*.sh
-bower_components/
-.sass-cache
-.jekyll-cache
-gulpfile.js
 node_modules/
-dump.rdb
-js/
+public/
+.jekyll-cache
+.sass-cache
+src/assets/*.js
+.DS_Store
+*.sh
+*.rdb

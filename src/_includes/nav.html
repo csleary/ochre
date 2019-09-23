@@ -1,0 +1,36 @@
+<nav>
+  <ul class="nav-menu" id="main-nav">
+    {% for item in site.data.nav %}
+    <li>
+      <a
+        href="{{ item.url }}"
+        {% if item.url == page.url %}
+          id="current"
+        {% endif %}
+        {% if item.external %}
+          class="external"
+          data-label="{{ item.label }}"
+        {% endif %}
+
+      >
+        {{ item.title }}
+      </a>
+    </li>
+    {% endfor %}
+    <li class="nav-icon">
+      <a href="javascript:void(0);" onclick="nav()">
+        <span class="burger-menu"></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<script>
+  function nav() {
+    var x = document.getElementById('main-nav');
+    if (x.className === 'nav-menu') {
+      x.className += ' responsive';
+    } else {
+      x.className = 'nav-menu';
+    }
+  }
+</script>
