@@ -36,9 +36,9 @@ $(document).ready(function() {
     $('#followers .soundcloud').html(data.soundcloud);
   });
 
-  $.get('https://ochremusic.com/api/facebook', function(data) {
-    $('#followers .facebook').html(data.facebook);
-  });
+  // $.get('https://ochremusic.com/api/facebook', function(data) {
+  //   $('#followers .facebook').html(data.facebook);
+  // });
 
   $.get('https://ochremusic.com/api/twitter', function(data) {
     $('#followers .twitter').html(data.twitter);
