@@ -51,11 +51,11 @@ $(document).ready(() => {
 
 const listForm = $('.list-subscribe');
 const button = $('.subscribe, .button');
-listForm.submit(e => {
-  e.preventDefault();
+const onSubmit = () => {
   button.prop('disabled', true);
   $('.list-res, .error').remove();
   $('.list-res, .success').remove();
+  $(listForm).after(`<p class="list-res">Sending…</p>`);
   const url = $(listForm).attr('action');
   const data = $(listForm).serialize();
 
@@ -63,17 +63,19 @@ listForm.submit(e => {
     button.prop('disabled', false);
 
     if (res.error) {
+      $('.list-res').remove();
       $(listForm).after(`
         <p class=list-res error>Error: ${res.error}</p>
-        <p class="list-res success">You can always subscribe manually <a href="https://sibforms.com/serve/MUIEANtw8O76011XmV9-7HGDJ9E0wlGF3W1y9Sls0LW_MabRdAKw01IlVGki8NBVpupxuI9LmNFwCuOge1QV_3eEiBTtI0sZ9GiTdOEj1WlPQa0D8LR1XlAZ6xdNmdOsqcDoKZKCHmEa6MbX0i_9zIoMWqXYiYVn8lqYVsEsMZdtlyZDa1EUOeMEjMnyz-BDcnwQ04_31fXRIWjJ">here</a>. You will receive a confirmation opt-in email.</p>
+        <p class="list-res">You can always subscribe manually <a href="https://sibforms.com/serve/MUIEANtw8O76011XmV9-7HGDJ9E0wlGF3W1y9Sls0LW_MabRdAKw01IlVGki8NBVpupxuI9LmNFwCuOge1QV_3eEiBTtI0sZ9GiTdOEj1WlPQa0D8LR1XlAZ6xdNmdOsqcDoKZKCHmEa6MbX0i_9zIoMWqXYiYVn8lqYVsEsMZdtlyZDa1EUOeMEjMnyz-BDcnwQ04_31fXRIWjJ">here</a>. You will receive a confirmation opt-in email.</p>
         `);
       return;
     }
 
+    $('.list-res').remove();
     $(listForm).after(`<p class="list-res success">${res.success}</p>`);
     $(listForm)[0].reset();
   });
-});
+};
 
 const contactForm = $('#contact-form');
 contactForm.submit(e => {
@@ -111,3 +113,7 @@ contactForm.submit(e => {
     }
   });
 });
+
+module.exports = {
+  onSubmit
+};

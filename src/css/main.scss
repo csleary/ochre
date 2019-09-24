@@ -637,6 +637,22 @@ aside {
   }
 }
 
+.list-res {
+  &.error {
+    background: $pink;
+    border: 2px solid $red;
+    color: $red;
+    padding: 0.75rem;
+  }
+
+  &.success {
+    background: $light-green;
+    border: 2px solid $dark-green;
+    color: $dark-green;
+    padding: 0.75rem;
+  }
+}
+
 #songkick {
   li {
     &:not(:last-child) {
@@ -902,7 +918,7 @@ form {
     clear: both;
     color: $red;
     margin-bottom: 1rem;
-    padding: 10px;
+    padding: 1rem;
   }
 
   .subscribe {
@@ -1010,10 +1026,6 @@ iframe {
 .lazyloaded {
   opacity: 1;
   transition: opacity 300ms;
-}
-
-.list-error {
-  color: $red;
 }
 
 @media (min-width: 769px) {

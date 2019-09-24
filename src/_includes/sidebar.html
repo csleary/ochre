@@ -15,27 +15,29 @@
       </li>
     </ul>
   </div>
-
   <a
     href="https://sibforms.com/serve/MUIEANtw8O76011XmV9-7HGDJ9E0wlGF3W1y9Sls0LW_MabRdAKw01IlVGki8NBVpupxuI9LmNFwCuOge1QV_3eEiBTtI0sZ9GiTdOEj1WlPQa0D8LR1XlAZ6xdNmdOsqcDoKZKCHmEa6MbX0i_9zIoMWqXYiYVn8lqYVsEsMZdtlyZDa1EUOeMEjMnyz-BDcnwQ04_31fXRIWjJ"
     ><h3 class="newsletter module">Newsletter</h3></a
   >
   <p>Sign up and be the first to hear about new releases:</p>
-
+  <script>
+    function onSubmit(token) {
+      Library.onSubmit();
+    }
+  </script>
   <form class="list-subscribe" action="https://ochremusic.com/api/list-subscribe" method="post">
     <label for="email">Your email address:</label>
     <div class="input-wrapper">
       <input type="email" name="email" placeholder="Email" required />
       <button
         aria-label="Subscribe"
-        class="subscribe button genericon genericon-next"
+        class="h-captcha subscribe button genericon genericon-next"
+        data-sitekey="abebe207-9713-4cb8-9514-7786dca8c46d"
+        data-callback="onSubmit"
         type="submit"
       ></button>
     </div>
-    <div id="list-res-error" class="list-error"></div>
-    <div id="list-res"></div>
   </form>
-
   <h3 class="tips module">Tip Jar</h3>
   <p>
     Tip via <a href="https://www.paypal.me/csleary">PayPal</a> or
