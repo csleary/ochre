@@ -2,7 +2,7 @@ node_modules/
 public/
 .jekyll-cache
 .sass-cache
-src/assets/*.js
+src/assets/js/
 .DS_Store
 *.sh
 *.rdb
