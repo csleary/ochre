@@ -24,19 +24,29 @@
     function onSubmit(token) {
       Library.onSubmit();
     }
+
+    var captchaLoaded = function() {
+      hcaptcha.render('h-captcha', {
+        callback: onSubmit,
+        sitekey: 'abebe207-9713-4cb8-9514-7786dca8c46d'
+      });
+    };
   </script>
-  <form class="list-subscribe" action="https://ochremusic.com/api/list-subscribe" method="post">
+  <form class="list-subscribe">
     <label for="email">Your email address:</label>
     <div class="input-wrapper">
-      <input type="email" name="email" placeholder="Email" required />
+      <input class="subscribe-input" type="email" name="email" placeholder="Email" required />
       <button
         aria-label="Subscribe"
-        class="h-captcha subscribe button genericon genericon-next"
-        data-sitekey="abebe207-9713-4cb8-9514-7786dca8c46d"
-        data-callback="onSubmit"
+        id="h-captcha"
+        class="subscribe button genericon genericon-next"
         type="submit"
+        data-callback="onSubmit"
+        data-sitekey="abebe207-9713-4cb8-9514-7786dca8c46d"
       ></button>
     </div>
+    <small class="apology">(Sorry about the captcha, but spambots hit this form hard.)</small>
+    <label for="email" class="error"></label>
   </form>
   <h3 class="tips module">Tip Jar</h3>
   <p>
@@ -58,10 +68,4 @@
     <li><a href="{{ post.url }}"> {{ post.title | smartify }} </a></li>
     {% endfor %}
   </ul>
-
-  <h3 class="module">Melograf Mastering</h3>
-  <p>
-    Please visit <a href="https://melograf.com/">Melograf Mastering</a> for more information about
-    my mastering work.
-  </p>
 </aside>

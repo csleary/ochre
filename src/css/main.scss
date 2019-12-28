@@ -121,7 +121,6 @@ header {
   background-size: cover;
   flex: none;
   height: 4rem;
-  opacity: 0;
 }
 
 p {
@@ -538,6 +537,12 @@ aside {
       &::placeholder {
         color: $dark-beige;
       }
+
+      &.error {
+        background: $white;
+        margin: 0;
+        padding: 0.75rem;
+      }
     }
 
     button {
@@ -623,6 +628,32 @@ aside {
     content: '\f463';
     font: normal 32px/1 'Genericons';
     padding-left: 0.5rem;
+  }
+}
+
+form {
+  label {
+    &.error {
+      background: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  small {
+    &.apology {
+      display: block;
+      font-size: 0.5rem;
+      line-height: 2;
+      opacity: 0;
+      transition: 150ms ease-out;
+      visibility: hidden;
+
+      &.show {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 }
 

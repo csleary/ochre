@@ -7,7 +7,7 @@ categories: [Ochre]
 tags: [remix]
 ---
 
-Thinking back to the antilounge live night/release party that I played at last month, celebrating the release of the _Weerhaak EP_ for Hague-based artist Foresense, here's the remix I contributed for the track 'Projector'.
+Thinking back to the antilounge live night/release party that I played at last month, celebrating the release of the _Weerhaak EP_ for Hague-based artist Foresense, here's the remix I contributed of the track 'Projector'.
 
 In addition to the usual download options, there's a very limited cassette tape edition of the EP available.
 

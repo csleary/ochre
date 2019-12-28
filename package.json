@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack --watch | bundle exec jekyll serve",
-    "build": "BABEL_ENV=production ./node_modules/.bin/webpack | bundle exec jekyll build"
+    "build": "BABEL_ENV=production ./node_modules/.bin/webpack && bundle exec jekyll build",
+    "deploy": "BABEL_ENV=production ./node_modules/.bin/webpack && bundle exec jekyll build && sh deploy.sh"
   },
   "repository": {
     "type": "git",
