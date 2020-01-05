@@ -45,37 +45,6 @@ $(document).ready(() => {
   // });
 });
 
-$('.subscribe-input').focus(() => {
-  $('.apology').addClass('show');
-});
-
-const button = $('.subscribe, .button');
-const onSubmit = () => {
-  button.prop('disabled', true);
-  $('.list-res, .error').remove();
-  $('.list-res, .success').remove();
-  $('.list-subscribe').after(`<p class="list-res">Sending…</p>`);
-  const url = 'https://ochremusic.com/api/list-subscribe';
-  const data = $('.subscribe-input').serialize();
-
-  $.post(url, data, res => {
-    button.prop('disabled', false);
-
-    if (res.error) {
-      $('.list-res').remove();
-      $('.list-subscribe').after(`
-        <p class=list-res error>Error: ${res.error}</p>
-        <p class="list-res">You can always subscribe manually <a href="https://sibforms.com/serve/MUIEANtw8O76011XmV9-7HGDJ9E0wlGF3W1y9Sls0LW_MabRdAKw01IlVGki8NBVpupxuI9LmNFwCuOge1QV_3eEiBTtI0sZ9GiTdOEj1WlPQa0D8LR1XlAZ6xdNmdOsqcDoKZKCHmEa6MbX0i_9zIoMWqXYiYVn8lqYVsEsMZdtlyZDa1EUOeMEjMnyz-BDcnwQ04_31fXRIWjJ">here</a>. You will receive a confirmation opt-in email.</p>
-        `);
-      return;
-    }
-
-    $('.list-res').remove();
-    $('.list-subscribe').after(`<p class="list-res success">${res.success}</p>`);
-    $('.list-subscribe')[0].reset();
-  });
-};
-
 const contactForm = $('#contact-form');
 contactForm.submit(e => {
   e.preventDefault();

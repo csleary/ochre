@@ -6,7 +6,5 @@
   label: 'To Bandcamp…'
 - url: '/biography/'
   title: 'Biography'
-# - url: '/mastering/'
-# title: 'Mastering'
 - url: '/contact/'
   title: 'Contact'
