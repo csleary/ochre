@@ -1,6 +1,6 @@
 ---
 title: "New Track: 'Late Transition'"
-description: "I've just put a new shimmering ambient\/drone guitar track on SoundCloud."
+description: "I've just put a new shimmering ambient/drone guitar track on SoundCloud."
 date: 2019-10-06
 published: true
 categories: [Ochre]
