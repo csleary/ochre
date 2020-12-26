@@ -1,14 +1,19 @@
 ---
-title: "Knotted Concrete"
-description: "New track."
-date: 2020-09-12T20:18
+title: 'Understory'
+description: 'A new mini-album/EP: Understory'
+date: 2020-12-26T14:03
 published: true
 categories: [Ochre]
-tags: [subscribers]
+tags: [releases, vinyl, guy warley]
+image: /assets/2020/2020-f0cb1929.jpg
+image-alt: 'Understory artwork'
+image-class: bottom
 ---
 
-Leaden doom FM glitch. Added to the Bandcamp subscriber collection.
+I'm excited to announce a new EP/mini-album called <em>Understory</em>. It's available now on digital and orange vinyl via Mystic and Quantum Records, and features a crop of new work produced during this year's covid-related hunkerings, as well as a couple of tracks previously shared individually (see earlier jam vids!). Guy Warley created the fantastic artwork for this release, and I could not be more thrilled to have his work on the cover.
 
-<div class="embed-container">
-  <iframe width="100%" height="450" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/890536426&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-</div>
+Vinyl is limited to 300 copies, and is currently available via Mystic and Quantum's Bandcamp page. It will also be available on Clone.nl in due course. Bandcamp subscribers will naturally find that the release has been added to their collection.
+
+Being able to focus on this release has offered me some respite from what has otherwise been a punishing year. All going well, I'll be back with some more new music next year -- let's make it a good one.
+
+<iframe style="width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2367681852/size=large/bgcol=ffffff/linkcol=EA5727/tracklist=false/artwork=small/transparent=true/"></iframe>

@@ -24,29 +24,21 @@ $(document).ready(() => {
     }
   });
 
-  $.get('https://ochremusic.com/api/spotify', data => {
+  $.get('https://ochremusic.com/api/spotify', (data) => {
     $('#followers .spotify').html(data.spotify);
   });
 
-  $.get('https://ochremusic.com/api/soundcloud', data => {
+  $.get('https://ochremusic.com/api/soundcloud', (data) => {
     $('#followers .soundcloud').html(data.soundcloud);
   });
 
-  $.get('https://ochremusic.com/api/twitter', data => {
+  $.get('https://ochremusic.com/api/twitter', (data) => {
     $('#followers .twitter').html(data.twitter);
   });
-
-  // $.get('https://ochremusic.com/api/facebook', (data) => {
-  //   $('#followers .facebook').html(data.facebook);
-  // });
-
-  // $.get('https://ochremusic.com/api/mailchimp', data => {
-  //   $('aside #mailchimp').html('Join ' + data.mailchimp + ' subscribers and');
-  // });
 });
 
 const contactForm = $('#contact-form');
-contactForm.submit(e => {
+contactForm.submit((e) => {
   e.preventDefault();
   const submitButton = $('.send');
   const defaultSubmitText = submitButton.val();
@@ -58,7 +50,7 @@ contactForm.submit(e => {
     beforeSend: () => {
       submitButton.prop('disabled', true).val('Sending message…');
     },
-    success: res => {
+    success: (res) => {
       contactForm.append(`<div class='success'>${res.success}</div>`);
       submitButton.val('Message sent!');
       $('#contact-form')[0].reset();
@@ -69,7 +61,7 @@ contactForm.submit(e => {
         submitButton.prop('disabled', false).val(defaultSubmitText);
       }, 5000);
     },
-    error: err => {
+    error: (err) => {
       contactForm.append(`<div class='error'>${err.error}</div>`);
       submitButton.val('Sending failed!');
       setTimeout(() => {
@@ -78,10 +70,6 @@ contactForm.submit(e => {
         });
         submitButton.prop('disabled', false).val(defaultSubmitText);
       }, 5000);
-    }
+    },
   });
 });
-
-// module.exports = {
-//   onSubmit
-// };
