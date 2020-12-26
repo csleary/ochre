@@ -63,7 +63,7 @@ contactForm.submit(e => {
       submitButton.val('Message sent!');
       $('#contact-form')[0].reset();
       setTimeout(() => {
-        $('.success').fadeOut(function() {
+        $('.success').fadeOut(function () {
           $(this).remove();
         });
         submitButton.prop('disabled', false).val(defaultSubmitText);
@@ -73,7 +73,7 @@ contactForm.submit(e => {
       contactForm.append(`<div class='error'>${err.error}</div>`);
       submitButton.val('Sending failed!');
       setTimeout(() => {
-        $('.error').fadeOut(function() {
+        $('.error').fadeOut(function () {
           $(this).remove();
         });
         submitButton.prop('disabled', false).val(defaultSubmitText);
@@ -82,6 +82,6 @@ contactForm.submit(e => {
   });
 });
 
-module.exports = {
-  onSubmit
-};
+// module.exports = {
+//   onSubmit
+// };
