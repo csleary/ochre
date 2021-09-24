@@ -7,9 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, 'src/assets/js'),
     filename: 'bundle.js',
     library: 'Library',
-    libraryTarget: 'var'
+    libraryTarget: 'var',
   },
   module: {
-    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }]
-  }
+    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }],
+  },
 };
