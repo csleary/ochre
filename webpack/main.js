@@ -25,11 +25,11 @@ $(document).ready(() => {
   });
 
   $.get('/.netlify/functions/spotify', (data) => {
-    $('#followers .spotify').html(data.spotify);
+    $('#followers .spotify').html(JSON.parse(data).spotify);
   });
 
   $.get('/.netlify/functions/twitter', (data) => {
-    $('#followers .twitter').html(data.twitter);
+    $('#followers .twitter').html(JSON.parse(data).twitter);
   });
 });
 
