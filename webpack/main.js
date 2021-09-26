@@ -60,7 +60,7 @@ contactForm.submit((e) => {
         submitButton.prop('disabled', false).val(defaultSubmitText);
       }, 5000);
     },
-    error: (error) => {
+    error: () => {
       contactForm.append(
         `<div class='error'>Sorry, your message could not be sent. Please email contact@ochremusic.com directly instead.</div>`
       );
