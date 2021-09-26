@@ -24,15 +24,11 @@ $(document).ready(() => {
     }
   });
 
-  $.get('https://ochremusic.com/api/spotify', (data) => {
+  $.get('/.netlify/functions/spotify', (data) => {
     $('#followers .spotify').html(data.spotify);
   });
 
-  $.get('https://ochremusic.com/api/soundcloud', (data) => {
-    $('#followers .soundcloud').html(data.soundcloud);
-  });
-
-  $.get('https://ochremusic.com/api/twitter', (data) => {
+  $.get('/.netlify/functions/twitter', (data) => {
     $('#followers .twitter').html(data.twitter);
   });
 });
@@ -44,7 +40,8 @@ contactForm.submit((e) => {
   const defaultSubmitText = submitButton.val();
 
   $.post({
-    url: 'https://ochremusic.com/api/contact',
+    url: '/',
+    contentType: 'application/x-www-form-urlencoded',
     data: $(contactForm).serialize(),
     dataType: 'json',
     beforeSend: () => {
