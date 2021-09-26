@@ -34,6 +34,7 @@ $(document).ready(() => {
 });
 
 const contactForm = $('#contact-form');
+
 contactForm.submit((e) => {
   e.preventDefault();
   const submitButton = $('.send');
@@ -43,12 +44,13 @@ contactForm.submit((e) => {
     url: '/',
     contentType: 'application/x-www-form-urlencoded',
     data: $(contactForm).serialize(),
-    dataType: 'json',
     beforeSend: () => {
       submitButton.prop('disabled', true).val('Sending message…');
     },
-    success: (res) => {
-      contactForm.append(`<div class='success'>${res.success}</div>`);
+    success: () => {
+      contactForm.append(
+        `<div class='success'>Thank you. Your message has been sent successfully.</div>`
+      );
       submitButton.val('Message sent!');
       $('#contact-form')[0].reset();
       setTimeout(() => {
@@ -58,8 +60,10 @@ contactForm.submit((e) => {
         submitButton.prop('disabled', false).val(defaultSubmitText);
       }, 5000);
     },
-    error: (err) => {
-      contactForm.append(`<div class='error'>${err.error}</div>`);
+    error: (error) => {
+      contactForm.append(
+        `<div class='error'>Sorry, your message could not be sent. Please email contact@ochremusic.com directly instead.</div>`
+      );
       submitButton.val('Sending failed!');
       setTimeout(() => {
         $('.error').fadeOut(function () {
