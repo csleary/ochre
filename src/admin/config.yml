@@ -4,11 +4,14 @@ backend:
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
-    slug: '{{year}}/{{month}}/{{day}}/{{slug}}'
     label: 'Blog'
     folder: '_posts/'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
     fields:
-      - { name: Title }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
       - {
           label: 'Publish Date',
           name: 'date',
@@ -45,5 +48,3 @@ collections:
           required: false,
         }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
-editor:
-  preview: false
