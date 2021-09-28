@@ -2,7 +2,7 @@ title: Ochre
 description: Music by Christopher Leary.
 author: Chris
 url: https://ochremusic.com
-baseurl: '/'
+baseurl: ''
 logo: /assets/logo.png
 
 excerpt_separator: <!--more-->
