@@ -19,21 +19,29 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Published', name: 'draft', widget: 'boolean', default: false }
-      - { label: 'Categories', name: 'categories', widget: 'list', default: ['Ochre'] }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+      - {
+          label: 'Categories',
+          name: 'categories',
+          widget: 'select',
+          multiple: true,
+          options:
+            ['Ochre', 'Production', 'Misc', 'Mastering', 'Mastering', 'Mastering', 'Live', 'Video'],
+          default: ['Ochre'],
+        }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Featured Image', name: 'image', widget: 'image', required: false }
       - {
-          label: 'Image alt. text',
+          label: 'Image alt text',
           name: 'image-alt',
           widget: 'string',
           default: '',
           required: false,
         }
       - {
-          label: 'Image focus',
+          label: 'Image position',
           name: 'image-class',
           widget: 'select',
           options: [{ label: 'Top', value: 'top' }, { label: 'Bottom', value: 'bottom' }],
           required: false,
         }
-      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
