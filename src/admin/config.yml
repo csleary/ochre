@@ -15,17 +15,8 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Published', name: 'draft', widget: 'boolean', default: false }
-      - {
-          label: 'Categories',
-          name: 'categories',
-          widget: 'list',
-          field: { label: Name, name: name, widget: string, default: 'Ochre', required: true },
-        }
-      - label: 'Tags'
-        name: 'tags'
-        widget: 'list'
-        summary: '{{fields.name}}'
-        field: { label: Name, name: name, widget: string }
+      - { label: 'Categories', name: 'categories', widget: 'list', default: ['Ochre'] }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Featured Image', name: 'image', widget: 'image', required: false }
       - {
           label: 'Image alt. text',
