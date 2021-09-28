@@ -4,6 +4,7 @@ backend:
 media_folder: 'src/assets/uploads'
 public_folder: '/assets/uploads'
 search: false
+publish_mode: editorial_workflow
 collections:
   - name: 'blog'
     label: 'Blog'
