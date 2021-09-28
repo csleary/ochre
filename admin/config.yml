@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: 'assets/uploads'
+collections:
+  - name: 'blog'
+    slug: '{{year}}/{{month}}/{{day}}/{{slug}}'
+    label: 'Blog'
+    folder: '_posts/'
+    fields:
+      - { name: Title }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          date_format: 'YYYY-MM-DD',
+          time_format: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - { label: 'Published', name: 'draft', widget: 'boolean', default: false }
+      - {
+          label: 'Categories',
+          name: 'categories',
+          widget: 'list',
+          field: { label: Name, name: name, widget: string, default: 'Ochre', required: true },
+        }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        summary: '{{fields.name}}'
+        field: { label: Name, name: name, widget: string }
+      - { label: 'Featured Image', name: 'image', widget: 'image', required: false }
+      - {
+          label: 'Image alt. text',
+          name: 'image-alt',
+          widget: 'string',
+          default: '',
+          required: false,
+        }
+      - {
+          label: 'Image focus',
+          name: 'image-class',
+          widget: 'select',
+          options: [{ 'label': Top, value:'top' }, { 'label': Bottom, value:'bottom' }],
+          required: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+editor:
+  preview: false
