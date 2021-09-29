@@ -5,7 +5,7 @@ date: 2016-11-29 12:40
 published: true
 categories: [Production, Gear Talk]
 tags: [audiomodern, samples, plugins, kontakt]
-image: /assets/paths.png
+image: paths.png
 ---
 
 Sample instrument developers [Audiomodern](https://audiomodern.com/shop/sample-packs/paths/) have just released a new product called _Paths_, for which I contributed a variety of stem loops. _Paths_ features 30 unique seamless loops of cinematic electronica/downtempo and ambient music, each loop broken down into six 24-bit/48kHz instrument stems for maximum flexibility.

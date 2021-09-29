@@ -5,7 +5,7 @@ date: 2017-02-03 14:42
 published: true
 categories: [Ochre, Live]
 tags: [live, gig, video]
-image: /assets/ochre-bucharest.jpg
+image: ochre-bucharest.jpg
 ---
 
 Just a quick update -- you can see a clip from my recent gig at Control Club, in Bucharest, on [my Facebook page](https://www.facebook.com/ochremusic).

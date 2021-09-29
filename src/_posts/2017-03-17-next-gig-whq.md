@@ -5,7 +5,7 @@ date: 2017-03-17 20:30
 published: true
 categories: [Ochre, Live]
 tags: [live, gig]
-image: /assets/machinedrum-whq.jpg
+image: machinedrum-whq.jpg
 image-alt: 'Gig flyer'
 image-class: 'top'
 ---

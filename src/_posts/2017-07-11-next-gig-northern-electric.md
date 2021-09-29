@@ -5,7 +5,7 @@ date: 2017-07-11 11:28
 published: true
 categories: [Ochre, Live]
 tags: [live, gig]
-image: /assets/NE2017.jpg
+image: NE2017.jpg
 image-alt: 'Gig flyer'
 image-class: 'top'
 ---

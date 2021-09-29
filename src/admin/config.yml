@@ -33,16 +33,16 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Featured Image', name: 'image', widget: 'image', required: false }
       - {
-          label: 'Image alt text',
-          name: 'image-alt',
-          widget: 'string',
-          default: '',
-          required: false,
-        }
-      - {
           label: 'Image position',
           name: 'image-class',
           widget: 'select',
           options: [{ label: 'Top', value: 'top' }, { label: 'Bottom', value: 'bottom' }],
+          required: false,
+        }
+      - {
+          label: 'Image alt text',
+          name: 'image-alt',
+          widget: 'string',
+          default: '',
           required: false,
         }

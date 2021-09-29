@@ -66,6 +66,12 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll_picture_tag (1.14.0)
+      addressable (~> 2.6)
+      jekyll (< 5)
+      mime-types (~> 3.0)
+      mini_magick (~> 4.0)
+      objective_elements (~> 1.1)
     jemoji (0.12.0)
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
@@ -80,6 +86,9 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2021.0901)
     mini_magick (4.11.0)
     mini_portile2 (2.6.1)
     mini_racer (0.4.0)
@@ -89,6 +98,7 @@ GEM
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
+    objective_elements (1.1.2)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
@@ -136,6 +146,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll_picture_tag
   jemoji
   mini_racer
 

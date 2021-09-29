@@ -5,7 +5,7 @@ date: 2017-03-24 22:15
 published: true
 categories: [Ochre]
 tags: [radio, bloop, zoon]
-image: /assets/oddtronica.jpg
+image: oddtronica.jpg
 image-alt: 'Gig flyer'
 image-class: 'top'
 ---

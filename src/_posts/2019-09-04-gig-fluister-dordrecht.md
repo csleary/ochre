@@ -5,7 +5,7 @@ date: 2019-09-04
 published: true
 categories: [Ochre, Live]
 tags: [live, gig, fluister, ambient, hotel neon, transtilla, dordrecht]
-image: /assets/fluister-pictura.jpg
+image: fluister-pictura.jpg
 image-alt: 'Fluister gig flyer.'
 image-class: top
 ---

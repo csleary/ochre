@@ -5,7 +5,7 @@ date: 2017-11-17 12:34
 published: true
 categories: [Ochre]
 tags: [snow palms, production]
-image: /assets/origin-and-echo.jpg
+image: origin-and-echo.jpg
 image-alt: 'Snow Palms - Origin and Echo artwork'
 image-class:
 ---

@@ -5,7 +5,7 @@ date: 2019-04-17
 published: true
 categories: [Ochre]
 tags: [album, vinyl, toytronic, lapsus, nkurence]
-image: /assets/MOCKUP_OCHRE_LP-PS03.jpg
+image: MOCKUP_OCHRE_LP-PS03.jpg
 image-alt: 'A Midsummer Nice Dream (15th Anniversary Edition) vinyl'
 ---
 

@@ -5,7 +5,7 @@ date: 2018-05-31 21:38
 published: true
 categories: [Ochre, Remixes]
 tags: [roel funcken, touched music, charity]
-image: /assets/dear-of-the-yog.jpg
+image: dear-of-the-yog.jpg
 image-alt: 'Roel Funcken - Dear of the Yog artwork'
 image-class: bottom
 ---

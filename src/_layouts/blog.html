@@ -33,11 +33,10 @@
               </div>
               {% if post.image %}
               <a href="{{ post.url }}">
-                <img
-                  data-src="{{ post.image }}"
-                  alt="{{ post.image-alt }}"
-                  class="lazyload peek{% if post.image-class %} {{ post.image-class }}{% endif %}"
-                />
+                {% if post.image-class %} {% picture "{{ post.image }}" --picture class="{{
+                post.image-class | prepend: 'lazyload ' }}" --alt {{ post.image-alt }} %} {% else %}
+                {% picture "{{ post.image }}" --picture class="lazyload" --alt {{ post.image-alt }}
+                %} {% endif %}
               </a>
               {% endif %} {{ post.excerpt }} {% if post.content contains site.excerpt_separator %}
               <a href="{{ post.url | prepend: site.baseurl }}"> Read on&hellip; </a> {% endif %}

@@ -5,7 +5,7 @@ date: 2017-01-12 10:37
 published: true
 categories: [Ochre, Live]
 tags: [live, gig]
-image: /assets/control-club.jpg
+image: control-club.jpg
 image-alt: 'Gig flyer'
 ---
 

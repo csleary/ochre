@@ -5,7 +5,7 @@ date: 2019-01-19
 published: true
 categories: [Ochre]
 tags: [album, web dev]
-image: /assets/pc-microsite.jpg
+image: pc-microsite.jpg
 image-alt: 'Project Caelus microsite.'
 image-class: top
 ---

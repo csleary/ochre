@@ -5,7 +5,7 @@ date: 2020-12-26T14:03
 published: true
 categories: [Ochre]
 tags: [releases, vinyl, guy warley]
-image: /assets/2020/2020-f0cb1929.jpg
+image: 2020/2020-f0cb1929.jpg
 image-alt: 'Understory artwork'
 image-class: bottom
 ---

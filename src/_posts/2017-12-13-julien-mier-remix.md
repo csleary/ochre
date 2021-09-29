@@ -5,7 +5,7 @@ date: 2017-12-13 16:37
 published: true
 categories: [Ochre, Remixes]
 tags: [remix, julien mier, sin hilo]
-image: /assets/untangle-the-roots.jpg
+image: untangle-the-roots.jpg
 image-alt: 'Julien Mier - Untangle the Roots artwork'
 image-class:
 ---

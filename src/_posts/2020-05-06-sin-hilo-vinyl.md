@@ -1,11 +1,11 @@
 ---
-title: "New Track on Sin Hilo Vinyl"
+title: 'New Track on Sin Hilo Vinyl'
 description: "I've got a new track on this rather fetching slice of vinyl, courtesy of Barcelona's Sin Hilo."
 date: 2020-05-06T21:54
 published: true
 categories: [Ochre]
 tags: [vinyl, compilation, barcelona, sin hilo]
-image: /assets/no5.jpg
+image: no5.jpg
 image-alt: 'No. 5 vinyl on Sin Hilo'
 ---
 

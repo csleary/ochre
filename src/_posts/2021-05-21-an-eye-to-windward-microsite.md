@@ -4,7 +4,7 @@ date: 2021-04-21
 published: true
 categories: [Ochre]
 tags: [web, webgl, shader, microsite]
-image: /assets/2021/aetw-microsite.png
+image: 2021/aetw-microsite.png
 image-alt: 'An Eye to Windward Microsite'
 image-class: top
 ---

@@ -5,7 +5,7 @@ date: 2018-01-10 16:33
 published: true
 categories: [Ochre, Remixes]
 tags: [remix, karsten pflum, touched]
-image: /assets/love-canticles.jpg
+image: love-canticles.jpg
 image-alt: 'Karsten Pflum - Love Canticles artwork'
 image-class:
 ---

@@ -53,11 +53,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-autoprefixer
   - jemoji
+  - jekyll_picture_tag
 
 source: src
 destination: public
 
-include: ['_pages']
+include: ['_pages', 'assets']
 
 exclude:
   - Gemfile
@@ -68,3 +69,7 @@ exclude:
   - '*.sh'
   - '*.rdb'
   - .DS_Store
+
+picture:
+  source: 'assets'
+  output: 'assets/opt'

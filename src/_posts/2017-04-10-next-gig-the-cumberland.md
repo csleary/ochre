@@ -5,7 +5,7 @@ date: 2017-04-10 11:50
 published: true
 categories: [Ochre, Live]
 tags: [live, gig]
-image: /assets/ew22.jpg
+image: ew22.jpg
 image-alt: 'Gig flyer'
 image-class: 'bottom'
 ---

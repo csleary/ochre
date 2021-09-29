@@ -5,7 +5,7 @@ date: 2019-06-09
 published: true
 categories: [Ochre]
 tags: [album, vinyl, bandcamp, lapsus]
-image: /assets/7essential_06-07-1244.jpg
+image: 7essential_06-07-1244.jpg
 image-alt: 'Bandcamp Essential Releases, June 7th 2019.'
 ---
 

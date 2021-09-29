@@ -10,8 +10,8 @@
           <div>
             <h1 class="entry-title">{{ page.title | smartify }}</h1>
             {% if page.image %}
-            <a href="{{ page.image }}">
-              <img data-src="{{ page.image }}" alt="{{ page.image-alt }}" class="lazyload" />
+            <a href="/assets/{{ page.image }}">
+              {% picture "{{ page.image }}" --picture class="lazyload" --alt {{ page.image-alt }} %}
             </a>
             {% endif %} {{ content }}
             <div class="entry-meta page-meta">

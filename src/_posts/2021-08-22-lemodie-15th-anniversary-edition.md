@@ -4,7 +4,7 @@ date: 2021-08-22
 published: true
 categories: [Ochre]
 tags: [vinyl, releases, lapsus]
-image: /assets/2021/lemodie-2021.jpg
+image: 2021/lemodie-2021.jpg
 image-alt: 'Lemodie 15th Anniversary Edition vinyl'
 image-class:
 ---

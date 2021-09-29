@@ -5,7 +5,7 @@ date: 2018-12-18
 published: true
 categories: [Ochre]
 tags: [album]
-image: /assets/project-caelus.jpg
+image: project-caelus.jpg
 image-alt: 'Project Caelus artwork'
 image-class: top
 ---

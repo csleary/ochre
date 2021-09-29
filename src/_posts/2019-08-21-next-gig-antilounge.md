@@ -5,7 +5,7 @@ date: 2019-08-21
 published: true
 categories: [Ochre, Live]
 tags: [live, gig, antilounge, foresense]
-image: /assets/antilounge-2019.jpg
+image: antilounge-2019.jpg
 image-alt: 'Antilounge gig flyer.'
 image-class: bottom
 ---
