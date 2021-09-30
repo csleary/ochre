@@ -11,7 +11,7 @@
             <h1 class="entry-title">{{ page.title | smartify }}</h1>
             {% if page.image %}
             <a href="/assets/{{ page.image }}">
-              {% picture "{{ page.image }}" --picture class="lazyload" --alt {{ page.image-alt }} %}
+              {% picture "{{ page.image }}" --img class="lazyload" --alt {{ page.image-alt }} %}
             </a>
             {% endif %} {{ content }}
             <div class="entry-meta page-meta">

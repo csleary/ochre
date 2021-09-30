@@ -33,10 +33,10 @@
               </div>
               {% if post.image %}
               <a href="{{ post.url }}">
-                {% if post.image-class %} {% picture "{{ post.image }}" --picture class="{{
-                post.image-class | prepend: 'lazyload ' }}" --alt {{ post.image-alt }} %} {% else %}
-                {% picture "{{ post.image }}" --picture class="lazyload" --alt {{ post.image-alt }}
-                %} {% endif %}
+                {% if post.image-class %} {% picture "{{ post.image }}" --img class="{{
+                post.image-class | prepend: 'lazyload peek ' }}" --alt {{ post.image-alt }} %} {%
+                else %} {% picture "{{ post.image }}" --img class="lazyload peek" --alt {{
+                post.image-alt }} %} {% endif %}
               </a>
               {% endif %} {{ post.excerpt }} {% if post.content contains site.excerpt_separator %}
               <a href="{{ post.url | prepend: site.baseurl }}"> Read on&hellip; </a> {% endif %}
