@@ -43,7 +43,11 @@ const twitterFollowers = async () => {
 
 exports.handler = async (event, context) => {
   try {
-    const [spotify, twitter] = await Promise.allSettled([spotifyFollowers, twitterFollowers]);
+    const [{ value: spotify }, { value: twitter }] = await Promise.allSettled([
+      spotifyFollowers,
+      twitterFollowers,
+    ]);
+
     return { statusCode: 200, body: JSON.stringify({ spotify, twitter }) };
   } catch (error) {
     console.log(error.toString());
