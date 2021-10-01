@@ -24,13 +24,13 @@ $(document).ready(() => {
     }
   });
 
-  $.get('/.netlify/functions/spotify', (data) => {
-    $('#followers .spotify').html(JSON.parse(data).spotify);
+  $.get('/.netlify/functions/socials', (data) => {
+    const { spotify, twitter } = JSON.parse(data);
+    $('#followers .spotify').html(spotify);
+    $('#followers .twitter').html(twitter);
   });
 
-  $.get('/.netlify/functions/twitter', (data) => {
-    $('#followers .twitter').html(JSON.parse(data).twitter);
-  });
+  $.get('/.netlify/functions/twitter', (data) => {});
 });
 
 const contactForm = $('#contact-form');
