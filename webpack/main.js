@@ -29,8 +29,6 @@ $(document).ready(() => {
     $('#followers .spotify').html(spotify);
     $('#followers .twitter').html(twitter);
   });
-
-  $.get('/.netlify/functions/twitter', (data) => {});
 });
 
 const contactForm = $('#contact-form');
