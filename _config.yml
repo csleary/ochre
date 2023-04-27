@@ -6,7 +6,7 @@ baseurl: ''
 logo: /assets/logo.png
 
 excerpt_separator: <!--more-->
-permalink: /:year/:month/:day/:title/
+permalink: "/:year/:month/:day/:title"
 paginate_path: /page/:num/
 paginate: 10
 
