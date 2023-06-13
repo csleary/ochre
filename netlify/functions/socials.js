@@ -36,7 +36,7 @@ const twitterFollowers = async () => {
   const key = TWITTER_CONSUMER_KEY;
   const secret = TWITTER_CONSUMER_SECRET;
   const token = await auth(authUrl, key, secret);
-  const url = 'https://api.twitter.com/2/users/18866956?user.fields=public_metrics';
+  const url = 'https://api.twitter.com/2/users/me?user.fields=public_metrics';
   const res = await axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
   return res.data.public_metrics.followers_count;
 };
