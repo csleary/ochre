@@ -1,5 +1,5 @@
 const axios = require('axios');
-const querystring = require('querystring');
+const querystring = require('node:querystring');
 const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET } =
   process.env;
 
@@ -32,13 +32,18 @@ const spotifyFollowers = async () => {
 };
 
 const twitterFollowers = async () => {
-  const authUrl = 'https://api.twitter.com/oauth2/token';
-  const key = TWITTER_CONSUMER_KEY;
-  const secret = TWITTER_CONSUMER_SECRET;
-  const token = await auth(authUrl, key, secret);
-  const url = 'https://api.twitter.com/2/users/me?user.fields=public_metrics';
+  const tokenUrl = 'https://api.twitter.com/oauth2/token';
+  const encodedKey = encodeURIComponent(TWITTER_CONSUMER_KEY);
+  const encodedSecret = encodeURIComponent(TWITTER_CONSUMER_SECRET);
+  const encodedCredentials = Buffer.from(`${encodedKey}:${encodedSecret}`).toString('base64');
+  const headers = { Authorization: `Basic ${encodedCredentials}` };
+  const params = { grant_type: 'client_credentials' };
+  const options = { method: 'POST', headers, params, url: tokenUrl };
+  const auth = await axios(options);
+  const token = auth.data.access_token;
+  const url = 'https://api.twitter.com/2/users/18866956?user.fields=public_metrics';
   const res = await axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
-  return res.data.public_metrics.followers_count;
+  return res.data.data.public_metrics.followers_count;
 };
 
 exports.handler = async (event, context) => {
