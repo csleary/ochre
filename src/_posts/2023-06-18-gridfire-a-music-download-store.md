@@ -15,7 +15,7 @@ image: /uploads/gridfire-screenshot.png
 image-class: top
 image-alt: A screenshot of the GridFire web app.
 ---
-Introducing (https://gridfire.app)[GridFire] -- a music download store with web3 payments and optional NFT-backed releases. It's a project I've been working on for a good while now, so I'm keen to share it and get some feedback.
+Introducing [GridFire](https://gridfire.app) -- a music download store with web3 payments and optional NFT-backed releases. It's a project I've been working on for a good while now, so I'm keen to share it and get some feedback.
 
 
 
