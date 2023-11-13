@@ -6,3 +6,6 @@ src/assets/js/
 .DS_Store
 *.sh
 *.rdb
+
+# Local Netlify folder
+.netlify

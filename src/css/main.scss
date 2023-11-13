@@ -1059,6 +1059,15 @@ iframe {
   transition: opacity 300ms;
 }
 
+h2.notice, h2.notice > a {
+  color: $red;
+  font-weight: 500;
+}
+
+h2.notice > a {
+  text-decoration: underline;
+}
+
 @media (min-width: 769px) {
   header {
     height: 12rem;
